@@ -63,12 +63,14 @@ def calcular(ctx):
             "flop": flop_de(lista),
         })
     em_alta, em_baixa = forma(ctx)
+    abaixo_da_media = [r for r in todos if r["diferenca_media"] is not None and r["diferenca_media"] < 0]
     return {
         "dia": ctx.dia_ref["data"],
         "mvp": max(todos, key=lambda r: r["pontos"]) if todos else None,
         "flop": flop_de(todos),
         "por_equipa": por_equipa,
         "top5": sorted(todos, key=lambda r: -r["pontos"])[:5],
+        "flops": sorted(abaixo_da_media, key=lambda r: r["diferenca_media"])[:5],
         "em_alta": em_alta,
         "em_baixa": em_baixa,
     }
@@ -115,18 +117,29 @@ def linhas_forma(lista, v, sobe):
     return f'<ul class="lista">{"".join(itens)}</ul>'
 
 
+def quadro(titulo, linhas, v, vazio):
+    if not linhas:
+        return f'<div class="cartao"><h3>{titulo}</h3><p class="nota">{vazio}</p></div>'
+    itens = []
+    for i, x in enumerate(linhas, 1):
+        media = f'<span class="meta">média {num(x["media_epoca"])}</span>' if x["media_epoca"] else ""
+        itens.append(
+            f'<li class="linha"><span class="posto">{i}</span><div class="cresce"><div class="nome">{e(x["nome"])}</div>'
+            f'<div class="nome meta">{v.ponto(x["equipa"])}{e(x["equipa"])}</div>'
+            f'<div class="meta">{linha_de_jogo(x)}</div></div>'
+            f'<div class="direita"><strong class="grande">{num(x["pontos"])}</strong>{media}</div></li>'
+        )
+    return f'<div class="cartao"><h3>{titulo}</h3><ol class="lista">{"".join(itens)}</ol></div>'
+
+
 def desenhar_dia(d, v):
     dia = data_curta(d["dia"])
-    top = "".join(
-        f'<li class="linha"><span class="posto">{i}</span><div class="cresce"><div class="nome">{e(x["nome"])}</div>'
-        f'<div class="nome meta">{v.ponto(x["equipa"])}{e(x["equipa"])}</div></div>'
-        f'<strong class="grande">{num(x["pontos"])}</strong></li>'
-        for i, x in enumerate(d["top5"], 1)
-    )
     return (
         f'<div class="grelha-herois">{heroi(f"MVP de {dia}", d["mvp"], v)}{heroi(f"Flop de {dia}", d["flop"], v)}</div>'
-        f'<div class="cartao"><h3>Top 5 de {dia}</h3><ol class="lista">{top}</ol></div>'
-        '<p class="nota">O flop é quem mais ficou abaixo da sua própria média.</p>'
+        + quadro(f"Top 5 de {dia}", d["top5"], v, "Ninguém jogou neste dia.")
+        + '<p class="nota">Os cinco jogadores com mais pontos, entre os que estavam em posições ativas.</p>'
+        + quadro(f"Flops de {dia}", d["flops"], v, "Ninguém ficou abaixo da sua média.")
+        + '<p class="nota">Os cinco que mais ficaram abaixo da sua própria média da época, entre os que estavam em posições ativas.</p>'
     )
 
 
