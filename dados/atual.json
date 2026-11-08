@@ -1,0 +1,7609 @@
+{
+ "atualizado_em": "2026-11-08T13:22:50+00:00",
+ "liga": {
+  "nome": "Triplo de Costas",
+  "periodo_atual": 20,
+  "periodo_final": 174,
+  "primeiro_dia": "2026-10-20",
+  "ultimo_fechado": "2026-11-07"
+ },
+ "lugares": {
+  "contagem": {
+   "0": 1,
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1,
+   "5": 1,
+   "6": 1,
+   "11": 3,
+   "12": 3,
+   "13": 1
+  },
+  "limites_jogos": {
+   "0": 82.0,
+   "1": 82.0,
+   "2": 82.0,
+   "3": 82.0,
+   "4": 82.0,
+   "5": 82.0,
+   "6": 82.0,
+   "11": 246.0
+  }
+ },
+ "equipas": [
+  {
+   "id": 1,
+   "nome": "Portela Lakers",
+   "abrev": "PTL",
+   "pontos_oficiais": 5187.5,
+   "fantasma": false,
+   "aquisicoes": 16,
+   "jogos_por_lugar": {
+    "0": 17,
+    "1": 14,
+    "2": 15,
+    "3": 13,
+    "4": 14,
+    "5": 12,
+    "6": 8,
+    "11": 21
+   },
+   "plantel": [
+    {
+     "id": 3112335,
+     "nome": "Nikola Jokic",
+     "nba": "DEN",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 5528.5,
+       "media": 85.05,
+       "jogos": 65
+      },
+      "u30": {
+       "total": 577.0,
+       "media": 72.12,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 554.5,
+       "media": 79.21,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 244.5,
+       "media": 81.5,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 577.0,
+       "media": 72.12,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 5412.0,
+       "media": 75.17,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4433134,
+     "nome": "Scottie Barnes",
+     "nba": "TOR",
+     "lugar": 5,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 4199.5,
+       "media": 52.49,
+       "jogos": 80
+      },
+      "u30": {
+       "total": 414.5,
+       "media": 51.81,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 304.0,
+       "media": 50.67,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 150.0,
+       "media": 50.0,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 414.5,
+       "media": 51.81,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3491.0,
+       "media": 48.49,
+       "jogos": 72
+      }
+     },
+     "estado": "DAY_TO_DAY",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4065648,
+     "nome": "Jayson Tatum",
+     "nba": "BOS",
+     "lugar": 2,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 771.0,
+       "media": 48.19,
+       "jogos": 16
+      },
+      "u30": {
+       "total": 409.5,
+       "media": 51.19,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 302.0,
+       "media": 50.33,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 156.0,
+       "media": 52.0,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 409.5,
+       "media": 51.19,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3563.0,
+       "media": 50.9,
+       "jogos": 70
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3202,
+     "nome": "Kevin Durant",
+     "nba": "HOU",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3914.0,
+       "media": 50.18,
+       "jogos": 78
+      },
+      "u30": {
+       "total": 396.0,
+       "media": 39.6,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 305.0,
+       "media": 38.12,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 104.5,
+       "media": 34.83,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 396.0,
+       "media": 39.6,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 3511.0,
+       "media": 48.76,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3945274,
+     "nome": "Luka Doncic",
+     "nba": "LAL",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 4278.5,
+       "media": 66.85,
+       "jogos": 64
+      },
+      "u30": {
+       "total": 651.5,
+       "media": 72.39,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 578.0,
+       "media": 82.57,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 340.5,
+       "media": 85.12,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 651.5,
+       "media": 72.39,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 4414.0,
+       "media": 64.91,
+       "jogos": 68
+      }
+     },
+     "estado": "DAY_TO_DAY",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4066261,
+     "nome": "Bam Adebayo",
+     "nba": "MIA",
+     "lugar": 6,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3395.0,
+       "media": 46.51,
+       "jogos": 73
+      },
+      "u30": {
+       "total": 429.5,
+       "media": 47.72,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 373.5,
+       "media": 53.36,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 178.0,
+       "media": 59.33,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 429.5,
+       "media": 47.72,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3126.0,
+       "media": 42.82,
+       "jogos": 73
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3136193,
+     "nome": "Devin Booker",
+     "nba": "PHX",
+     "lugar": 12,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2822.0,
+       "media": 44.09,
+       "jogos": 64
+      },
+      "u30": {
+       "total": 338.0,
+       "media": 42.25,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 295.0,
+       "media": 42.14,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 170.5,
+       "media": 42.62,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 338.0,
+       "media": 42.25,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3448.0,
+       "media": 47.89,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4433136,
+     "nome": "Walker Kessler",
+     "nba": "LAL",
+     "lugar": 4,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 251.0,
+       "media": 50.2,
+       "jogos": 5
+      },
+      "u30": {
+       "total": 524.0,
+       "media": 52.4,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 372.5,
+       "media": 46.56,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 231.5,
+       "media": 57.88,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 524.0,
+       "media": 52.4,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 2759.0,
+       "media": 43.11,
+       "jogos": 64
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4066457,
+     "nome": "Austin Reaves",
+     "nba": "LAL",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2246.0,
+       "media": 44.04,
+       "jogos": 51
+      },
+      "u30": {
+       "total": 402.0,
+       "media": 40.2,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 292.0,
+       "media": 36.5,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 145.5,
+       "media": 36.38,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 402.0,
+       "media": 40.2,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 3125.0,
+       "media": 46.64,
+       "jogos": 67
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4065733,
+     "nome": "Ty Jerome",
+     "nba": "MEM",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 594.5,
+       "media": 39.63,
+       "jogos": 15
+      },
+      "u30": {
+       "total": 376.5,
+       "media": 47.06,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 238.0,
+       "media": 39.67,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 142.0,
+       "media": 47.33,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 376.5,
+       "media": 47.06,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3259.0,
+       "media": 47.23,
+       "jogos": 69
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 6583,
+     "nome": "Anthony Davis",
+     "nba": "WSH",
+     "lugar": 13,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 1127.0,
+       "media": 56.35,
+       "jogos": 20
+      },
+      "u30": {
+       "total": 432.0,
+       "media": 54.0,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 340.0,
+       "media": 56.67,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 142.0,
+       "media": 71.0,
+       "jogos": 2
+      },
+      "epoca": {
+       "total": 432.0,
+       "media": 54.0,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3477.0,
+       "media": 57.0,
+       "jogos": 61
+      }
+     },
+     "estado": "OUT",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4251,
+     "nome": "Paul George",
+     "nba": "BOS",
+     "lugar": 3,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 1384.0,
+       "media": 37.41,
+       "jogos": 37
+      },
+      "u30": {
+       "total": 339.0,
+       "media": 42.38,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 229.5,
+       "media": 38.25,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 113.0,
+       "media": 37.67,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 339.0,
+       "media": 42.38,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 2256.0,
+       "media": 41.02,
+       "jogos": 55
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3975,
+     "nome": "Stephen Curry",
+     "nba": "GS",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 1942.5,
+       "media": 45.17,
+       "jogos": 43
+      },
+      "u30": {
+       "total": 430.5,
+       "media": 53.81,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 368.5,
+       "media": 61.42,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 178.0,
+       "media": 59.33,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 430.5,
+       "media": 53.81,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 2950.0,
+       "media": 44.7,
+       "jogos": 66
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4066383,
+     "nome": "Miles Bridges",
+     "nba": "PHX",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2645.5,
+       "media": 34.36,
+       "jogos": 77
+      },
+      "u30": {
+       "total": 359.0,
+       "media": 44.88,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 348.5,
+       "media": 49.79,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 213.5,
+       "media": 53.38,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 359.0,
+       "media": 44.88,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 2614.0,
+       "media": 36.82,
+       "jogos": 71
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "nome": "Lisbon Lebron’s",
+   "abrev": "Ll",
+   "pontos_oficiais": 5488.5,
+   "fantasma": false,
+   "aquisicoes": 9,
+   "jogos_por_lugar": {
+    "0": 14,
+    "1": 12,
+    "2": 14,
+    "3": 13,
+    "4": 13,
+    "5": 12,
+    "6": 11,
+    "11": 27
+   },
+   "plantel": [
+    {
+     "id": 4278073,
+     "nome": "Shai Gilgeous-Alexander",
+     "nba": "OKC",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 4382.5,
+       "media": 64.45,
+       "jogos": 68
+      },
+      "u30": {
+       "total": 544.5,
+       "media": 54.45,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 442.5,
+       "media": 55.31,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 254.0,
+       "media": 63.5,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 544.5,
+       "media": 54.45,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 4927.0,
+       "media": 64.83,
+       "jogos": 76
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4594268,
+     "nome": "Anthony Edwards",
+     "nba": "MIN",
+     "lugar": 13,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3085.0,
+       "media": 50.57,
+       "jogos": 61
+      },
+      "u30": {
+       "total": 233.0,
+       "media": 58.25,
+       "jogos": 4
+      },
+      "u15": {
+       "total": 117.5,
+       "media": 58.75,
+       "jogos": 2
+      },
+      "u7": {
+       "total": 82.5,
+       "media": 0.0,
+       "jogos": 1
+      },
+      "epoca": {
+       "total": 233.0,
+       "media": 58.25,
+       "jogos": 4
+      },
+      "proj": {
+       "total": 2649.0,
+       "media": 51.94,
+       "jogos": 51
+      }
+     },
+     "estado": "OUT",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3032977,
+     "nome": "Giannis Antetokounmpo",
+     "nba": "MIA",
+     "lugar": 11,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2286.0,
+       "media": 63.5,
+       "jogos": 36
+      },
+      "u30": {
+       "total": 613.0,
+       "media": 68.11,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 473.0,
+       "media": 67.57,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 183.5,
+       "media": 61.17,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 613.0,
+       "media": 68.11,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 4595.0,
+       "media": 68.58,
+       "jogos": 67
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3155942,
+     "nome": "Domantas Sabonis",
+     "nba": "SAC",
+     "lugar": 4,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 854.0,
+       "media": 44.95,
+       "jogos": 19
+      },
+      "u30": {
+       "total": 493.0,
+       "media": 54.78,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 340.0,
+       "media": 48.57,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 125.0,
+       "media": 41.67,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 493.0,
+       "media": 54.78,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3671.0,
+       "media": 53.2,
+       "jogos": 69
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4432166,
+     "nome": "Cade Cunningham",
+     "nba": "DET",
+     "lugar": 5,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3748.0,
+       "media": 58.56,
+       "jogos": 64
+      },
+      "u30": {
+       "total": 420.5,
+       "media": 52.56,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 336.0,
+       "media": 56.0,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 146.5,
+       "media": 73.25,
+       "jogos": 2
+      },
+      "epoca": {
+       "total": 420.5,
+       "media": 52.56,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3833.0,
+       "media": 55.55,
+       "jogos": 69
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4683021,
+     "nome": "Deni Avdija",
+     "nba": "POR",
+     "lugar": 2,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3095.0,
+       "media": 46.89,
+       "jogos": 66
+      },
+      "u30": {
+       "total": 387.0,
+       "media": 43.0,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 289.5,
+       "media": 41.36,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 154.5,
+       "media": 38.62,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 387.0,
+       "media": 43.0,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3152.0,
+       "media": 43.78,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4871144,
+     "nome": "Alperen Sengun",
+     "nba": "HOU",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3995.0,
+       "media": 55.49,
+       "jogos": 72
+      },
+      "u30": {
+       "total": 487.5,
+       "media": 60.94,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 372.5,
+       "media": 62.08,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 188.5,
+       "media": 62.83,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 487.5,
+       "media": 60.94,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3585.0,
+       "media": 49.79,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4433627,
+     "nome": "Keyonte George",
+     "nba": "UTAH",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2282.0,
+       "media": 42.26,
+       "jogos": 54
+      },
+      "u30": {
+       "total": 332.5,
+       "media": 36.94,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 250.5,
+       "media": 35.79,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 115.0,
+       "media": 38.33,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 332.5,
+       "media": 36.94,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 2676.0,
+       "media": 39.35,
+       "jogos": 68
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4277905,
+     "nome": "Trae Young",
+     "nba": "WSH",
+     "lugar": 12,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 546.5,
+       "media": 36.43,
+       "jogos": 15
+      },
+      "u30": {
+       "total": 381.0,
+       "media": 38.1,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 293.5,
+       "media": 36.69,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 122.5,
+       "media": 30.62,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 381.0,
+       "media": 38.1,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 3295.0,
+       "media": 46.41,
+       "jogos": 71
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3936299,
+     "nome": "Jamal Murray",
+     "nba": "DEN",
+     "lugar": 12,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3938.5,
+       "media": 52.51,
+       "jogos": 75
+      },
+      "u30": {
+       "total": 395.0,
+       "media": 49.38,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 388.0,
+       "media": 55.43,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 137.5,
+       "media": 45.83,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 395.0,
+       "media": 49.38,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3339.0,
+       "media": 48.39,
+       "jogos": 69
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4395628,
+     "nome": "Zion Williamson",
+     "nba": "NO",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2791.5,
+       "media": 45.02,
+       "jogos": 62
+      },
+      "u30": {
+       "total": 440.0,
+       "media": 48.89,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 350.0,
+       "media": 50.0,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 144.0,
+       "media": 48.0,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 440.0,
+       "media": 48.89,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3108.0,
+       "media": 48.56,
+       "jogos": 64
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3917376,
+     "nome": "Jaylen Brown",
+     "nba": "PHI",
+     "lugar": 6,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3682.5,
+       "media": 51.87,
+       "jogos": 71
+      },
+      "u30": {
+       "total": 412.5,
+       "media": 45.83,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 320.0,
+       "media": 45.71,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 171.5,
+       "media": 57.17,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 412.5,
+       "media": 45.83,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3114.0,
+       "media": 43.86,
+       "jogos": 71
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5175737,
+     "nome": "Yaxel Lendeborg",
+     "nba": "GS",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "u30": {
+       "total": 435.0,
+       "media": 43.5,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 363.5,
+       "media": 45.44,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 205.0,
+       "media": 51.25,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 435.0,
+       "media": 43.5,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 2761.0,
+       "media": 38.89,
+       "jogos": 71
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4397002,
+     "nome": "Ayo Dosunmu",
+     "nba": "MIN",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2263.0,
+       "media": 32.8,
+       "jogos": 69
+      },
+      "u30": {
+       "total": 417.0,
+       "media": 41.7,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 326.0,
+       "media": 40.75,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 154.5,
+       "media": 51.5,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 417.0,
+       "media": 41.7,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 2426.0,
+       "media": 33.69,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "nome": "Queta's magic",
+   "abrev": "QM",
+   "pontos_oficiais": 5312.5,
+   "fantasma": false,
+   "aquisicoes": 5,
+   "jogos_por_lugar": {
+    "0": 16,
+    "1": 15,
+    "2": 9,
+    "3": 13,
+    "4": 16,
+    "5": 10,
+    "6": 11,
+    "11": 27
+   },
+   "plantel": [
+    {
+     "id": 4431678,
+     "nome": "Tyrese Maxey",
+     "nba": "PHI",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3983.5,
+       "media": 56.91,
+       "jogos": 70
+      },
+      "u30": {
+       "total": 507.5,
+       "media": 50.75,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 384.0,
+       "media": 48.0,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 130.5,
+       "media": 43.5,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 507.5,
+       "media": 50.75,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 3468.0,
+       "media": 48.85,
+       "jogos": 71
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3908809,
+     "nome": "Donovan Mitchell",
+     "nba": "CLE",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3600.5,
+       "media": 51.44,
+       "jogos": 70
+      },
+      "u30": {
+       "total": 459.5,
+       "media": 45.95,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 395.0,
+       "media": 43.89,
+       "jogos": 9
+      },
+      "u7": {
+       "total": 197.5,
+       "media": 49.38,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 459.5,
+       "media": 45.95,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 3547.0,
+       "media": 49.96,
+       "jogos": 71
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5041939,
+     "nome": "Cooper Flagg",
+     "nba": "DAL",
+     "lugar": 2,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3264.0,
+       "media": 46.63,
+       "jogos": 70
+      },
+      "u30": {
+       "total": 444.5,
+       "media": 55.56,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 339.0,
+       "media": 56.5,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 122.5,
+       "media": 40.83,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 444.5,
+       "media": 55.56,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3753.0,
+       "media": 52.12,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4701230,
+     "nome": "Jalen Johnson",
+     "nba": "ATL",
+     "lugar": 6,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 4309.5,
+       "media": 59.85,
+       "jogos": 72
+      },
+      "u30": {
+       "total": 378.5,
+       "media": 47.31,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 275.0,
+       "media": 45.83,
+       "jogos": 6
+      },
+      "u7": {
+       "total": 57.0,
+       "media": 57.0,
+       "jogos": 1
+      },
+      "epoca": {
+       "total": 378.5,
+       "media": 47.31,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 3991.0,
+       "media": 55.43,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5104157,
+     "nome": "Victor Wembanyama",
+     "nba": "SA",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 4189.0,
+       "media": 65.45,
+       "jogos": 64
+      },
+      "u30": {
+       "total": 756.0,
+       "media": 75.6,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 661.5,
+       "media": 82.69,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 310.5,
+       "media": 77.62,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 756.0,
+       "media": 75.6,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 4403.0,
+       "media": 65.72,
+       "jogos": 67
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3934672,
+     "nome": "Jalen Brunson",
+     "nba": "NY",
+     "lugar": 12,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3531.0,
+       "media": 47.72,
+       "jogos": 74
+      },
+      "u30": {
+       "total": 390.5,
+       "media": 43.39,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 334.5,
+       "media": 47.79,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 150.0,
+       "media": 50.0,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 390.5,
+       "media": 43.39,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3539.0,
+       "media": 49.15,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4397424,
+     "nome": "Neemias Queta",
+     "nba": "BOS",
+     "lugar": 4,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2832.0,
+       "media": 37.26,
+       "jogos": 76
+      },
+      "u30": {
+       "total": 238.0,
+       "media": 26.44,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 183.0,
+       "media": 26.14,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 116.5,
+       "media": 29.12,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 238.0,
+       "media": 26.44,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 2239.0,
+       "media": 31.1,
+       "jogos": 72
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3078576,
+     "nome": "Derrick White",
+     "nba": "BOS",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2951.5,
+       "media": 38.33,
+       "jogos": 77
+      },
+      "u30": {
+       "total": 284.0,
+       "media": 31.56,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 214.0,
+       "media": 30.57,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 127.5,
+       "media": 31.88,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 284.0,
+       "media": 31.56,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 2853.0,
+       "media": 37.05,
+       "jogos": 77
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4432158,
+     "nome": "Evan Mobley",
+     "nba": "CLE",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3230.5,
+       "media": 49.7,
+       "jogos": 65
+      },
+      "u30": {
+       "total": 479.5,
+       "media": 47.95,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 446.5,
+       "media": 49.61,
+       "jogos": 9
+      },
+      "u7": {
+       "total": 174.0,
+       "media": 43.5,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 479.5,
+       "media": 47.95,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 3226.0,
+       "media": 48.88,
+       "jogos": 66
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3136195,
+     "nome": "Karl-Anthony Towns",
+     "nba": "NY",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 3703.5,
+       "media": 49.38,
+       "jogos": 75
+      },
+      "u30": {
+       "total": 485.5,
+       "media": 53.94,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 385.0,
+       "media": 55.0,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 161.0,
+       "media": 53.67,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 485.5,
+       "media": 53.94,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 3435.0,
+       "media": 49.07,
+       "jogos": 70
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4396971,
+     "nome": "Naz Reid",
+     "nba": "CHA",
+     "lugar": 12,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2441.5,
+       "media": 31.71,
+       "jogos": 77
+      },
+      "u30": {
+       "total": 308.5,
+       "media": 30.85,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 237.0,
+       "media": 29.62,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 97.0,
+       "media": 32.33,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 308.5,
+       "media": 30.85,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 2839.0,
+       "media": 37.36,
+       "jogos": 76
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5142620,
+     "nome": "Darius Acuff Jr.",
+     "nba": "SAC",
+     "lugar": 5,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "medias": {
+      "u30": {
+       "total": 365.0,
+       "media": 40.56,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 327.5,
+       "media": 46.79,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 133.0,
+       "media": 44.33,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 365.0,
+       "media": 40.56,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 2555.0,
+       "media": 35.0,
+       "jogos": 73
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4432639,
+     "nome": "Jabari Smith Jr.",
+     "nba": "HOU",
+     "lugar": 12,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2607.0,
+       "media": 33.86,
+       "jogos": 77
+      },
+      "u30": {
+       "total": 415.0,
+       "media": 41.5,
+       "jogos": 10
+      },
+      "u15": {
+       "total": 329.5,
+       "media": 41.19,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 125.0,
+       "media": 41.67,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 415.0,
+       "media": 41.5,
+       "jogos": 10
+      },
+      "proj": {
+       "total": 2127.0,
+       "media": 29.14,
+       "jogos": 73
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "nome": "Mike's FAKE Team",
+   "abrev": "FAKE",
+   "pontos_oficiais": 321.0,
+   "fantasma": true,
+   "aquisicoes": 0,
+   "jogos_por_lugar": {
+    "0": 3,
+    "1": 0,
+    "2": 0,
+    "3": 7,
+    "4": 8,
+    "5": 0,
+    "6": 0,
+    "11": 8
+   },
+   "plantel": [
+    {
+     "id": 4396818,
+     "nome": "Jordan Miller",
+     "nba": "LAC",
+     "lugar": 2,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 1374.0,
+       "media": 22.9,
+       "jogos": 60
+      },
+      "u30": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u15": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "epoca": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "proj": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      }
+     },
+     "estado": "OUT",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5242496,
+     "nome": "Noa Essengue",
+     "nba": "CHI",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": -0.5,
+       "media": -0.25,
+       "jogos": 2
+      },
+      "u30": {
+       "total": 50.5,
+       "media": 7.21,
+       "jogos": 7
+      },
+      "u15": {
+       "total": 30.0,
+       "media": 6.0,
+       "jogos": 5
+      },
+      "u7": {
+       "total": 22.0,
+       "media": 11.0,
+       "jogos": 2
+      },
+      "epoca": {
+       "total": 50.5,
+       "media": 7.21,
+       "jogos": 7
+      },
+      "proj": {
+       "total": 480.0,
+       "media": 7.5,
+       "jogos": 64
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3934673,
+     "nome": "Donte DiVincenzo",
+     "nba": "MIN",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 2295.5,
+       "media": 27.99,
+       "jogos": 82
+      },
+      "u30": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u15": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "epoca": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "proj": {
+       "total": 91.0,
+       "media": 22.75,
+       "jogos": 4
+      }
+     },
+     "estado": "OUT",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4433569,
+     "nome": "Johni Broome",
+     "nba": "FA",
+     "lugar": 6,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 35.5,
+       "media": 3.23,
+       "jogos": 11
+      },
+      "u30": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u15": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "epoca": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "proj": {
+       "total": 246.0,
+       "media": 7.45,
+       "jogos": 33
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4397886,
+     "nome": "Charles Bassey",
+     "nba": "GS",
+     "lugar": 4,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 262.5,
+       "media": 20.19,
+       "jogos": 13
+      },
+      "u30": {
+       "total": 168.5,
+       "media": 21.06,
+       "jogos": 8
+      },
+      "u15": {
+       "total": 168.5,
+       "media": 21.06,
+       "jogos": 8
+      },
+      "u7": {
+       "total": 117.0,
+       "media": 29.25,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 168.5,
+       "media": 21.06,
+       "jogos": 8
+      },
+      "proj": {
+       "total": 284.0,
+       "media": 16.71,
+       "jogos": 17
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4432171,
+     "nome": "Moses Moody",
+     "nba": "GS",
+     "lugar": 5,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 1474.0,
+       "media": 24.57,
+       "jogos": 60
+      },
+      "u30": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u15": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "epoca": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "proj": {
+       "total": 274.0,
+       "media": 22.83,
+       "jogos": 12
+      }
+     },
+     "estado": "OUT",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5211983,
+     "nome": "Pacome Dadiet",
+     "nba": "NY",
+     "lugar": 11,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 107.0,
+       "media": 3.69,
+       "jogos": 29
+      },
+      "u30": {
+       "total": 7.5,
+       "media": 3.75,
+       "jogos": 2
+      },
+      "u15": {
+       "total": 7.5,
+       "media": 3.75,
+       "jogos": 2
+      },
+      "u7": {
+       "total": 5.5,
+       "media": 5.5,
+       "jogos": 1
+      },
+      "epoca": {
+       "total": 7.5,
+       "media": 3.75,
+       "jogos": 2
+      },
+      "proj": {
+       "total": 336.0,
+       "media": 5.79,
+       "jogos": 58
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5105553,
+     "nome": "Julian Phillips",
+     "nba": "HOU",
+     "lugar": 11,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 329.5,
+       "media": 6.86,
+       "jogos": 48
+      },
+      "u30": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u15": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "epoca": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "proj": {
+       "total": 383.0,
+       "media": 7.37,
+       "jogos": 52
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5217746,
+     "nome": "Yang Hansen",
+     "nba": "POR",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 169.5,
+       "media": 3.94,
+       "jogos": 43
+      },
+      "u30": {
+       "total": 68.0,
+       "media": 11.33,
+       "jogos": 6
+      },
+      "u15": {
+       "total": 61.0,
+       "media": 12.2,
+       "jogos": 5
+      },
+      "u7": {
+       "total": 29.5,
+       "media": 9.83,
+       "jogos": 3
+      },
+      "epoca": {
+       "total": 68.0,
+       "media": 11.33,
+       "jogos": 6
+      },
+      "proj": {
+       "total": 616.0,
+       "media": 9.48,
+       "jogos": 65
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 4398390,
+     "nome": "Jalen Pickett",
+     "nba": "LAC",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 668.0,
+       "media": 13.36,
+       "jogos": 50
+      },
+      "u30": {
+       "total": 26.5,
+       "media": 8.83,
+       "jogos": 3
+      },
+      "u15": {
+       "total": 15.5,
+       "media": 7.75,
+       "jogos": 2
+      },
+      "u7": {
+       "total": 7.0,
+       "media": 7.0,
+       "jogos": 1
+      },
+      "epoca": {
+       "total": 26.5,
+       "media": 8.83,
+       "jogos": 3
+      },
+      "proj": {
+       "total": 433.0,
+       "media": 8.84,
+       "jogos": 49
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 2999547,
+     "nome": "Gary Harris",
+     "nba": "FA",
+     "lugar": 12,
+     "posicoes": [
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 422.5,
+       "media": 8.8,
+       "jogos": 48
+      },
+      "u30": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u15": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "epoca": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 0
+      },
+      "proj": {
+       "total": 430.0,
+       "media": 8.96,
+       "jogos": 48
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 5239561,
+     "nome": "Jase Richardson",
+     "nba": "ORL",
+     "lugar": 12,
+     "posicoes": [
+      1,
+      5,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 515.5,
+       "media": 9.55,
+       "jogos": 54
+      },
+      "u30": {
+       "total": 130.0,
+       "media": 14.44,
+       "jogos": 9
+      },
+      "u15": {
+       "total": 100.0,
+       "media": 14.29,
+       "jogos": 7
+      },
+      "u7": {
+       "total": 53.0,
+       "media": 13.25,
+       "jogos": 4
+      },
+      "epoca": {
+       "total": 130.0,
+       "media": 14.44,
+       "jogos": 9
+      },
+      "proj": {
+       "total": 500.0,
+       "media": 9.26,
+       "jogos": 54
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    },
+    {
+     "id": 3136777,
+     "nome": "Jae'Sean Tate",
+     "nba": "HOU",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "medias": {
+      "anterior": {
+       "total": 353.0,
+       "media": 7.67,
+       "jogos": 46
+      },
+      "u30": {
+       "total": 11.5,
+       "media": 1.92,
+       "jogos": 6
+      },
+      "u15": {
+       "total": 11.5,
+       "media": 2.3,
+       "jogos": 5
+      },
+      "u7": {
+       "total": 0.0,
+       "media": 0.0,
+       "jogos": 1
+      },
+      "epoca": {
+       "total": 11.5,
+       "media": 1.92,
+       "jogos": 6
+      },
+      "proj": {
+       "total": 525.0,
+       "media": 9.72,
+       "jogos": 54
+      }
+     },
+     "estado": "ACTIVE",
+     "regresso": null,
+     "fora_epoca": false
+    }
+   ]
+  }
+ ],
+ "livres": [
+  {
+   "id": 4566434,
+   "nome": "Franz Wagner",
+   "nba": "ORL",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 404.0,
+     "media": 44.89,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 345.0,
+     "media": 49.29,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 214.0,
+     "media": 53.5,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 404.0,
+     "media": 44.89,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2854.0,
+     "media": 43.24,
+     "jogos": 66
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5174563,
+   "nome": "Kyshawn George",
+   "nba": "WSH",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 389.5,
+     "media": 38.95,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 351.0,
+     "media": 43.88,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 210.0,
+     "media": 52.5,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 389.5,
+     "media": 38.95,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2084.0,
+     "media": 31.58,
+     "jogos": 66
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4869342,
+   "nome": "Dyson Daniels",
+   "nba": "ATL",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 479.5,
+     "media": 43.59,
+     "jogos": 11
+    },
+    "u15": {
+     "total": 357.5,
+     "media": 39.72,
+     "jogos": 9
+    },
+    "u7": {
+     "total": 208.0,
+     "media": 52.0,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 479.5,
+     "media": 43.59,
+     "jogos": 11
+    },
+    "proj": {
+     "total": 2963.0,
+     "media": 39.51,
+     "jogos": 75
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4431680,
+   "nome": "Onyeka Okongwu",
+   "nba": "ATL",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 424.5,
+     "media": 38.59,
+     "jogos": 11
+    },
+    "u15": {
+     "total": 382.5,
+     "media": 42.5,
+     "jogos": 9
+    },
+    "u7": {
+     "total": 206.5,
+     "media": 51.62,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 424.5,
+     "media": 38.59,
+     "jogos": 11
+    },
+    "proj": {
+     "total": 2693.0,
+     "media": 37.4,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5105565,
+   "nome": "Donovan Clingan",
+   "nba": "POR",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 364.5,
+     "media": 40.5,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 296.5,
+     "media": 42.36,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 202.5,
+     "media": 50.62,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 364.5,
+     "media": 40.5,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2652.0,
+     "media": 36.33,
+     "jogos": 73
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5279130,
+   "nome": "Nolan Traore",
+   "nba": "BKN",
+   "posicoes": [
+    0,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 264.5,
+     "media": 29.39,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 267.0,
+     "media": 33.38,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 175.0,
+     "media": 43.75,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 264.5,
+     "media": 29.39,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1645.0,
+     "media": 23.17,
+     "jogos": 71
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4395625,
+   "nome": "RJ Barrett",
+   "nba": "TOR",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 358.5,
+     "media": 39.83,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 271.0,
+     "media": 38.71,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 168.0,
+     "media": 42.0,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 358.5,
+     "media": 39.83,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2420.0,
+     "media": 36.67,
+     "jogos": 66
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4900671,
+   "nome": "Ajay Mitchell",
+   "nba": "OKC",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 393.0,
+     "media": 39.3,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 347.5,
+     "media": 43.44,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 162.0,
+     "media": 40.5,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 393.0,
+     "media": 39.3,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2582.0,
+     "media": 36.37,
+     "jogos": 71
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4432194,
+   "nome": "Day'Ron Sharpe",
+   "nba": "BKN",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 265.0,
+     "media": 29.44,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 224.0,
+     "media": 28.0,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 161.5,
+     "media": 40.38,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 265.0,
+     "media": 29.44,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2095.0,
+     "media": 30.36,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4278039,
+   "nome": "Nickeil Alexander-Walker",
+   "nba": "ATL",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 381.0,
+     "media": 34.64,
+     "jogos": 11
+    },
+    "u15": {
+     "total": 294.0,
+     "media": 32.67,
+     "jogos": 9
+    },
+    "u7": {
+     "total": 160.0,
+     "media": 40.0,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 381.0,
+     "media": 34.64,
+     "jogos": 11
+    },
+    "proj": {
+     "total": 2842.0,
+     "media": 35.97,
+     "jogos": 79
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 3064514,
+   "nome": "Julius Randle",
+   "nba": "BKN",
+   "posicoes": [
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 336.0,
+     "media": 37.33,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 274.0,
+     "media": 34.25,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 158.0,
+     "media": 39.5,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 336.0,
+     "media": 37.33,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2990.0,
+     "media": 41.53,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4277847,
+   "nome": "Wendell Carter Jr.",
+   "nba": "ORL",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 338.0,
+     "media": 37.56,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 236.0,
+     "media": 33.71,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 151.0,
+     "media": 37.75,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 338.0,
+     "media": 37.56,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1789.0,
+     "media": 24.85,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5174983,
+   "nome": "Aday Mara",
+   "nba": "OKC",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 277.5,
+     "media": 27.75,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 244.5,
+     "media": 30.56,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 147.5,
+     "media": 36.88,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 277.5,
+     "media": 27.75,
+     "jogos": 10
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5037871,
+   "nome": "Dylan Harper",
+   "nba": "SA",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 383.5,
+     "media": 38.35,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 319.0,
+     "media": 39.88,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 145.5,
+     "media": 36.38,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 383.5,
+     "media": 38.35,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2610.0,
+     "media": 36.25,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4709138,
+   "nome": "Brandin Podziemski",
+   "nba": "GS",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 297.0,
+     "media": 37.12,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 263.5,
+     "media": 37.64,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 145.5,
+     "media": 36.38,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 297.0,
+     "media": 37.12,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 2577.0,
+     "media": 32.62,
+     "jogos": 79
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4845367,
+   "nome": "Stephon Castle",
+   "nba": "SA",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "WAIVERS",
+   "medias": {
+    "u30": {
+     "total": 333.5,
+     "media": 33.35,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 271.0,
+     "media": 33.88,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 141.5,
+     "media": 35.38,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 333.5,
+     "media": 33.35,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2901.0,
+     "media": 40.29,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4278104,
+   "nome": "Michael Porter Jr.",
+   "nba": "BKN",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 334.5,
+     "media": 37.17,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 288.5,
+     "media": 36.06,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 137.5,
+     "media": 34.38,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 334.5,
+     "media": 37.17,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2873.0,
+     "media": 41.64,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4278053,
+   "nome": "Davion Mitchell",
+   "nba": "MIA",
+   "posicoes": [
+    0,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 388.5,
+     "media": 43.17,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 321.5,
+     "media": 45.93,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 136.0,
+     "media": 45.33,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 388.5,
+     "media": 43.17,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1931.0,
+     "media": 27.2,
+     "jogos": 71
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4432816,
+   "nome": "LaMelo Ball",
+   "nba": "MIN",
+   "posicoes": [
+    0,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 337.5,
+     "media": 33.75,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 271.5,
+     "media": 33.94,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 135.5,
+     "media": 45.17,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 337.5,
+     "media": 33.75,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 3205.0,
+     "media": 47.13,
+     "jogos": 68
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4066336,
+   "nome": "Lauri Markkanen",
+   "nba": "UTAH",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 252.0,
+     "media": 31.5,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 191.5,
+     "media": 31.92,
+     "jogos": 6
+    },
+    "u7": {
+     "total": 134.5,
+     "media": 44.83,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 252.0,
+     "media": 31.5,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 2570.0,
+     "media": 41.45,
+     "jogos": 62
+    }
+   },
+   "estado": "DAY_TO_DAY",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4395725,
+   "nome": "Tyler Herro",
+   "nba": "MIL",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 380.5,
+     "media": 42.28,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 278.0,
+     "media": 39.71,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 133.5,
+     "media": 44.5,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 380.5,
+     "media": 42.28,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2824.0,
+     "media": 42.15,
+     "jogos": 67
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 6606,
+   "nome": "Damian Lillard",
+   "nba": "POR",
+   "posicoes": [
+    0,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 279.0,
+     "media": 31.0,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 194.5,
+     "media": 27.79,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 131.5,
+     "media": 32.88,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 279.0,
+     "media": 31.0,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2621.0,
+     "media": 40.32,
+     "jogos": 65
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5124612,
+   "nome": "VJ Edgecombe",
+   "nba": "PHI",
+   "posicoes": [
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 311.0,
+     "media": 34.56,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 256.0,
+     "media": 36.57,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 130.5,
+     "media": 43.5,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 311.0,
+     "media": 34.56,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2614.0,
+     "media": 36.31,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 3995,
+   "nome": "Jrue Holiday",
+   "nba": "POR",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 280.0,
+     "media": 31.11,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 224.0,
+     "media": 32.0,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 130.0,
+     "media": 32.5,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 280.0,
+     "media": 31.11,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2011.0,
+     "media": 29.57,
+     "jogos": 68
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4222252,
+   "nome": "Isaiah Hartenstein",
+   "nba": "OKC",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 323.5,
+     "media": 32.35,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 287.0,
+     "media": 35.88,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 129.0,
+     "media": 32.25,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 323.5,
+     "media": 32.35,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2199.0,
+     "media": 34.36,
+     "jogos": 64
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5093267,
+   "nome": "Collin Murray-Boyles",
+   "nba": "TOR",
+   "posicoes": [
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 235.0,
+     "media": 26.11,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 182.5,
+     "media": 26.07,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 126.5,
+     "media": 31.62,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 235.0,
+     "media": 26.11,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1849.0,
+     "media": 28.02,
+     "jogos": 66
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4712849,
+   "nome": "Anthony Black",
+   "nba": "ORL",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 238.0,
+     "media": 39.67,
+     "jogos": 6
+    },
+    "u15": {
+     "total": 238.0,
+     "media": 39.67,
+     "jogos": 6
+    },
+    "u7": {
+     "total": 125.0,
+     "media": 41.67,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 238.0,
+     "media": 39.67,
+     "jogos": 6
+    },
+    "proj": {
+     "total": 2092.0,
+     "media": 30.32,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5142718,
+   "nome": "AJ Dybantsa",
+   "nba": "WSH",
+   "posicoes": [
+    2,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 184.0,
+     "media": 30.67,
+     "jogos": 6
+    },
+    "u15": {
+     "total": 184.0,
+     "media": 30.67,
+     "jogos": 6
+    },
+    "u7": {
+     "total": 124.0,
+     "media": 31.0,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 184.0,
+     "media": 30.67,
+     "jogos": 6
+    },
+    "proj": {
+     "total": 2816.0,
+     "media": 39.11,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 3149673,
+   "nome": "Pascal Siakam",
+   "nba": "IND",
+   "posicoes": [
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 372.0,
+     "media": 41.33,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 292.0,
+     "media": 41.71,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 122.5,
+     "media": 40.83,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 372.0,
+     "media": 41.33,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 3496.0,
+     "media": 47.24,
+     "jogos": 74
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4277951,
+   "nome": "Luka Garza",
+   "nba": "BOS",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 169.0,
+     "media": 18.78,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 146.0,
+     "media": 20.86,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 122.0,
+     "media": 30.5,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 169.0,
+     "media": 18.78,
+     "jogos": 9
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 3155526,
+   "nome": "Dillon Brooks",
+   "nba": "PHX",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 237.0,
+     "media": 29.62,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 227.0,
+     "media": 32.43,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 120.5,
+     "media": 30.12,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 237.0,
+     "media": 29.62,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 2042.0,
+     "media": 29.59,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4432241,
+   "nome": "Jamal Shead",
+   "nba": "TOR",
+   "posicoes": [
+    0,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 206.5,
+     "media": 22.94,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 184.0,
+     "media": 26.29,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 120.5,
+     "media": 30.12,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 206.5,
+     "media": 22.94,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1698.0,
+     "media": 20.96,
+     "jogos": 81
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4397183,
+   "nome": "Aaron Wiggins",
+   "nba": "ATL",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 329.0,
+     "media": 29.91,
+     "jogos": 11
+    },
+    "u15": {
+     "total": 259.5,
+     "media": 28.83,
+     "jogos": 9
+    },
+    "u7": {
+     "total": 118.5,
+     "media": 29.62,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 329.0,
+     "media": 29.91,
+     "jogos": 11
+    },
+    "proj": {
+     "total": 1506.0,
+     "media": 20.92,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4395630,
+   "nome": "Devin Vassell",
+   "nba": "SA",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 291.5,
+     "media": 29.15,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 266.5,
+     "media": 33.31,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 118.5,
+     "media": 29.62,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 291.5,
+     "media": 29.15,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 1970.0,
+     "media": 28.55,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 3992,
+   "nome": "James Harden",
+   "nba": "CLE",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 299.5,
+     "media": 29.95,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 277.5,
+     "media": 30.83,
+     "jogos": 9
+    },
+    "u7": {
+     "total": 117.0,
+     "media": 29.25,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 299.5,
+     "media": 29.95,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 3165.0,
+     "media": 43.36,
+     "jogos": 73
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4683778,
+   "nome": "Jared McCain",
+   "nba": "OKC",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 214.0,
+     "media": 21.4,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 175.0,
+     "media": 21.88,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 117.0,
+     "media": 29.25,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 214.0,
+     "media": 21.4,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 1665.0,
+     "media": 24.13,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4592829,
+   "nome": "Quenton Jackson",
+   "nba": "IND",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 239.0,
+     "media": 23.9,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 196.5,
+     "media": 24.56,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 115.0,
+     "media": 28.75,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 239.0,
+     "media": 23.9,
+     "jogos": 10
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5041955,
+   "nome": "Darryn Peterson",
+   "nba": "UTAH",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 270.0,
+     "media": 30.0,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 225.5,
+     "media": 32.21,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 114.5,
+     "media": 38.17,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 270.0,
+     "media": 30.0,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2520.0,
+     "media": 34.52,
+     "jogos": 73
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4397136,
+   "nome": "Saddiq Bey",
+   "nba": "NO",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 288.5,
+     "media": 32.06,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 233.5,
+     "media": 33.36,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 114.5,
+     "media": 38.17,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 288.5,
+     "media": 32.06,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1973.0,
+     "media": 27.79,
+     "jogos": 71
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5160992,
+   "nome": "Alex Sarr",
+   "nba": "WSH",
+   "posicoes": [
+    3,
+    4,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 280.0,
+     "media": 31.11,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 231.5,
+     "media": 33.07,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 114.0,
+     "media": 38.0,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 280.0,
+     "media": 31.11,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2686.0,
+     "media": 40.7,
+     "jogos": 66
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4431671,
+   "nome": "Jaden McDaniels",
+   "nba": "MIN",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 396.0,
+     "media": 39.6,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 307.0,
+     "media": 38.38,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 109.0,
+     "media": 36.33,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 396.0,
+     "media": 39.6,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2449.0,
+     "media": 33.09,
+     "jogos": 74
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4684740,
+   "nome": "Amen Thompson",
+   "nba": "HOU",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "WAIVERS",
+   "medias": {
+    "u30": {
+     "total": 406.0,
+     "media": 40.6,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 285.0,
+     "media": 35.62,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 96.0,
+     "media": 32.0,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 406.0,
+     "media": 40.6,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 3566.0,
+     "media": 45.72,
+     "jogos": 78
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4433287,
+   "nome": "Brandon Miller",
+   "nba": "CHA",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 290.0,
+     "media": 29.0,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 278.5,
+     "media": 34.81,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 25.0,
+     "media": 8.33,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 290.0,
+     "media": 29.0,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2683.0,
+     "media": 39.46,
+     "jogos": 68
+    }
+   },
+   "estado": "DAY_TO_DAY",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5144091,
+   "nome": "Jeremiah Fears",
+   "nba": "NO",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 286.0,
+     "media": 31.78,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 277.5,
+     "media": 39.64,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 103.0,
+     "media": 34.33,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 286.0,
+     "media": 31.78,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2345.0,
+     "media": 30.45,
+     "jogos": 77
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4066328,
+   "nome": "Jarrett Allen",
+   "nba": "CLE",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 312.5,
+     "media": 39.06,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 277.0,
+     "media": 39.57,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 35.0,
+     "media": 17.5,
+     "jogos": 2
+    },
+    "epoca": {
+     "total": 312.5,
+     "media": 39.06,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 3062.0,
+     "media": 43.13,
+     "jogos": 71
+    }
+   },
+   "estado": "OUT",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4903027,
+   "nome": "Cedric Coward",
+   "nba": "MEM",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 291.0,
+     "media": 36.38,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 267.5,
+     "media": 38.21,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 99.0,
+     "media": 33.0,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 291.0,
+     "media": 36.38,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 2213.0,
+     "media": 32.07,
+     "jogos": 69
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4066259,
+   "nome": "De'Aaron Fox",
+   "nba": "SA",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "WAIVERS",
+   "medias": {
+    "u30": {
+     "total": 351.5,
+     "media": 35.15,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 267.5,
+     "media": 33.44,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 97.0,
+     "media": 24.25,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 351.5,
+     "media": 35.15,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 2979.0,
+     "media": 41.96,
+     "jogos": 71
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4433247,
+   "nome": "Jonathan Kuminga",
+   "nba": "MIN",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 338.5,
+     "media": 33.85,
+     "jogos": 10
+    },
+    "u15": {
+     "total": 264.5,
+     "media": 33.06,
+     "jogos": 8
+    },
+    "u7": {
+     "total": 107.0,
+     "media": 35.67,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 338.5,
+     "media": 33.85,
+     "jogos": 10
+    },
+    "proj": {
+     "total": 1972.0,
+     "media": 29.43,
+     "jogos": 67
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4433249,
+   "nome": "Moussa Diabate",
+   "nba": "CHA",
+   "posicoes": [
+    3,
+    4,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 342.5,
+     "media": 38.06,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 257.5,
+     "media": 36.79,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 59.0,
+     "media": 29.5,
+     "jogos": 2
+    },
+    "epoca": {
+     "total": 342.5,
+     "media": 38.06,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 1890.0,
+     "media": 27.0,
+     "jogos": 70
+    }
+   },
+   "estado": "DAY_TO_DAY",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 1966,
+   "nome": "LeBron James",
+   "nba": "PHI",
+   "posicoes": [
+    2,
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 338.5,
+     "media": 42.31,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 252.0,
+     "media": 42.0,
+     "jogos": 6
+    },
+    "u7": {
+     "total": 105.5,
+     "media": 35.17,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 338.5,
+     "media": 42.31,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 3049.0,
+     "media": 47.64,
+     "jogos": 64
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4278049,
+   "nome": "Daniel Gafford",
+   "nba": "DAL",
+   "posicoes": [
+    4,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 290.5,
+     "media": 32.28,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 249.5,
+     "media": 35.64,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 82.5,
+     "media": 27.5,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 290.5,
+     "media": 32.28,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2290.0,
+     "media": 33.68,
+     "jogos": 68
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5095151,
+   "nome": "Caleb Wilson",
+   "nba": "CHI",
+   "posicoes": [
+    2,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 302.0,
+     "media": 37.75,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 249.0,
+     "media": 41.5,
+     "jogos": 6
+    },
+    "u7": {
+     "total": 57.5,
+     "media": 28.75,
+     "jogos": 2
+    },
+    "epoca": {
+     "total": 302.0,
+     "media": 37.75,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 2843.0,
+     "media": 40.04,
+     "jogos": 71
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 5041935,
+   "nome": "Cameron Boozer",
+   "nba": "MEM",
+   "posicoes": [
+    3,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 319.0,
+     "media": 35.44,
+     "jogos": 9
+    },
+    "u15": {
+     "total": 248.0,
+     "media": 35.43,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 66.0,
+     "media": 22.0,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 319.0,
+     "media": 35.44,
+     "jogos": 9
+    },
+    "proj": {
+     "total": 2949.0,
+     "media": 40.96,
+     "jogos": 72
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 2490149,
+   "nome": "CJ McCollum",
+   "nba": "ATL",
+   "posicoes": [
+    0,
+    1,
+    5,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 297.0,
+     "media": 27.0,
+     "jogos": 11
+    },
+    "u15": {
+     "total": 243.5,
+     "media": 27.06,
+     "jogos": 9
+    },
+    "u7": {
+     "total": 111.5,
+     "media": 27.88,
+     "jogos": 4
+    },
+    "epoca": {
+     "total": 297.0,
+     "media": 27.0,
+     "jogos": 11
+    },
+    "proj": {
+     "total": 2564.0,
+     "media": 35.12,
+     "jogos": 73
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  },
+  {
+   "id": 4431767,
+   "nome": "Christian Braun",
+   "nba": "DEN",
+   "posicoes": [
+    1,
+    2,
+    5,
+    6,
+    11
+   ],
+   "situacao": "FREEAGENT",
+   "medias": {
+    "u30": {
+     "total": 252.0,
+     "media": 31.5,
+     "jogos": 8
+    },
+    "u15": {
+     "total": 240.5,
+     "media": 34.36,
+     "jogos": 7
+    },
+    "u7": {
+     "total": 71.0,
+     "media": 23.67,
+     "jogos": 3
+    },
+    "epoca": {
+     "total": 252.0,
+     "media": 31.5,
+     "jogos": 8
+    },
+    "proj": {
+     "total": 1658.0,
+     "media": 25.51,
+     "jogos": 65
+    }
+   },
+   "estado": "ACTIVE",
+   "regresso": null,
+   "fora_epoca": false
+  }
+ ],
+ "calendario": {
+  "1": [
+   "BOS",
+   "DET",
+   "NY",
+   "OKC",
+   "PHI",
+   "SA"
+  ],
+  "2": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "DAL",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHX",
+   "POR",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "3": [
+   "CLE",
+   "DEN",
+   "OKC",
+   "PHI"
+  ],
+  "4": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "5": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "GS",
+   "HOU",
+   "MIA",
+   "MIL",
+   "NO",
+   "PHI",
+   "PHX",
+   "SA",
+   "WSH"
+  ],
+  "6": [
+   "BKN",
+   "DET",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "7": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "GS",
+   "HOU",
+   "IND",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "OKC",
+   "PHX",
+   "UTAH",
+   "WSH"
+  ],
+  "8": [
+   "BKN",
+   "BOS",
+   "DET",
+   "LAL",
+   "NY",
+   "POR",
+   "SA",
+   "SAC"
+  ],
+  "9": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "SA",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "10": [
+   "ATL",
+   "CLE",
+   "MEM",
+   "NO",
+   "POR",
+   "SAC"
+  ],
+  "11": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIA",
+   "MIN",
+   "NY",
+   "ORL",
+   "PHI",
+   "PHX",
+   "TOR",
+   "WSH"
+  ],
+  "12": [
+   "ATL",
+   "CHA",
+   "CLE",
+   "HOU",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "OKC",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC",
+   "UTAH"
+  ],
+  "13": [
+   "BKN",
+   "BOS",
+   "GS",
+   "IND",
+   "LAC",
+   "LAL",
+   "ORL",
+   "TOR"
+  ],
+  "14": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "16": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "17": [
+   "GS",
+   "MIA",
+   "ORL",
+   "PHX"
+  ],
+  "18": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "CLE",
+   "DAL",
+   "LAL",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "OKC",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "19": [
+   "ATL",
+   "BKN",
+   "CLE",
+   "DEN",
+   "GS",
+   "HOU",
+   "IND",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "WSH"
+  ],
+  "20": [
+   "BKN",
+   "BOS",
+   "CHI",
+   "DAL",
+   "DET",
+   "LAC",
+   "LAL",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "PHI",
+   "SAC",
+   "UTAH"
+  ],
+  "21": [
+   "ATL",
+   "CHA",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "NO",
+   "PHX",
+   "SA",
+   "TOR",
+   "WSH"
+  ],
+  "22": [
+   "BOS",
+   "LAC",
+   "MIA",
+   "MIL",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "SAC",
+   "UTAH"
+  ],
+  "23": [
+   "BKN",
+   "BOS",
+   "CHI",
+   "CLE",
+   "DEN",
+   "GS",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "SA",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "24": [
+   "CHA",
+   "DAL",
+   "DET",
+   "MIN",
+   "PHI",
+   "PHX",
+   "TOR",
+   "WSH"
+  ],
+  "25": [
+   "ATL",
+   "CHI",
+   "CLE",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "UTAH"
+  ],
+  "26": [
+   "BKN",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO"
+  ],
+  "27": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "DAL",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIL",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "28": [
+   "BKN",
+   "BOS",
+   "CHI",
+   "CLE",
+   "DEN",
+   "GS",
+   "HOU",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "WSH"
+  ],
+  "29": [
+   "CHA",
+   "DET",
+   "LAC",
+   "LAL",
+   "MIN",
+   "NY",
+   "POR",
+   "SA",
+   "TOR",
+   "UTAH"
+  ],
+  "30": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "31": [
+   "GS",
+   "LAC",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NY",
+   "POR",
+   "SA"
+  ],
+  "32": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DEN",
+   "DET",
+   "HOU",
+   "IND",
+   "LAL",
+   "NO",
+   "OKC",
+   "ORL",
+   "PHX",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "33": [
+   "BOS",
+   "DAL",
+   "LAC",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC"
+  ],
+  "34": [
+   "ATL",
+   "BOS",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "IND",
+   "MIA",
+   "NY",
+   "OKC",
+   "ORL",
+   "UTAH",
+   "WSH"
+  ],
+  "35": [
+   "BKN",
+   "CHA",
+   "CHI",
+   "CLE",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "OKC",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "36": [
+   "BOS",
+   "DAL",
+   "DEN",
+   "DET",
+   "ORL",
+   "WSH"
+  ],
+  "37": [
+   "BKN",
+   "CHA",
+   "CHI",
+   "CLE",
+   "GS",
+   "HOU",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC"
+  ],
+  "39": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "TOR",
+   "UTAH"
+  ],
+  "40": [
+   "BKN",
+   "CHA",
+   "CHI",
+   "HOU",
+   "IND",
+   "MIL",
+   "OKC",
+   "ORL",
+   "PHI",
+   "WSH"
+  ],
+  "41": [
+   "ATL",
+   "BOS",
+   "CLE",
+   "DEN",
+   "DET",
+   "GS",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "NY",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "42": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "DAL",
+   "DEN",
+   "DET",
+   "HOU",
+   "LAL",
+   "MIL",
+   "NO",
+   "OKC",
+   "SA",
+   "SAC",
+   "WSH"
+  ],
+  "43": [
+   "ATL",
+   "CHI",
+   "CLE",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NY",
+   "PHI",
+   "PHX",
+   "POR",
+   "TOR",
+   "UTAH"
+  ],
+  "44": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "DAL",
+   "DEN",
+   "DET",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SAC"
+  ],
+  "45": [
+   "ATL",
+   "CHI",
+   "CLE",
+   "IND",
+   "MIA",
+   "POR",
+   "SA",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "54": [
+   "ATL",
+   "CHA",
+   "CLE",
+   "DEN",
+   "GS",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "UTAH",
+   "WSH"
+  ],
+  "55": [
+   "BKN",
+   "BOS",
+   "CHI",
+   "DET",
+   "HOU",
+   "IND",
+   "LAC",
+   "NO",
+   "OKC",
+   "SA",
+   "SAC",
+   "TOR"
+  ],
+  "56": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DET",
+   "GS",
+   "HOU",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "ORL",
+   "PHI",
+   "PHX",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "57": [
+   "CLE",
+   "DEN",
+   "POR",
+   "SA"
+  ],
+  "58": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "59": [
+   "ATL",
+   "DAL",
+   "DEN",
+   "IND",
+   "PHI",
+   "POR"
+  ],
+  "60": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "61": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "LAL",
+   "ORL",
+   "POR"
+  ],
+  "62": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CLE",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "OKC",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "63": [
+   "BKN",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DEN",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC"
+  ],
+  "64": [
+   "DAL",
+   "DET",
+   "GS",
+   "OKC",
+   "TOR",
+   "WSH"
+  ],
+  "65": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "67": [
+   "BOS",
+   "DEN",
+   "GS",
+   "LAL",
+   "MIA",
+   "MIN",
+   "NY",
+   "OKC",
+   "PHI",
+   "SA"
+  ],
+  "68": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DET",
+   "IND",
+   "LAC",
+   "MEM",
+   "NO",
+   "ORL",
+   "PHX",
+   "POR",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "69": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CLE",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC",
+   "UTAH",
+   "WSH"
+  ],
+  "70": [
+   "BOS",
+   "CLE",
+   "DEN",
+   "GS",
+   "MIN",
+   "NO",
+   "PHX",
+   "TOR"
+  ],
+  "71": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "DAL",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "OKC",
+   "ORL",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC"
+  ],
+  "72": [
+   "BOS",
+   "CHI",
+   "DET",
+   "GS",
+   "HOU",
+   "NO",
+   "NY",
+   "PHI",
+   "PHX",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "73": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CLE",
+   "DEN",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "SA",
+   "SAC"
+  ],
+  "74": [
+   "BOS",
+   "DAL",
+   "DET",
+   "HOU",
+   "LAC",
+   "MIL",
+   "ORL",
+   "PHI",
+   "SA",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "75": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "GS",
+   "IND",
+   "LAL",
+   "MIA",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "PHX",
+   "POR",
+   "SAC",
+   "UTAH"
+  ],
+  "76": [
+   "CHA",
+   "CLE",
+   "DEN",
+   "DET",
+   "HOU",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIL",
+   "MIN",
+   "OKC",
+   "ORL",
+   "SA",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "77": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHI",
+   "DAL",
+   "IND",
+   "NO",
+   "NY",
+   "PHI",
+   "PHX",
+   "POR",
+   "UTAH"
+  ],
+  "78": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DEN",
+   "DET",
+   "HOU",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "ORL",
+   "PHX",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "79": [
+   "BKN",
+   "GS",
+   "IND",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "POR",
+   "SA",
+   "UTAH"
+  ],
+  "80": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "OKC",
+   "ORL",
+   "POR",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "81": [
+   "DAL",
+   "DET",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "NY",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "82": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DEN",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MIL",
+   "POR"
+  ],
+  "83": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DET",
+   "MEM",
+   "MIA",
+   "NO",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "84": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CLE",
+   "DEN",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIN",
+   "NY",
+   "WSH"
+  ],
+  "85": [
+   "BKN",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "MEM",
+   "MIA",
+   "MIL",
+   "ORL",
+   "PHI",
+   "POR",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "86": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "CLE",
+   "GS",
+   "HOU",
+   "IND",
+   "LAL",
+   "MIL",
+   "NY",
+   "OKC",
+   "PHX",
+   "POR",
+   "TOR"
+  ],
+  "87": [
+   "BKN",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "NY",
+   "ORL",
+   "PHI",
+   "SA",
+   "SAC",
+   "UTAH"
+  ],
+  "88": [
+   "ATL",
+   "CLE",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MIA",
+   "MIL",
+   "OKC",
+   "ORL",
+   "PHX",
+   "POR",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "89": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "HOU",
+   "MEM",
+   "MIN",
+   "NY",
+   "PHI"
+  ],
+  "90": [
+   "CHI",
+   "DEN",
+   "GS",
+   "IND",
+   "LAL",
+   "MIA",
+   "MIL",
+   "NO",
+   "OKC",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "91": [
+   "ATL",
+   "BOS",
+   "CLE",
+   "DAL",
+   "DET",
+   "HOU",
+   "LAC",
+   "MEM",
+   "MIN",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "WSH"
+  ],
+  "92": [
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "GS",
+   "IND",
+   "LAL",
+   "MIA",
+   "ORL",
+   "PHI",
+   "POR",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "93": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHI",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "94": [
+   "BKN",
+   "BOS",
+   "CLE",
+   "DEN",
+   "GS",
+   "LAL",
+   "PHI",
+   "WSH"
+  ],
+  "95": [
+   "ATL",
+   "CHA",
+   "DAL",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "UTAH",
+   "WSH"
+  ],
+  "96": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "MIA",
+   "MIL",
+   "PHI",
+   "TOR"
+  ],
+  "97": [
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "LAL",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "UTAH",
+   "WSH"
+  ],
+  "98": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHI",
+   "SAC",
+   "TOR"
+  ],
+  "99": [
+   "ATL",
+   "CHI",
+   "DET",
+   "HOU",
+   "IND",
+   "LAL",
+   "MIL",
+   "NY",
+   "OKC",
+   "PHX",
+   "POR",
+   "SA",
+   "UTAH",
+   "WSH"
+  ],
+  "100": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "MIN",
+   "NO",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR"
+  ],
+  "101": [
+   "ATL",
+   "CHI",
+   "GS",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "SAC",
+   "UTAH",
+   "WSH"
+  ],
+  "102": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CLE",
+   "DAL",
+   "DET",
+   "HOU",
+   "LAC",
+   "MIN",
+   "ORL",
+   "PHX",
+   "TOR"
+  ],
+  "103": [
+   "ATL",
+   "CLE",
+   "DEN",
+   "GS",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "SA",
+   "UTAH",
+   "WSH"
+  ],
+  "104": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "HOU",
+   "LAL",
+   "MIN",
+   "OKC",
+   "ORL",
+   "PHX",
+   "POR",
+   "SAC",
+   "TOR"
+  ],
+  "105": [
+   "ATL",
+   "BKN",
+   "CLE",
+   "GS",
+   "IND",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "PHI",
+   "SA",
+   "UTAH",
+   "WSH"
+  ],
+  "106": [
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "LAC",
+   "LAL",
+   "MIA",
+   "MIN",
+   "NO",
+   "OKC",
+   "ORL",
+   "POR",
+   "SA",
+   "TOR"
+  ],
+  "107": [
+   "ATL",
+   "CLE",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "NY",
+   "PHI",
+   "PHX",
+   "UTAH"
+  ],
+  "108": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "LAL",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "109": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "OKC",
+   "PHI",
+   "PHX"
+  ],
+  "110": [
+   "BKN",
+   "CHI",
+   "CLE",
+   "DAL",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "111": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "MIN",
+   "NY",
+   "OKC",
+   "PHI",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "112": [
+   "ATL",
+   "BKN",
+   "CHI",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "WSH"
+  ],
+  "113": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "MIL",
+   "MIN",
+   "NY",
+   "OKC",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "114": [
+   "ATL",
+   "BOS",
+   "CLE",
+   "DET",
+   "GS",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "NO",
+   "ORL",
+   "PHX",
+   "WSH"
+  ],
+  "115": [
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "HOU",
+   "IND",
+   "MIL",
+   "NY",
+   "OKC",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC",
+   "UTAH"
+  ],
+  "116": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CLE",
+   "DEN",
+   "HOU",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHX",
+   "TOR",
+   "WSH"
+  ],
+  "117": [
+   "CHA",
+   "DAL",
+   "DET",
+   "GS",
+   "IND",
+   "MIL",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "POR",
+   "SA",
+   "SAC",
+   "WSH"
+  ],
+  "118": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHI",
+   "CLE",
+   "DEN",
+   "HOU",
+   "LAC",
+   "MIA",
+   "NO",
+   "PHX",
+   "POR",
+   "SAC",
+   "TOR"
+  ],
+  "119": [
+   "CHA",
+   "DAL",
+   "DET",
+   "GS",
+   "IND",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SA",
+   "UTAH",
+   "WSH"
+  ],
+  "120": [
+   "ATL",
+   "CHI",
+   "CLE",
+   "HOU",
+   "LAC",
+   "LAL",
+   "MIL",
+   "NO",
+   "POR",
+   "TOR"
+  ],
+  "121": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "122": [
+   "BOS",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIN",
+   "POR",
+   "SA"
+  ],
+  "129": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DET",
+   "GS",
+   "LAC",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SAC",
+   "UTAH",
+   "WSH"
+  ],
+  "130": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "CLE",
+   "DAL",
+   "DEN",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIN",
+   "POR",
+   "SA",
+   "TOR"
+  ],
+  "131": [
+   "BKN",
+   "CHI",
+   "DET",
+   "MEM",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "SAC",
+   "UTAH",
+   "WSH"
+  ],
+  "132": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "DAL",
+   "DEN",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR"
+  ],
+  "133": [
+   "BKN",
+   "CHI",
+   "CLE",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "NO",
+   "PHI",
+   "PHX",
+   "UTAH",
+   "WSH"
+  ],
+  "134": [
+   "BOS",
+   "DAL",
+   "DET",
+   "GS",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "135": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "DEN",
+   "HOU",
+   "MIA",
+   "MIL",
+   "NO",
+   "PHI",
+   "PHX",
+   "SA",
+   "TOR",
+   "UTAH"
+  ],
+  "136": [
+   "ATL",
+   "BKN",
+   "CLE",
+   "DAL",
+   "GS",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "POR",
+   "SAC",
+   "WSH"
+  ],
+  "137": [
+   "BOS",
+   "DET",
+   "HOU",
+   "MIL",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "TOR",
+   "UTAH"
+  ],
+  "138": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "CLE",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "NO",
+   "OKC",
+   "SAC",
+   "UTAH",
+   "WSH"
+  ],
+  "139": [
+   "BKN",
+   "BOS",
+   "CHI",
+   "DEN",
+   "GS",
+   "HOU",
+   "LAL",
+   "MIN",
+   "NY",
+   "PHI",
+   "POR",
+   "SA"
+  ],
+  "140": [
+   "ATL",
+   "CHA",
+   "DAL",
+   "DEN",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIN",
+   "NO",
+   "OKC",
+   "PHI",
+   "PHX",
+   "SAC",
+   "UTAH"
+  ],
+  "141": [
+   "BKN",
+   "BOS",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DET",
+   "GS",
+   "MEM",
+   "MIL",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "WSH"
+  ],
+  "142": [
+   "ATL",
+   "CHA",
+   "DEN",
+   "GS",
+   "HOU",
+   "LAC",
+   "MIA",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "143": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DET",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIL",
+   "NY",
+   "PHI",
+   "PHX",
+   "SA",
+   "WSH"
+  ],
+  "144": [
+   "BOS",
+   "CLE",
+   "DEN",
+   "GS",
+   "LAL",
+   "MIA",
+   "MIL",
+   "NO",
+   "OKC",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "145": [
+   "ATL",
+   "BKN",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DET",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR"
+  ],
+  "146": [
+   "BOS",
+   "CLE",
+   "DEN",
+   "DET",
+   "GS",
+   "LAL",
+   "MIA",
+   "MIN",
+   "NY",
+   "OKC",
+   "SA",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "147": [
+   "ATL",
+   "BKN",
+   "CHI",
+   "DAL",
+   "IND",
+   "MEM",
+   "ORL",
+   "PHI",
+   "PHX",
+   "TOR"
+  ],
+  "148": [
+   "BOS",
+   "CHA",
+   "CLE",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "WSH"
+  ],
+  "149": [
+   "ATL",
+   "BKN",
+   "CHI",
+   "DAL",
+   "GS",
+   "HOU",
+   "LAL",
+   "MEM",
+   "MIA",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "POR",
+   "SAC",
+   "UTAH"
+  ],
+  "150": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CLE",
+   "DEN",
+   "DET",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "ORL",
+   "PHI",
+   "SA",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "151": [
+   "ATL",
+   "DAL",
+   "GS",
+   "HOU",
+   "LAL",
+   "MIA",
+   "NO",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR"
+  ],
+  "152": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DEN",
+   "DET",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIL",
+   "NY",
+   "OKC",
+   "ORL",
+   "WSH"
+  ],
+  "153": [
+   "BKN",
+   "BOS",
+   "DAL",
+   "DEN",
+   "LAL",
+   "MIA",
+   "NO",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "154": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIL",
+   "MIN",
+   "ORL",
+   "SAC",
+   "WSH"
+  ],
+  "155": [
+   "BKN",
+   "BOS",
+   "LAL",
+   "MIA",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "POR",
+   "TOR",
+   "UTAH"
+  ],
+  "156": [
+   "ATL",
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "SA",
+   "SAC",
+   "WSH"
+  ],
+  "157": [
+   "BKN",
+   "CHI",
+   "CLE",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIA",
+   "SA",
+   "TOR",
+   "UTAH"
+  ],
+  "158": [
+   "CHA",
+   "DAL",
+   "LAC",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR"
+  ],
+  "159": [
+   "ATL",
+   "BOS",
+   "CHI",
+   "DET",
+   "GS",
+   "LAC",
+   "MIA",
+   "MIL",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "160": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "DAL",
+   "DEN",
+   "HOU",
+   "LAL",
+   "MEM",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "161": [
+   "ATL",
+   "BKN",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "IND",
+   "LAC",
+   "MIA",
+   "MIL",
+   "MIN",
+   "PHX",
+   "SA",
+   "SAC"
+  ],
+  "162": [
+   "BOS",
+   "CHA",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIA",
+   "NY",
+   "OKC",
+   "ORL",
+   "POR",
+   "UTAH"
+  ],
+  "163": [
+   "ATL",
+   "BKN",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "MIL",
+   "MIN",
+   "NO",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "164": [
+   "BOS",
+   "CHA",
+   "CLE",
+   "IND",
+   "LAL",
+   "NY",
+   "OKC",
+   "ORL"
+  ],
+  "165": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "LAC",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "166": [
+   "NO",
+   "OKC",
+   "ORL",
+   "WSH"
+  ],
+  "167": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "168": [
+   "BKN",
+   "CLE",
+   "MIA",
+   "NO",
+   "ORL",
+   "WSH"
+  ],
+  "169": [
+   "ATL",
+   "CHA",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "PHX",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH"
+  ],
+  "170": [
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DET",
+   "HOU",
+   "IND",
+   "LAL",
+   "MEM",
+   "MIN",
+   "ORL",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "WSH"
+  ],
+  "171": [
+   "DEN",
+   "GS",
+   "LAC",
+   "MIA",
+   "MIL",
+   "NO",
+   "NY",
+   "OKC",
+   "PHI",
+   "UTAH"
+  ],
+  "172": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ],
+  "174": [
+   "ATL",
+   "BKN",
+   "BOS",
+   "CHA",
+   "CHI",
+   "CLE",
+   "DAL",
+   "DEN",
+   "DET",
+   "GS",
+   "HOU",
+   "IND",
+   "LAC",
+   "LAL",
+   "MEM",
+   "MIA",
+   "MIL",
+   "MIN",
+   "NO",
+   "NY",
+   "OKC",
+   "ORL",
+   "PHI",
+   "PHX",
+   "POR",
+   "SA",
+   "SAC",
+   "TOR",
+   "UTAH",
+   "WSH"
+  ]
+ },
+ "verificacao": {
+  "bate_certo": true,
+  "diferencas": {}
+ }
+}

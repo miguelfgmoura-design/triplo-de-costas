@@ -1,0 +1,167 @@
+name: Atualização diária
+
+# Corre sozinho todas as manhãs e também à mão, no botão "Run workflow".
+# Nunca corre em pull requests de terceiros, porque o repositório é público.
+on:
+  schedule:
+    - cron: "7 9 * * *"
+      timezone: "Europe/Lisbon"
+  workflow_dispatch:
+    inputs:
+      simular_falha:
+        description: "Simular uma falha, para testar"
+        type: choice
+        default: nenhuma
+        options:
+          - nenhuma
+          - comentario
+          - espn
+
+permissions: {}
+
+concurrency:
+  group: atualizacao-diaria
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    name: Atualizar os dados e gerar o site
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    outputs:
+      dados: ${{ steps.dados.outcome }}
+      blocos: ${{ steps.verificar.outputs.blocos }}
+      guardar: ${{ steps.guardar.outcome }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Instalar as dependências
+        run: pip install -r requirements.txt
+
+      - name: Recolher os dados da ESPN e calcular as estatísticas
+        id: dados
+        continue-on-error: true
+        env:
+          SIMULAR: ${{ inputs.simular_falha }}
+        run: |
+          if [ "$SIMULAR" = "espn" ]; then
+            echo "Falha da ESPN simulada."
+            exit 2
+          fi
+          python src/recolher.py
+          python src/calcular.py
+
+      - name: Verificar os blocos de estatísticas
+        id: verificar
+        if: steps.dados.outcome == 'success'
+        run: |
+          if grep -q '"erro": true' dados/stats.json; then
+            echo "blocos=falhou" >> "$GITHUB_OUTPUT"
+          else
+            echo "blocos=ok" >> "$GITHUB_OUTPUT"
+          fi
+
+      # O Claude não tem ferramentas nenhumas neste passo: sem comandos, sem
+      # internet e sem acesso a ficheiros. Só recebe os números e devolve texto.
+      - name: Escrever o comentário com o Claude
+        id: comentario
+        if: steps.dados.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 8
+        env:
+          SIMULAR: ${{ inputs.simular_falha }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ "$SIMULAR" = "comentario" ]; then
+            echo "Falha do comentário simulada."
+            exit 3
+          fi
+          curl -fsSL https://claude.ai/install.sh | bash -s stable
+          python src/pedido_comentario.py > "$RUNNER_TEMP/pedido.txt"
+          pasta_vazia="$(mktemp -d)"
+          cd "$pasta_vazia"
+          "$HOME/.local/bin/claude" -p --tools "" --max-turns 1 --no-session-persistence --strict-mcp-config \
+            < "$RUNNER_TEMP/pedido.txt" > "$RUNNER_TEMP/comentario.md"
+          mv "$RUNNER_TEMP/comentario.md" "$GITHUB_WORKSPACE/dados/comentario.md"
+
+      - name: Gerar o site
+        env:
+          DADOS: ${{ steps.dados.outcome }}
+        run: |
+          if [ "$DADOS" = "success" ]; then
+            python src/gerar_site.py
+          else
+            python src/gerar_site.py --dados-antigos
+          fi
+
+      - name: Preparar a publicação
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - name: Guardar os dados no repositório
+        id: guardar
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados
+          if git diff --cached --quiet; then
+            echo "Sem alterações para guardar."
+          else
+            git commit -m "Dados de $(TZ=Europe/Lisbon date +%F)"
+            git pull --rebase
+            git push
+          fi
+
+  publicar:
+    name: Publicar o site
+    needs: atualizar
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    steps:
+      - id: publicacao
+        uses: actions/deploy-pages@v5
+
+  # O site já saiu nesta altura. Este passo só serve para o GitHub enviar o
+  # email de falha quando houver alguma coisa a corrigir.
+  avisar:
+    name: Avisar se alguma coisa falhou
+    needs: [atualizar, publicar]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Confirmar o resultado
+        env:
+          DADOS: ${{ needs.atualizar.outputs.dados }}
+          BLOCOS: ${{ needs.atualizar.outputs.blocos }}
+          GUARDAR: ${{ needs.atualizar.outputs.guardar }}
+        run: |
+          problemas=0
+          if [ "$DADOS" != "success" ]; then
+            echo "::error::A ESPN falhou. O site saiu com os dados anteriores e o aviso de dados de ontem."
+            problemas=1
+          fi
+          if [ "$BLOCOS" = "falhou" ]; then
+            echo "::error::Um bloco de estatísticas falhou e ficou indisponível no site."
+            problemas=1
+          fi
+          if [ "$GUARDAR" != "success" ]; then
+            echo "::error::Os dados de hoje não ficaram guardados no repositório."
+            problemas=1
+          fi
+          exit "$problemas"

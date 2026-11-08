@@ -1,0 +1,1138 @@
+{
+ "data": "2026-10-28",
+ "periodo": 9,
+ "equipas": [
+  {
+   "id": 1,
+   "nome": "Portela Lakers",
+   "abrev": "PTL",
+   "pontos": 366.5,
+   "jogos": 8,
+   "jogadores": [
+    {
+     "id": 3112335,
+     "nome": "Nikola Jokic",
+     "nba": "DEN",
+     "lugar": 4,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 71.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 34,
+      "pts": 21,
+      "res": 13,
+      "ast": 10,
+      "rb": 1,
+      "dl": 0,
+      "per": 7
+     }
+    },
+    {
+     "id": 4433134,
+     "nome": "Scottie Barnes",
+     "nba": "TOR",
+     "lugar": 2,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "pontos": 72.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 31,
+      "pts": 28,
+      "res": 6,
+      "ast": 4,
+      "rb": 3,
+      "dl": 2,
+      "per": 2
+     }
+    },
+    {
+     "id": 4065648,
+     "nome": "Jayson Tatum",
+     "nba": "BOS",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 3202,
+     "nome": "Kevin Durant",
+     "nba": "HOU",
+     "lugar": 6,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "pontos": 44.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 31,
+      "pts": 18,
+      "res": 5,
+      "ast": 4,
+      "rb": 0,
+      "dl": 3,
+      "per": 3
+     }
+    },
+    {
+     "id": 3945274,
+     "nome": "Luka Doncic",
+     "nba": "LAL",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 4396993,
+     "nome": "Tyrese Haliburton",
+     "nba": "IND",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 4066261,
+     "nome": "Bam Adebayo",
+     "nba": "MIA",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "pontos": 55.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 33,
+      "pts": 24,
+      "res": 9,
+      "ast": 3,
+      "rb": 3,
+      "dl": 0,
+      "per": 3
+     }
+    },
+    {
+     "id": 3136193,
+     "nome": "Devin Booker",
+     "nba": "PHX",
+     "lugar": 12,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 4433255,
+     "nome": "Chet Holmgren",
+     "nba": "OKC",
+     "lugar": 13,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 4433136,
+     "nome": "Walker Kessler",
+     "nba": "LAL",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 39.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 26,
+      "pts": 11,
+      "res": 9,
+      "ast": 1,
+      "rb": 2,
+      "dl": 1,
+      "per": 0
+     }
+    },
+    {
+     "id": 4277847,
+     "nome": "Wendell Carter Jr.",
+     "nba": "ORL",
+     "lugar": 12,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 18.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 26,
+      "pts": 3,
+      "res": 10,
+      "ast": 3,
+      "rb": 1,
+      "dl": 0,
+      "per": 2
+     }
+    },
+    {
+     "id": 4869342,
+     "nome": "Dyson Daniels",
+     "nba": "ATL",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 40.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 28,
+      "pts": 7,
+      "res": 4,
+      "ast": 7,
+      "rb": 3,
+      "dl": 1,
+      "per": 1
+     }
+    },
+    {
+     "id": 4278039,
+     "nome": "Nickeil Alexander-Walker",
+     "nba": "ATL",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 33.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 32,
+      "pts": 23,
+      "res": 3,
+      "ast": 1,
+      "rb": 1,
+      "dl": 0,
+      "per": 2
+     }
+    },
+    {
+     "id": 4066457,
+     "nome": "Austin Reaves",
+     "nba": "LAL",
+     "lugar": 5,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 10.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 31,
+      "pts": 16,
+      "res": 6,
+      "ast": 1,
+      "rb": 1,
+      "dl": 0,
+      "per": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "nome": "Lisbon Lebron’s",
+   "abrev": "Ll",
+   "pontos": 429.5,
+   "jogos": 10,
+   "jogadores": [
+    {
+     "id": 4278073,
+     "nome": "Shai Gilgeous-Alexander",
+     "nba": "OKC",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "pontos": 31.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 28,
+      "pts": 21,
+      "res": 6,
+      "ast": 2,
+      "rb": 1,
+      "dl": 0,
+      "per": 1
+     }
+    },
+    {
+     "id": 4594268,
+     "nome": "Anthony Edwards",
+     "nba": "MIN",
+     "lugar": 12,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 3917376,
+     "nome": "Jaylen Brown",
+     "nba": "PHI",
+     "lugar": 2,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "pontos": 47.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 34,
+      "pts": 20,
+      "res": 10,
+      "ast": 2,
+      "rb": 1,
+      "dl": 1,
+      "per": 5
+     }
+    },
+    {
+     "id": 3032977,
+     "nome": "Giannis Antetokounmpo",
+     "nba": "MIA",
+     "lugar": 4,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "pontos": 72.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 31,
+      "pts": 24,
+      "res": 18,
+      "ast": 3,
+      "rb": 1,
+      "dl": 1,
+      "per": 2
+     }
+    },
+    {
+     "id": 3155942,
+     "nome": "Domantas Sabonis",
+     "nba": "SAC",
+     "lugar": 12,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 4432166,
+     "nome": "Cade Cunningham",
+     "nba": "DET",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "pontos": 60.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 39,
+      "pts": 30,
+      "res": 5,
+      "ast": 7,
+      "rb": 2,
+      "dl": 0,
+      "per": 1
+     }
+    },
+    {
+     "id": 4683021,
+     "nome": "Deni Avdija",
+     "nba": "POR",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 3149673,
+     "nome": "Pascal Siakam",
+     "nba": "IND",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "pontos": 55.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 34,
+      "pts": 26,
+      "res": 11,
+      "ast": 3,
+      "rb": 1,
+      "dl": 0,
+      "per": 3
+     }
+    },
+    {
+     "id": 4871144,
+     "nome": "Alperen Sengun",
+     "nba": "HOU",
+     "lugar": 13,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 4433627,
+     "nome": "Keyonte George",
+     "nba": "UTAH",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 34.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 37,
+      "pts": 31,
+      "res": 4,
+      "ast": 3,
+      "rb": 0,
+      "dl": 0,
+      "per": 5
+     }
+    },
+    {
+     "id": 4277905,
+     "nome": "Trae Young",
+     "nba": "WSH",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "pontos": 18.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 34,
+      "pts": 14,
+      "res": 5,
+      "ast": 8,
+      "rb": 0,
+      "dl": 0,
+      "per": 4
+     }
+    },
+    {
+     "id": 3936299,
+     "nome": "Jamal Murray",
+     "nba": "DEN",
+     "lugar": 5,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "pontos": 48.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 38,
+      "pts": 23,
+      "res": 1,
+      "ast": 6,
+      "rb": 0,
+      "dl": 2,
+      "per": 1
+     }
+    },
+    {
+     "id": 4066259,
+     "nome": "De'Aaron Fox",
+     "nba": "SA",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 34.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 39,
+      "pts": 14,
+      "res": 3,
+      "ast": 4,
+      "rb": 3,
+      "dl": 1,
+      "per": 3
+     }
+    },
+    {
+     "id": 4431671,
+     "nome": "Jaden McDaniels",
+     "nba": "MIN",
+     "lugar": 6,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "pontos": 28.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 35,
+      "pts": 19,
+      "res": 7,
+      "ast": 4,
+      "rb": 0,
+      "dl": 0,
+      "per": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "nome": "Queta's magic",
+   "abrev": "QM",
+   "pontos": 550.5,
+   "jogos": 10,
+   "jogadores": [
+    {
+     "id": 4431678,
+     "nome": "Tyrese Maxey",
+     "nba": "PHI",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 39.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 36,
+      "pts": 27,
+      "res": 5,
+      "ast": 4,
+      "rb": 1,
+      "dl": 0,
+      "per": 4
+     }
+    },
+    {
+     "id": 3908809,
+     "nome": "Donovan Mitchell",
+     "nba": "CLE",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 41.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 31,
+      "pts": 19,
+      "res": 5,
+      "ast": 7,
+      "rb": 2,
+      "dl": 0,
+      "per": 5
+     }
+    },
+    {
+     "id": 5041939,
+     "nome": "Cooper Flagg",
+     "nba": "DAL",
+     "lugar": 11,
+     "posicoes": [
+      2,
+      3,
+      6,
+      11
+     ],
+     "pontos": 50.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 33,
+      "pts": 26,
+      "res": 5,
+      "ast": 8,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
+     }
+    },
+    {
+     "id": 4701230,
+     "nome": "Jalen Johnson",
+     "nba": "ATL",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "pontos": 43.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 36,
+      "pts": 12,
+      "res": 9,
+      "ast": 11,
+      "rb": 0,
+      "dl": 1,
+      "per": 3
+     }
+    },
+    {
+     "id": 5104157,
+     "nome": "Victor Wembanyama",
+     "nba": "SA",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 101.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 39,
+      "pts": 36,
+      "res": 14,
+      "ast": 5,
+      "rb": 3,
+      "dl": 2,
+      "per": 0
+     }
+    },
+    {
+     "id": 3934672,
+     "nome": "Jalen Brunson",
+     "nba": "NY",
+     "lugar": 5,
+     "posicoes": [
+      0,
+      5,
+      11
+     ],
+     "pontos": 71.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 35,
+      "pts": 38,
+      "res": 1,
+      "ast": 7,
+      "rb": 2,
+      "dl": 0,
+      "per": 2
+     }
+    },
+    {
+     "id": 4397424,
+     "nome": "Neemias Queta",
+     "nba": "BOS",
+     "lugar": 12,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 4684740,
+     "nome": "Amen Thompson",
+     "nba": "HOU",
+     "lugar": 2,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "pontos": 46.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 33,
+      "pts": 23,
+      "res": 4,
+      "ast": 3,
+      "rb": 1,
+      "dl": 0,
+      "per": 1
+     }
+    },
+    {
+     "id": 3078576,
+     "nome": "Derrick White",
+     "nba": "BOS",
+     "lugar": 12,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 4432158,
+     "nome": "Evan Mobley",
+     "nba": "CLE",
+     "lugar": 6,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "pontos": 57.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 32,
+      "pts": 24,
+      "res": 12,
+      "ast": 2,
+      "rb": 0,
+      "dl": 0,
+      "per": 3
+     }
+    },
+    {
+     "id": 4845367,
+     "nome": "Stephon Castle",
+     "nba": "SA",
+     "lugar": 11,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 48.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 38,
+      "pts": 14,
+      "res": 6,
+      "ast": 8,
+      "rb": 2,
+      "dl": 1,
+      "per": 3
+     }
+    },
+    {
+     "id": 3136195,
+     "nome": "Karl-Anthony Towns",
+     "nba": "NY",
+     "lugar": 4,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 51.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 28,
+      "pts": 19,
+      "res": 13,
+      "ast": 5,
+      "rb": 1,
+      "dl": 0,
+      "per": 4
+     }
+    },
+    {
+     "id": 4396971,
+     "nome": "Naz Reid",
+     "nba": "CHA",
+     "lugar": 12,
+     "posicoes": [
+      3,
+      4,
+      6,
+      11
+     ],
+     "pontos": 16.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 13,
+      "pts": 7,
+      "res": 6,
+      "ast": 0,
+      "rb": 0,
+      "dl": 1,
+      "per": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "nome": "Mike's FAKE Team",
+   "abrev": "FAKE",
+   "pontos": 15.5,
+   "jogos": 3,
+   "jogadores": [
+    {
+     "id": 4396818,
+     "nome": "Jordan Miller",
+     "nba": "LAC",
+     "lugar": 2,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 5242496,
+     "nome": "Noa Essengue",
+     "nba": "CHI",
+     "lugar": 3,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "pontos": 6.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 10,
+      "pts": 3,
+      "res": 0,
+      "ast": 1,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
+     }
+    },
+    {
+     "id": 3934673,
+     "nome": "Donte DiVincenzo",
+     "nba": "MIN",
+     "lugar": 1,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 4433569,
+     "nome": "Johni Broome",
+     "nba": "FA",
+     "lugar": 6,
+     "posicoes": [
+      3,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 4397886,
+     "nome": "Charles Bassey",
+     "nba": "GS",
+     "lugar": 4,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 1.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 2,
+      "pts": 0,
+      "res": 0,
+      "ast": 0,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
+     }
+    },
+    {
+     "id": 4432171,
+     "nome": "Moses Moody",
+     "nba": "GS",
+     "lugar": 5,
+     "posicoes": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 5211983,
+     "nome": "Pacome Dadiet",
+     "nba": "NY",
+     "lugar": 11,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 5105553,
+     "nome": "Julian Phillips",
+     "nba": "HOU",
+     "lugar": 11,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": true
+    },
+    {
+     "id": 5217746,
+     "nome": "Yang Hansen",
+     "nba": "POR",
+     "lugar": 11,
+     "posicoes": [
+      4,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 4398390,
+     "nome": "Jalen Pickett",
+     "nba": "LAC",
+     "lugar": 0,
+     "posicoes": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "pontos": 8.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 8,
+      "pts": 4,
+      "res": 1,
+      "ast": 1,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
+     }
+    },
+    {
+     "id": 2999547,
+     "nome": "Gary Harris",
+     "nba": "FA",
+     "lugar": 12,
+     "posicoes": [
+      1,
+      5,
+      11
+     ],
+     "pontos": 0.0,
+     "jogou": false,
+     "tinha_jogo": false
+    },
+    {
+     "id": 5239561,
+     "nome": "Jase Richardson",
+     "nba": "ORL",
+     "lugar": 12,
+     "posicoes": [
+      1,
+      5,
+      11
+     ],
+     "pontos": 15.5,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 14,
+      "pts": 10,
+      "res": 1,
+      "ast": 1,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
+     }
+    },
+    {
+     "id": 3136777,
+     "nome": "Jae'Sean Tate",
+     "nba": "HOU",
+     "lugar": 12,
+     "posicoes": [
+      2,
+      6,
+      11
+     ],
+     "pontos": 1.0,
+     "jogou": true,
+     "tinha_jogo": true,
+     "linha": {
+      "min": 4,
+      "pts": 0,
+      "res": 0,
+      "ast": 0,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
+     }
+    }
+   ]
+  }
+ ]
+}
