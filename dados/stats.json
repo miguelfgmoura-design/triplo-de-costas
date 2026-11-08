@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08T21:52:31+00:00",
+ "atualizado_em": "2026-11-08T22:03:51+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "formato": "Pontos acumulados na época, sem confrontos semanais",
@@ -85,29 +85,29 @@
      39202,
      44442
     ],
-    "probabilidade_titulo": 49.5,
+    "probabilidade_titulo": 49.1,
     "jogos_restantes_previstos": 706
    },
    {
     "id": 2,
     "nome": "Lisbon Lebron’s",
-    "total_previsto": 41777,
+    "total_previsto": 41803,
     "intervalo_80": [
-     39171,
-     44324
+     39196,
+     44353
     ],
-    "probabilidade_titulo": 46.9,
+    "probabilidade_titulo": 47.2,
     "jogos_restantes_previstos": 704
    },
    {
     "id": 3,
     "nome": "Queta's magic",
-    "total_previsto": 38679,
+    "total_previsto": 38712,
     "intervalo_80": [
-     36241,
-     41009
+     36276,
+     41044
     ],
-    "probabilidade_titulo": 3.6,
+    "probabilidade_titulo": 3.7,
     "jogos_restantes_previstos": 704
    }
   ],
@@ -740,6 +740,93 @@
     }
    }
   ],
+  "flops": [
+   {
+    "nome": "Alperen Sengun",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "HOU",
+    "pontos": 30.0,
+    "media_epoca": 60.94,
+    "diferenca_media": -30.9,
+    "linha": {
+     "min": 32,
+     "pts": 15,
+     "res": 6,
+     "ast": 5,
+     "rb": 0,
+     "dl": 1,
+     "per": 2
+    }
+   },
+   {
+    "nome": "Trae Young",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "WSH",
+    "pontos": 12.0,
+    "media_epoca": 38.1,
+    "diferenca_media": -26.1,
+    "linha": {
+     "min": 28,
+     "pts": 4,
+     "res": 5,
+     "ast": 3,
+     "rb": 1,
+     "dl": 0,
+     "per": 1
+    }
+   },
+   {
+    "nome": "Deni Avdija",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "POR",
+    "pontos": 19.0,
+    "media_epoca": 43.0,
+    "diferenca_media": -24.0,
+    "linha": {
+     "min": 24,
+     "pts": 15,
+     "res": 4,
+     "ast": 1,
+     "rb": 1,
+     "dl": 0,
+     "per": 3
+    }
+   },
+   {
+    "nome": "Evan Mobley",
+    "equipa": "Queta's magic",
+    "nba": "CLE",
+    "pontos": 26.5,
+    "media_epoca": 47.95,
+    "diferenca_media": -21.5,
+    "linha": {
+     "min": 33,
+     "pts": 12,
+     "res": 9,
+     "ast": 5,
+     "rb": 0,
+     "dl": 0,
+     "per": 3
+    }
+   },
+   {
+    "nome": "Victor Wembanyama",
+    "equipa": "Queta's magic",
+    "nba": "SA",
+    "pontos": 59.5,
+    "media_epoca": 75.6,
+    "diferenca_media": -16.1,
+    "linha": {
+     "min": 24,
+     "pts": 29,
+     "res": 7,
+     "ast": 3,
+     "rb": 1,
+     "dl": 1,
+     "per": 2
+    }
+   }
+  ],
   "em_alta": [
    {
     "nome": "Cade Cunningham",
@@ -798,15 +885,6 @@
     "variacao": -13.1
    },
    {
-    "nome": "Tyrese Maxey",
-    "equipa": "Queta's magic",
-    "nba": "PHI",
-    "media_7_dias": 40.5,
-    "jogos_7_dias": 4,
-    "media_referencia": 49.0,
-    "variacao": -8.5
-   },
-   {
     "nome": "Trae Young",
     "equipa": "Lisbon Lebron’s",
     "nba": "WSH",
@@ -814,6 +892,15 @@
     "jogos_7_dias": 4,
     "media_referencia": 38.1,
     "variacao": -7.5
+   },
+   {
+    "nome": "Giannis Antetokounmpo",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "MIA",
+    "media_7_dias": 61.2,
+    "jogos_7_dias": 3,
+    "media_referencia": 68.1,
+    "variacao": -6.9
    }
   ]
  },
@@ -1378,92 +1465,6 @@
  },
  "draft": {
   "escolhas_consideradas": 39,
-  "equipas": [
-   {
-    "nome": "Queta's magic",
-    "valor": 8,
-    "melhor": {
-     "nome": "Zion Williamson",
-     "nba": "NO",
-     "equipa": "Queta's magic",
-     "escolha": 50,
-     "ordem": 38,
-     "pontos": 440.0,
-     "media": 48.89,
-     "jogos": 9,
-     "lugar_pontos": 14,
-     "valor": 24
-    },
-    "pior": {
-     "nome": "Paolo Banchero",
-     "nba": "ORL",
-     "equipa": "Queta's magic",
-     "escolha": 26,
-     "ordem": 20,
-     "pontos": 106.5,
-     "media": 53.25,
-     "jogos": 2,
-     "lugar_pontos": 39,
-     "valor": -19
-    }
-   },
-   {
-    "nome": "Portela Lakers",
-    "valor": 1,
-    "melhor": {
-     "nome": "Karl-Anthony Towns",
-     "nba": "NY",
-     "equipa": "Portela Lakers",
-     "escolha": 32,
-     "ordem": 24,
-     "pontos": 485.5,
-     "media": 53.94,
-     "jogos": 9,
-     "lugar_pontos": 9,
-     "valor": 15
-    },
-    "pior": {
-     "nome": "Tyrese Haliburton",
-     "nba": "IND",
-     "equipa": "Portela Lakers",
-     "escolha": 25,
-     "ordem": 19,
-     "pontos": 232.5,
-     "media": 58.12,
-     "jogos": 4,
-     "lugar_pontos": 37,
-     "valor": -18
-    }
-   },
-   {
-    "nome": "Lisbon Lebron’s",
-    "valor": -9,
-    "melhor": {
-     "nome": "Alperen Sengun",
-     "nba": "HOU",
-     "equipa": "Lisbon Lebron’s",
-     "escolha": 35,
-     "ordem": 27,
-     "pontos": 487.5,
-     "media": 60.94,
-     "jogos": 8,
-     "lugar_pontos": 8,
-     "valor": 19
-    },
-    "pior": {
-     "nome": "Anthony Edwards",
-     "nba": "MIN",
-     "equipa": "Lisbon Lebron’s",
-     "escolha": 6,
-     "ordem": 4,
-     "pontos": 233.0,
-     "media": 58.25,
-     "jogos": 4,
-     "lugar_pontos": 36,
-     "valor": -32
-    }
-   }
-  ],
   "pechinchas": [
    {
     "nome": "Zion Williamson",
@@ -1525,68 +1526,6 @@
     "lugar_pontos": 1,
     "valor": 13
    }
-  ],
-  "desastres": [
-   {
-    "nome": "Anthony Edwards",
-    "nba": "MIN",
-    "equipa": "Lisbon Lebron’s",
-    "escolha": 6,
-    "ordem": 4,
-    "pontos": 233.0,
-    "media": 58.25,
-    "jogos": 4,
-    "lugar_pontos": 36,
-    "valor": -32
-   },
-   {
-    "nome": "Paolo Banchero",
-    "nba": "ORL",
-    "equipa": "Queta's magic",
-    "escolha": 26,
-    "ordem": 20,
-    "pontos": 106.5,
-    "media": 53.25,
-    "jogos": 2,
-    "lugar_pontos": 39,
-    "valor": -19
-   },
-   {
-    "nome": "Tyrese Haliburton",
-    "nba": "IND",
-    "equipa": "Portela Lakers",
-    "escolha": 25,
-    "ordem": 19,
-    "pontos": 232.5,
-    "media": 58.12,
-    "jogos": 4,
-    "lugar_pontos": 37,
-    "valor": -18
-   },
-   {
-    "nome": "Josh Giddey",
-    "nba": "CHI",
-    "equipa": "Portela Lakers",
-    "escolha": 24,
-    "ordem": 18,
-    "pontos": 264.0,
-    "media": 29.33,
-    "jogos": 9,
-    "lugar_pontos": 32,
-    "valor": -14
-   },
-   {
-    "nome": "Jalen Johnson",
-    "nba": "ATL",
-    "equipa": "Queta's magic",
-    "escolha": 15,
-    "ordem": 11,
-    "pontos": 378.5,
-    "media": 47.31,
-    "jogos": 8,
-    "lugar_pontos": 24,
-    "valor": -13
-   }
   ]
  },
  "previsao": {
@@ -1599,11 +1538,11 @@
    },
    {
     "nome": "Queta's magic",
-    "diferenca": 0.2
+    "diferenca": 0.3
    },
    {
     "nome": "Lisbon Lebron’s",
-    "diferenca": 0.0
+    "diferenca": 0.1
    }
   ],
   "surpresas": [
