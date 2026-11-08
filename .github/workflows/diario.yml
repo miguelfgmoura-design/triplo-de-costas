@@ -87,8 +87,12 @@ jobs:
           python src/pedido_comentario.py > "$RUNNER_TEMP/pedido.txt"
           pasta_vazia="$(mktemp -d)"
           cd "$pasta_vazia"
-          "$HOME/.local/bin/claude" -p --tools "" --max-turns 1 --no-session-persistence --strict-mcp-config \
-            < "$RUNNER_TEMP/pedido.txt" > "$RUNNER_TEMP/comentario.md"
+          if ! "$HOME/.local/bin/claude" -p --tools "" --max-turns 1 --no-session-persistence --strict-mcp-config \
+            < "$RUNNER_TEMP/pedido.txt" > "$RUNNER_TEMP/comentario.md"; then
+            echo "O Claude devolveu este erro:"
+            head -c 600 "$RUNNER_TEMP/comentario.md"
+            exit 1
+          fi
           mv "$RUNNER_TEMP/comentario.md" "$GITHUB_WORKSPACE/dados/comentario.md"
 
       - name: Gerar o site
