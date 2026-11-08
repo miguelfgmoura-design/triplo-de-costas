@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08T13:22:50+00:00",
+ "atualizado_em": "2026-11-08T19:56:40+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "formato": "Pontos acumulados na época, sem confrontos semanais",
@@ -80,13 +80,13 @@
    {
     "id": 1,
     "nome": "Portela Lakers",
-    "total_previsto": 41957,
+    "total_previsto": 41895,
     "intervalo_80": [
-     39317,
-     44530
+     39265,
+     44448
     ],
-    "probabilidade_titulo": 50.2,
-    "jogos_restantes_previstos": 707
+    "probabilidade_titulo": 49.3,
+    "jogos_restantes_previstos": 706
    },
    {
     "id": 2,
@@ -96,7 +96,7 @@
      39162,
      44405
     ],
-    "probabilidade_titulo": 46.1,
+    "probabilidade_titulo": 46.8,
     "jogos_restantes_previstos": 705
    },
    {
@@ -107,7 +107,7 @@
      36247,
      41048
     ],
-    "probabilidade_titulo": 3.7,
+    "probabilidade_titulo": 3.9,
     "jogos_restantes_previstos": 704
    }
   ],
@@ -972,10 +972,20 @@
     "fora_da_epoca": false
    },
    {
+    "nome": "Keyonte George",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "UTAH",
+    "estado": "Dia a dia",
+    "lugar": "UT",
+    "em_posicao_ativa": false,
+    "regresso": null,
+    "fora_da_epoca": false
+   },
+   {
     "nome": "Anthony Davis",
     "equipa": "Portela Lakers",
     "nba": "WSH",
-    "estado": "Fora",
+    "estado": "Dia a dia",
     "lugar": "Lesionados",
     "em_posicao_ativa": false,
     "regresso": null,
@@ -985,9 +995,9 @@
     "nome": "Luka Doncic",
     "equipa": "Portela Lakers",
     "nba": "LAL",
-    "estado": "Dia a dia",
+    "estado": "Fora",
     "lugar": "PG",
-    "em_posicao_ativa": false,
+    "em_posicao_ativa": true,
     "regresso": null,
     "fora_da_epoca": false
    },
@@ -1097,8 +1107,8 @@
      "dias": [
       {
        "data": "2026-11-08",
-       "jogos": 6,
-       "utilizaveis": 6
+       "jogos": 5,
+       "utilizaveis": 5
       },
       {
        "data": "2026-11-09",
@@ -1117,8 +1127,8 @@
       },
       {
        "data": "2026-11-12",
-       "jogos": 3,
-       "utilizaveis": 3
+       "jogos": 4,
+       "utilizaveis": 4
       },
       {
        "data": "2026-11-13",
