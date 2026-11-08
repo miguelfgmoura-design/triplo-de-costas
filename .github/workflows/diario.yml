@@ -83,6 +83,10 @@ jobs:
             echo "Falha do comentário simulada."
             exit 3
           fi
+          # Ao copiar o token é fácil ficar uma quebra de linha a meio. Aqui é removida.
+          CLAUDE_CODE_OAUTH_TOKEN="$(printf '%s' "$CLAUDE_CODE_OAUTH_TOKEN" | tr -d '[:space:]')"
+          echo "::add-mask::$CLAUDE_CODE_OAUTH_TOKEN"
+          export CLAUDE_CODE_OAUTH_TOKEN
           curl -fsSL https://claude.ai/install.sh | bash -s stable
           python src/pedido_comentario.py > "$RUNNER_TEMP/pedido.txt"
           pasta_vazia="$(mktemp -d)"
