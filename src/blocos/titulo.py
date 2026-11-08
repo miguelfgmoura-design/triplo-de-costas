@@ -7,9 +7,6 @@ from datetime import date
 from comum import melhor_alinhamento
 from desenho import EB, data_curta, e, grafico_linhas, num, plural, tabela_numeros
 
-TITULO = "Corrida ao título"
-MENU = "Título"
-
 SIMULACOES = 10000
 PESO_DA_PREVISAO = 12  # a previsão da ESPN vale como 12 jogos já feitos
 DISPONIBILIDADE_BASE = 0.85  # um jogador típico faz 85% dos jogos da equipa
@@ -166,7 +163,7 @@ def calcular(ctx):
     }
 
 
-def desenhar(d, v):
+def desenhar_classificacao(d, v):
     linhas = []
     for c in d["classificacao"]:
         distancia = "Líder" if c["lugar"] == 1 else f'{num(c["diferenca_lider"])} do líder'
@@ -179,11 +176,13 @@ def desenhar(d, v):
             f'<div class="direita"><strong class="grande">{num(c["pontos"])}</strong>'
             f'<span class="meta">{distancia}</span></div></li>'
         )
-    html = [
-        f'<div class="cartao"><ol class="lista">{"".join(linhas)}</ol></div>',
-        '<p class="nota">Ritmo: média de pontos nos últimos 7 dias com jogos.</p>',
-    ]
+    return (
+        f'<div class="cartao"><ol class="lista">{"".join(linhas)}</ol></div>'
+        '<p class="nota">Ritmo: média de pontos nos últimos 7 dias com jogos.</p>'
+    )
 
+
+def desenhar_projecao(d, v):
     barras = "".join(
         f'<li><div class="barra-topo"><span class="nome">{v.ponto(p["nome"])}{e(p["nome"])}</span>'
         f'<strong>{num(p["probabilidade_titulo"])}%</strong></div>'
@@ -192,13 +191,15 @@ def desenhar(d, v):
         f'entre {num(p["intervalo_80"][0], 0)} e {num(p["intervalo_80"][1], 0)}</div></li>'
         for p in d["projecao"]
     )
-    html.append(
-        f'<div class="cartao"><h3>Quem vai ganhar</h3><ul class="barras">{barras}</ul></div>'
+    return (
+        f'<div class="cartao"><ul class="barras">{barras}</ul></div>'
         f'<p class="nota">{num(d["simulacoes"], 0)} simulações com as médias, os jogos restantes de cada plantel '
         "e o limite de jogos. Assume que cada equipa gasta os jogos que lhe restam nos melhores jogadores. "
         "O intervalo cobre 8 em cada 10 simulações.</p>"
     )
 
+
+def desenhar_evolucao(d, v):
     datas = [data_curta(x) for x in d["evolucao"]["datas"]]
     series = [
         {"nome": s["nome"], "abrev": s["abrev"], "classe": v.classe(s["nome"]), "valores": s["pontos"]}
@@ -209,8 +210,8 @@ def desenhar(d, v):
     distancias = [
         {**s, "valores": [round(s["valores"][i] - lideres[i], 1) for i in range(len(datas))]} for s in reais
     ]
-    html.append(
-        '<div class="cartao"><h3>Evolução dos pontos</h3>'
+    return (
+        '<div class="cartao">'
         + grafico_linhas("Pontos acumulados de cada equipa ao longo da época", datas, series)
         + tabela_numeros("Ver os números, de semana a semana", datas, series)
         + '<h3 class="subtitulo">Distância para o líder</h3>'
@@ -218,4 +219,3 @@ def desenhar(d, v):
         + tabela_numeros("Ver os números, de semana a semana", datas, distancias)
         + "</div>"
     )
-    return "".join(html)

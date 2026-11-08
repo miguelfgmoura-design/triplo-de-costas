@@ -1,9 +1,13 @@
-"""Blocos de estatísticas. Para acrescentar um, cria o ficheiro e junta-o aqui."""
-from . import conselhos, destaques, perdas, titulo
+"""Blocos de estatísticas. Para acrescentar um, cria o ficheiro, junta-o aqui e põe-no num menu em seccoes.py."""
+from . import conselhos, destaques, draft, estrela, perdas, premios, previsao, titulo
 
 BLOCOS = {
     "titulo": titulo,
     "perdas": perdas,
     "destaques": destaques,
     "conselhos": conselhos,
+    "premios": premios,
+    "estrela": estrela,
+    "draft": draft,
+    "previsao": previsao,
 }

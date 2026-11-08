@@ -21,9 +21,9 @@
     --q1:#0d366b;--q1t:#f0efec;--q2:#184f95;--q2t:#fff;--q3:#2a78d6;--q3t:#fff;--q4:#6da7ec;--q4t:#0b0b0b;
   }
 }
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--pagina);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.pagina{max-width:34rem;margin:0 auto;padding:0 16px 40px}
+.pagina{max-width:34rem;margin:0 auto;padding:0 16px calc(88px + env(safe-area-inset-bottom))}
 
 .topo{padding:24px 0 10px}
 .marca{display:flex;align-items:center;gap:10px}
@@ -34,11 +34,28 @@ h1{margin:0;font-size:1.8rem;line-height:1.1;font-weight:800;letter-spacing:-.02
 .fecho{margin:2px 0 0;color:var(--tinta2);font-size:.875rem}
 .aviso{margin:12px 0 0;padding:10px 12px;border-radius:10px;background:color-mix(in srgb,var(--alerta) 22%,var(--cartao));font-size:.9375rem}
 
-.menu{position:sticky;top:0;z-index:5;display:flex;gap:4px;justify-content:space-between;margin:0 -16px;padding:8px 16px;background:var(--pagina);border-bottom:1px solid var(--borda)}
-.menu a{flex:0 1 auto;padding:8px 7px;border-radius:8px;color:var(--tinta);font-size:.8125rem;font-weight:600;text-decoration:none;white-space:nowrap}
-.menu a:hover,.menu a:focus-visible{background:var(--realce)}
+.menus{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;justify-content:center;gap:2px;padding:4px 6px calc(4px + env(safe-area-inset-bottom));background:var(--cartao);border-top:1px solid var(--borda)}
+.menus a{flex:1 1 0;max-width:112px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;border-radius:10px;color:var(--muda);font-size:.6875rem;font-weight:600;line-height:1.2;text-decoration:none}
+.menus a[aria-current]{background:var(--realce);color:var(--tinta)}
+.menus a:focus-visible{outline:2px solid var(--tinta2);outline-offset:-2px}
+.menus svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-section{scroll-margin-top:58px;margin-top:26px}
+.com-js .painel{display:none}
+.com-js .painel.ativo{display:block}
+.painel>section:first-child,.ficha>section:first-of-type{margin-top:14px}
+
+.escolha{position:sticky;top:0;z-index:4;margin:6px -16px 0;padding:8px 16px;background:var(--pagina)}
+.escolha label{display:block;margin-bottom:4px;color:var(--tinta2);font-size:.8125rem;font-weight:600}
+.escolha-caixa{position:relative}
+.escolha-caixa .ponto{position:absolute;left:12px;top:50%;margin-top:-5px;pointer-events:none}
+.escolha-caixa::after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;margin-top:-6px;border-right:2px solid var(--tinta2);border-bottom:2px solid var(--tinta2);transform:rotate(45deg);pointer-events:none}
+.escolha select{width:100%;height:48px;padding:0 40px 0 32px;border:1px solid var(--borda);border-radius:10px;background:var(--cartao);color:var(--tinta);font:inherit;font-weight:600;-webkit-appearance:none;appearance:none}
+.ficha-titulo{margin:20px 0 0}
+.com-js .ficha-titulo{display:none}
+.com-js .ficha{display:none}
+.com-js .ficha.ativa{display:block}
+
+section{margin-top:26px}
 h2{margin:0 0 10px;font-size:1.3rem;line-height:1.2;letter-spacing:-.01em}
 h3{margin:0 0 8px;font-size:1rem;line-height:1.25}
 .cartao{margin:0 0 10px;padding:14px;background:var(--cartao);border:1px solid var(--borda);border-radius:14px}
@@ -89,7 +106,7 @@ h3{margin:0 0 8px;font-size:1rem;line-height:1.25}
 .barra{height:12px;margin:4px 0;border-radius:0 4px 4px 0;background:var(--cor);min-width:2px}
 
 .grelha-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tile span{display:block;color:var(--tinta2);font-size:.8125rem}
+.tile>span{display:block;color:var(--tinta2);font-size:.8125rem}
 .tile strong{font-size:1.5rem;line-height:1.2}
 .dados-linhas{margin:12px 0 0;padding:0}
 .dados-linhas>div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;padding:8px 0;border-top:1px solid var(--grelha)}
@@ -153,4 +170,4 @@ details[open] summary::before{transform:rotate(45deg)}
 
 .rodape{margin-top:28px;color:var(--tinta2);font-size:.8125rem}
 .rodape p{margin:4px 0}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}details summary::before{transition:none}}
+@media (prefers-reduced-motion:reduce){details summary::before{transition:none}}

@@ -52,6 +52,25 @@ class ESPN:
     def calendario_nba(self):
         return self._pedir(self.url_epoca, [("view", "proTeamSchedules_wl")])
 
+    def jogadores_por_id(self, periodo, ids, por_pedido=50):
+        """Totais e médias de uma lista de jogadores, estejam onde estiverem."""
+        a = self.ano
+        resultado = []
+        for inicio in range(0, len(ids), por_pedido):
+            filtro = {"players": {
+                "filterIds": {"value": ids[inicio:inicio + por_pedido]},
+                "filterStatsForTopScoringPeriodIds": {
+                    "value": 1,
+                    "additionalValue": [f"00{a}", f"01{a}", f"02{a}", f"03{a}", f"10{a}"],
+                },
+            }}
+            resultado += self._pedir(
+                self.url_liga,
+                [("view", "kona_player_info"), ("scoringPeriodId", periodo)],
+                {"x-fantasy-filter": json.dumps(filtro)},
+            ).get("players", [])
+        return resultado
+
     def jogadores_livres(self, periodo, janela, limite=40):
         """Jogadores sem equipa, do melhor para o pior na janela pedida.
 

@@ -12,8 +12,8 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
 from comum import (
-    DIAS, FICHEIRO_ATUAL, NOVA_IORQUE, agora_utc, escrever_json, ler_config,
-    ler_json, ultimo_dia_fechado,
+    DIAS, FICHEIRO_ATUAL, FICHEIRO_PROJECOES, NOVA_IORQUE, agora_utc, escrever_json,
+    ler_config, ler_json, ultimo_dia_fechado,
 )
 from espn import ESPN, ErroESPN
 
@@ -139,6 +139,53 @@ def ler_livres(api, periodo, siglas, lugares_ativos):
     return list(escolhidos.values())
 
 
+def ler_draft(api):
+    escolhas = api.liga(["mDraftDetail"])["draftDetail"].get("picks", [])
+    return [
+        {"escolha": p["overallPickNumber"], "equipa": p["teamId"], "jogador": p["playerId"]}
+        for p in escolhas if p.get("playerId", 0) > 0
+    ]
+
+
+def jogadores_envolvidos(draft):
+    """Todos os jogadores escolhidos no draft ou que passaram por um plantel."""
+    envolvidos = {escolha["jogador"] for escolha in draft}
+    for ficheiro in sorted(DIAS.glob("*.json")):
+        for t in ler_json(ficheiro)["equipas"]:
+            envolvidos |= {j["id"] for j in t["jogadores"]}
+    return envolvidos
+
+
+def ler_jogadores_envolvidos(api, periodo, draft, siglas):
+    """Totais e médias de quem foi escolhido no draft ou passou por um plantel."""
+    jogadores = {}
+    for bruto in api.jogadores_por_id(periodo, sorted(jogadores_envolvidos(draft))):
+        p = bruto["player"]
+        jogadores[str(p["id"])] = {
+            "nome": p["fullName"],
+            "nba": siglas.get(p.get("proTeamId"), "?"),
+            "medias": ler_medias(p, api.ano),
+            **dados_de_lesao(p),
+        }
+    return jogadores
+
+
+def guardar_projecoes(jogadores, ultimo_fechado):
+    """Fixa a previsão da ESPN na primeira vez que vê cada jogador.
+
+    A ESPN pode rever as previsões durante a época. Guardadas assim, a
+    comparação usa sempre o mesmo ponto de partida.
+    """
+    guardadas = ler_json(FICHEIRO_PROJECOES) if FICHEIRO_PROJECOES.exists() else {}
+    for id_jogador, j in jogadores.items():
+        previsao = j["medias"].get("proj")
+        if previsao and previsao["media"] and id_jogador not in guardadas:
+            guardadas[id_jogador] = {
+                "media": previsao["media"], "total": previsao["total"], "desde": ultimo_fechado.isoformat(),
+            }
+    escrever_json(FICHEIRO_PROJECOES, guardadas)
+
+
 def ler_situacao_atual(api, cfg, definicoes, estado, siglas, por_periodo, primeiro_dia, ultimo_fechado):
     regras = definicoes["settings"]["rosterSettings"]
     contagem = {int(k): v for k, v in regras["lineupSlotCounts"].items() if v}
@@ -174,6 +221,11 @@ def ler_situacao_atual(api, cfg, definicoes, estado, siglas, por_periodo, primei
             "jogos_por_lugar": {str(k): por_lugar.get(t["id"], {}).get(k, 0) for k in sorted(lugares_ativos)},
             "plantel": plantel,
         })
+    time.sleep(PAUSA)
+    draft = ler_draft(api)
+    time.sleep(PAUSA)
+    jogadores = ler_jogadores_envolvidos(api, periodo_atual, draft, siglas)
+    guardar_projecoes(jogadores, ultimo_fechado)
     return {
         "atualizado_em": agora_utc().isoformat(timespec="seconds"),
         "liga": {
@@ -190,6 +242,8 @@ def ler_situacao_atual(api, cfg, definicoes, estado, siglas, por_periodo, primei
         "equipas": equipas,
         "livres": ler_livres(api, periodo_atual, siglas, lugares_ativos),
         "calendario": {str(k): sorted(v) for k, v in sorted(por_periodo.items())},
+        "draft": draft,
+        "jogadores": jogadores,
     }
 
 

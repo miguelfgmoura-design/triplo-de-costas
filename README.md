@@ -49,3 +49,4 @@ O token é como uma palavra-passe: não o envies a ninguém nem o escrevas em ne
 - A equipa fantasma e o número da liga estão em `config.json`. Para a próxima época, muda lá também `ano_api`.
 - A liga tem de continuar visível ao público na ESPN, senão os dados deixam de chegar.
 - Para acrescentar um bloco de estatísticas, junta um ficheiro em `src/blocos/` e regista-o em `src/blocos/__init__.py`.
+- Para mudar o que aparece em cada menu do site, altera as listas em `src/seccoes.py`.

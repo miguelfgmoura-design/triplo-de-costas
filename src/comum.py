@@ -9,6 +9,7 @@ DADOS = RAIZ / "dados"
 DIAS = DADOS / "dias"
 FICHEIRO_ATUAL = DADOS / "atual.json"
 FICHEIRO_STATS = DADOS / "stats.json"
+FICHEIRO_PROJECOES = DADOS / "projecoes.json"
 
 NOVA_IORQUE = ZoneInfo("America/New_York")
 LISBOA = ZoneInfo("Europe/Lisbon")

@@ -3,7 +3,11 @@ import traceback
 from datetime import date, timedelta
 
 from blocos import BLOCOS
-from comum import DIAS, FICHEIRO_ATUAL, FICHEIRO_STATS, FORA_DO_CINCO, NOMES_LUGARES, escrever_json, ler_json
+from comum import (
+    DIAS, FICHEIRO_ATUAL, FICHEIRO_PROJECOES, FICHEIRO_STATS, FORA_DO_CINCO, NOMES_LUGARES,
+    escrever_json, ler_json,
+)
+from percursos import calcular_entradas
 
 
 class Contexto:
@@ -37,6 +41,11 @@ class Contexto:
         self.periodos_futuros = [
             p for p in range(self.periodo_hoje, self.periodo_final + 1) if self.calendario.get(p)
         ]
+
+        self.draft = self.atual.get("draft", [])
+        self.jogadores = self.atual.get("jogadores", {})
+        self.projecoes = ler_json(FICHEIRO_PROJECOES) if FICHEIRO_PROJECOES.exists() else {}
+        self.entradas = calcular_entradas(self.dias, self.draft, self.lugares_ativos)
 
     def data_do_periodo(self, periodo):
         return self.primeiro_dia + timedelta(days=periodo - 1)

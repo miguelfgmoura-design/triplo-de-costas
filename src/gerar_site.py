@@ -7,13 +7,12 @@ import argparse
 import json
 import re
 import shutil
-import traceback
 import unicodedata
 from datetime import date, timedelta
 
-from blocos import BLOCOS
 from comum import DADOS, FICHEIRO_STATS, RAIZ, ler_json
 from desenho import Vista, data_longa, e, momento_longo
+from seccoes import MENUS, SIMBOLOS, painel_equipa, peca
 
 SITE = RAIZ / "site"
 RECURSOS = RAIZ / "recursos"
@@ -132,33 +131,35 @@ def seccao_comentario(chave_hoje, dias):
     )
 
 
-def seccao_bloco(chave, modulo, dados, vista):
-    try:
-        if dados.get("erro"):
-            raise ValueError("bloco sem dados")
-        corpo = modulo.desenhar(dados, vista)
-    except Exception:  # um bloco com problemas não pode deitar o site abaixo
-        traceback.print_exc()
-        corpo = '<p class="nota">Este bloco não ficou disponível hoje.</p>'
-    return f'<section id="{chave}"><h2>{e(modulo.TITULO)}</h2>{corpo}</section>'
+def montar_paineis(stats, vista, dias_com_comentario):
+    paineis = []
+    for n, menu in enumerate(MENUS):
+        corpo = "".join(peca(stats, vista, *p) for p in menu["pecas"])
+        if menu["id"] == "hoje":
+            corpo = seccao_comentario(stats["ultimo_dia_fechado"], dias_com_comentario) + corpo
+        elif menu["id"] == "equipa":
+            corpo = painel_equipa(stats, vista)
+        ativo = " ativo" if n == 0 else ""
+        paineis.append(f'<div class="painel{ativo}" id="{menu["id"]}">{corpo}</div>')
+    return "".join(paineis)
 
 
 def montar_pagina(stats, dias_com_comentario, dados_antigos):
     vista = Vista(stats)
     nome = stats["liga"]["nome"]
-    menu = '<a href="#comentario">Hoje</a>' + "".join(
-        f'<a href="#{chave}">{e(modulo.MENU)}</a>' for chave, modulo in BLOCOS.items()
+    menu = "".join(
+        f'<a href="#{m["id"]}">{SIMBOLOS[m["id"]]}<span>{e(m["nome"])}</span></a>' for m in MENUS
     )
-    seccoes = seccao_comentario(stats["ultimo_dia_fechado"], dias_com_comentario) + "".join(
-        seccao_bloco(chave, modulo, stats.get(chave, {"erro": True}), vista) for chave, modulo in BLOCOS.items()
-    )
+    paineis = montar_paineis(stats, vista, dias_com_comentario)
     aviso = (
         '<p class="aviso" role="status"><strong>Dados de ontem.</strong> '
         "A ESPN não respondeu esta manhã, por isso estes são os últimos números guardados.</p>"
         if dados_antigos else ""
     )
     estilo = (RECURSOS / "estilo.css").read_text(encoding="utf-8")
-    codigo = "".join((RECURSOS / nome_js).read_text(encoding="utf-8") for nome_js in ("graficos.js", "comentarios.js"))
+    codigo = "".join(
+        (RECURSOS / nome_js).read_text(encoding="utf-8") for nome_js in ("graficos.js", "comentarios.js", "menus.js")
+    )
     verificacao = stats.get("verificacao") or {}
     alerta_contas = (
         "<p>A soma dos dias ainda não bate certo com o total oficial da ESPN.</p>"
@@ -180,6 +181,7 @@ def montar_pagina(stats, dias_com_comentario, dados_antigos):
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icone-192.png">
 <link rel="apple-touch-icon" href="icone-180.png">
+<script>document.documentElement.className='com-js'</script>
 <style>{estilo}</style>
 </head>
 <body>
@@ -190,10 +192,10 @@ def montar_pagina(stats, dias_com_comentario, dados_antigos):
 <p class="fecho">Pontos fechados até {e(data_longa(stats["ultimo_dia_fechado"]))}</p>
 {aviso}
 </header>
-<nav class="menu" aria-label="Secções">{menu}</nav>
-<main>{seccoes}</main>
+<main>{paineis}</main>
 <footer class="rodape">{alerta_contas}<p>Dados da ESPN Fantasy. Página atualizada automaticamente todas as manhãs.</p></footer>
 </div>
+<nav class="menus" aria-label="Menus">{menu}</nav>
 <script>{codigo}</script>
 </body>
 </html>

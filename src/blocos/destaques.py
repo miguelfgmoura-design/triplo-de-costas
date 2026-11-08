@@ -1,9 +1,6 @@
 """C. Forma e destaques: MVP, flop, top 5, em alta e em baixa. Sem a equipa fantasma."""
 from desenho import EB, data_curta, e, num
 
-TITULO = "Forma e destaques"
-MENU = "Destaques"
-
 MINIMO_JOGOS_RECENTES = 2
 MINIMO_JOGOS_COMPARACAO = 5
 QUANTOS_EM_ALTA = 4
@@ -118,28 +115,41 @@ def linhas_forma(lista, v, sobe):
     return f'<ul class="lista">{"".join(itens)}</ul>'
 
 
-def desenhar(d, v):
+def desenhar_dia(d, v):
     dia = data_curta(d["dia"])
-    html = [
-        f'<div class="grelha-herois">{heroi(f"MVP de {dia}", d["mvp"], v)}{heroi(f"Flop de {dia}", d["flop"], v)}</div>'
-    ]
-    equipas = "".join(
-        f'<li class="linha"><div class="cresce"><div class="nome">{v.ponto(t["equipa"])}{e(t["equipa"])}</div>'
-        f'<div class="meta">MVP: {e(t["mvp"]["nome"]) if t["mvp"] else "ninguém jogou"}'
-        f'{" (" + num(t["mvp"]["pontos"]) + ")" if t["mvp"] else ""}</div>'
-        f'<div class="meta">Flop: {e(t["flop"]["nome"]) + " (" + num(t["flop"]["pontos"]) + ", média " + num(t["flop"]["media_epoca"]) + ")" if t["flop"] else "ninguém abaixo da média"}</div>'
-        "</div></li>"
-        for t in d["por_equipa"]
-    )
     top = "".join(
         f'<li class="linha"><span class="posto">{i}</span><div class="cresce"><div class="nome">{e(x["nome"])}</div>'
         f'<div class="nome meta">{v.ponto(x["equipa"])}{e(x["equipa"])}</div></div>'
         f'<strong class="grande">{num(x["pontos"])}</strong></li>'
         for i, x in enumerate(d["top5"], 1)
     )
-    html.append(f'<div class="cartao"><h3>Por equipa</h3><ul class="lista">{equipas}</ul></div>')
-    html.append(f'<div class="cartao"><h3>Top 5 de {dia}</h3><ol class="lista">{top}</ol></div>')
-    html.append(f'<div class="cartao"><h3>Em alta</h3>{linhas_forma(d["em_alta"], v, True)}</div>')
-    html.append(f'<div class="cartao"><h3>Em baixa</h3>{linhas_forma(d["em_baixa"], v, False)}</div>')
-    html.append('<p class="nota">O flop é quem mais ficou abaixo da sua própria média. Em alta e em baixa: média dos últimos 7 dias contra a dos últimos 30 dias.</p>')
-    return "".join(html)
+    return (
+        f'<div class="grelha-herois">{heroi(f"MVP de {dia}", d["mvp"], v)}{heroi(f"Flop de {dia}", d["flop"], v)}</div>'
+        f'<div class="cartao"><h3>Top 5 de {dia}</h3><ol class="lista">{top}</ol></div>'
+        '<p class="nota">O flop é quem mais ficou abaixo da sua própria média.</p>'
+    )
+
+
+def desenhar_forma(d, v):
+    return (
+        f'<div class="cartao"><h3>Em alta</h3>{linhas_forma(d["em_alta"], v, True)}</div>'
+        f'<div class="cartao"><h3>Em baixa</h3>{linhas_forma(d["em_baixa"], v, False)}</div>'
+        '<p class="nota">Média dos últimos 7 dias contra a dos últimos 30 dias.</p>'
+    )
+
+
+def cartao_equipa(t, v):
+    mvp = t["mvp"]
+    flop = t["flop"]
+    linha_mvp = (
+        f'<li class="linha"><div class="cresce"><div class="meta">MVP</div><div class="nome">{e(mvp["nome"])}</div></div>'
+        f'<strong class="grande">{num(mvp["pontos"])}</strong></li>'
+        if mvp else '<li class="linha"><div class="cresce"><div class="meta">MVP</div><div class="nome">Ninguém jogou</div></div></li>'
+    )
+    linha_flop = (
+        f'<li class="linha"><div class="cresce"><div class="meta">Flop</div><div class="nome">{e(flop["nome"])}</div>'
+        f'<div class="meta">média {num(flop["media_epoca"])}</div></div>'
+        f'<strong class="grande">{num(flop["pontos"])}</strong></li>'
+        if flop else '<li class="linha"><div class="cresce"><div class="meta">Flop</div><div class="nome">Ninguém abaixo da média</div></div></li>'
+    )
+    return f'<div class="cartao"><ul class="lista">{linha_mvp}{linha_flop}</ul></div>'

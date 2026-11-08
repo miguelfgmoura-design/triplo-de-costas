@@ -2,9 +2,6 @@
 from comum import NOMES_LUGARES, melhor_alinhamento
 from desenho import data_curta, dia_curto, e, num, plural
 
-TITULO = "Conselhos táticos"
-MENU = "Conselhos"
-
 JANELAS = {"ultimos_7_dias": ("u7", 2), "ultimos_15_dias": ("u15", 4)}  # janela e mínimo de jogos
 QUANTOS_LIVRES = 5
 DIAS_A_OLHAR = 7
