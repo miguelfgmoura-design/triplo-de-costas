@@ -43,7 +43,6 @@ class Contexto:
         ]
 
         self.draft = self.atual.get("draft", [])
-        self.jogadores = self.atual.get("jogadores", {})
         self.projecoes = ler_json(FICHEIRO_PROJECOES) if FICHEIRO_PROJECOES.exists() else {}
         self.entradas = calcular_entradas(self.dias, self.draft, self.lugares_ativos)
 

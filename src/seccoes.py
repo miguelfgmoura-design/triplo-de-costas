@@ -4,7 +4,7 @@ Para mudar a organização do site, basta mexer nas listas MENUS e FICHA.
 """
 import traceback
 
-from blocos import conselhos, destaques, draft, estrela, perdas, premios, previsao, titulo
+from blocos import conselhos, destaques, estrela, perdas, premios, previsao, titulo
 from desenho import e
 
 INDISPONIVEL = '<p class="nota">Este bloco não ficou disponível hoje.</p>'
@@ -38,7 +38,6 @@ MENUS = [
     {"id": "jogadores", "nome": "Jogadores", "pecas": [
         ("destaques", "Em alta e em baixa", destaques.desenhar_forma),
         ("previsao", "Real vs. projeção da ESPN", previsao.desenhar),
-        ("draft", "Valor do draft", draft.desenhar),
     ]},
     {"id": "conselhos", "nome": "Conselhos", "pecas": [
         ("conselhos", "Conselhos táticos", conselhos.desenhar),
