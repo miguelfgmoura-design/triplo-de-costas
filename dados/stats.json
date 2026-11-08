@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08T22:03:51+00:00",
+ "atualizado_em": "2026-11-08T22:12:11+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "formato": "Pontos acumulados na época, sem confrontos semanais",
@@ -96,18 +96,18 @@
      39196,
      44353
     ],
-    "probabilidade_titulo": 47.2,
+    "probabilidade_titulo": 47.1,
     "jogos_restantes_previstos": 704
    },
    {
     "id": 3,
     "nome": "Queta's magic",
-    "total_previsto": 38712,
+    "total_previsto": 38720,
     "intervalo_80": [
-     36276,
-     41044
+     36284,
+     41054
     ],
-    "probabilidade_titulo": 3.7,
+    "probabilidade_titulo": 3.8,
     "jogos_restantes_previstos": 704
    }
   ],
@@ -1460,71 +1460,6 @@
     "percentagem_3_melhores": 30.1,
     "estado": null,
     "ainda_no_plantel": true
-   }
-  ]
- },
- "draft": {
-  "escolhas_consideradas": 39,
-  "pechinchas": [
-   {
-    "nome": "Zion Williamson",
-    "nba": "NO",
-    "equipa": "Queta's magic",
-    "escolha": 50,
-    "ordem": 38,
-    "pontos": 440.0,
-    "media": 48.89,
-    "jogos": 9,
-    "lugar_pontos": 14,
-    "valor": 24
-   },
-   {
-    "nome": "Evan Mobley",
-    "nba": "CLE",
-    "equipa": "Queta's magic",
-    "escolha": 42,
-    "ordem": 32,
-    "pontos": 479.5,
-    "media": 47.95,
-    "jogos": 10,
-    "lugar_pontos": 10,
-    "valor": 22
-   },
-   {
-    "nome": "Alperen Sengun",
-    "nba": "HOU",
-    "equipa": "Lisbon Lebron’s",
-    "escolha": 35,
-    "ordem": 27,
-    "pontos": 487.5,
-    "media": 60.94,
-    "jogos": 8,
-    "lugar_pontos": 8,
-    "valor": 19
-   },
-   {
-    "nome": "Karl-Anthony Towns",
-    "nba": "NY",
-    "equipa": "Portela Lakers",
-    "escolha": 32,
-    "ordem": 24,
-    "pontos": 485.5,
-    "media": 53.94,
-    "jogos": 9,
-    "lugar_pontos": 9,
-    "valor": 15
-   },
-   {
-    "nome": "Victor Wembanyama",
-    "nba": "SA",
-    "equipa": "Queta's magic",
-    "escolha": 18,
-    "ordem": 14,
-    "pontos": 756.0,
-    "media": 75.6,
-    "jogos": 10,
-    "lugar_pontos": 1,
-    "valor": 13
    }
   ]
  },
