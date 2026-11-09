@@ -82,7 +82,7 @@ def _parte_da_ficha(stats, vista, nome, titulo_parte, bloco, lista, campo, desen
 def _nomes_das_equipas(stats):
     classificacao = (stats.get("titulo") or {}).get("classificacao")
     if classificacao:
-        return [c["nome"] for c in classificacao if not c["fantasma"]]
+        return [c["nome"] for c in classificacao]
     return [t["nome"] for t in (stats.get("perdas") or {}).get("equipas", [])]
 
 

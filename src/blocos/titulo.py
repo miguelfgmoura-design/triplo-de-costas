@@ -108,7 +108,7 @@ def calcular(ctx):
     for t in ctx.equipas:
         hoje = ctx.equipa_no_dia(ctx.dia_ref, t["id"])
         classificacao.append({
-            "id": t["id"], "nome": t["nome"], "abrev": t["abrev"], "fantasma": t["fantasma"],
+            "id": t["id"], "nome": t["nome"], "abrev": t["abrev"],
             "pontos": round(totais[t["id"]], 1),
             "diferenca_lider": round(totais[t["id"]] - lider, 1),
             "pontos_ontem": hoje["pontos"],
@@ -128,17 +128,17 @@ def calcular(ctx):
                 jogos_feitos_nba[s] += 1
 
     rng = random.Random(ctx.dia_ref["data"])
-    linhas = {t["id"]: jogos_a_utilizar(ctx, t, jogos_feitos_nba) for t in ctx.reais}
+    linhas = {t["id"]: jogos_a_utilizar(ctx, t, jogos_feitos_nba) for t in ctx.equipas}
     resultados = defaultdict(list)
     vitorias = defaultdict(int)
     for _ in range(SIMULACOES):
-        finais = {i: simular(rng, totais[i], linhas[i]) for i in ctx.ids_reais}
+        finais = {i: simular(rng, totais[i], linhas[i]) for i in linhas}
         vitorias[max(finais, key=finais.get)] += 1
         for i, v in finais.items():
             resultados[i].append(v)
 
     projecao = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         valores = sorted(resultados[t["id"]])
         projecao.append({
             "id": t["id"], "nome": t["nome"],
@@ -156,7 +156,7 @@ def calcular(ctx):
         "evolucao": {
             "datas": [d["data"] for d in ctx.dias],
             "series": [
-                {"id": t["id"], "nome": t["nome"], "abrev": t["abrev"], "fantasma": t["fantasma"], "pontos": series[t["id"]]}
+                {"id": t["id"], "nome": t["nome"], "abrev": t["abrev"], "pontos": series[t["id"]]}
                 for t in ctx.equipas
             ],
         },
@@ -167,10 +167,9 @@ def desenhar_classificacao(d, v):
     linhas = []
     for c in d["classificacao"]:
         distancia = "Líder" if c["lugar"] == 1 else f'{num(c["diferenca_lider"])} do líder'
-        fantasma = ' <span class="etiqueta">fantasma</span>' if c["fantasma"] else ""
         linhas.append(
-            f'<li class="linha{" apagada" if c["fantasma"] else ""}"><span class="posto">{c["lugar"]}</span>'
-            f'<div class="cresce"><div class="nome">{v.ponto(c["nome"])}{e(c["nome"])}{fantasma}</div>'
+            f'<li class="linha"><span class="posto">{c["lugar"]}</span>'
+            f'<div class="cresce"><div class="nome">{v.ponto(c["nome"])}{e(c["nome"])}</div>'
             f'<div class="meta">{v.Ontem}: {num(c["pontos_ontem"])} em {plural(c["jogos_ontem"], "jogo", "jogos")}'
             f' · ritmo{EB}{num(c["ritmo_7_dias"])}</div></div>'
             f'<div class="direita"><strong class="grande">{num(c["pontos"])}</strong>'
@@ -205,10 +204,9 @@ def desenhar_evolucao(d, v):
         {"nome": s["nome"], "abrev": s["abrev"], "classe": v.classe(s["nome"]), "valores": s["pontos"]}
         for s in d["evolucao"]["series"]
     ]
-    reais = [s for s, o in zip(series, d["evolucao"]["series"]) if not o["fantasma"]]
-    lideres = [max(s["valores"][i] for s in reais) for i in range(len(datas))]
+    lideres = [max(s["valores"][i] for s in series) for i in range(len(datas))]
     distancias = [
-        {**s, "valores": [round(s["valores"][i] - lideres[i], 1) for i in range(len(datas))]} for s in reais
+        {**s, "valores": [round(s["valores"][i] - lideres[i], 1) for i in range(len(datas))]} for s in series
     ]
     return (
         '<div class="cartao">'

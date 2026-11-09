@@ -22,16 +22,12 @@
   "bate_certo": true,
   "diferencas": {}
  },
- "fantasma": [
-  "Mike's FAKE Team"
- ],
  "titulo": {
   "classificacao": [
    {
     "id": 2,
     "nome": "Lisbon Lebron’s",
     "abrev": "Ll",
-    "fantasma": false,
     "pontos": 5488.5,
     "diferenca_lider": 0.0,
     "pontos_ontem": 210.5,
@@ -43,7 +39,6 @@
     "id": 3,
     "nome": "Queta's magic",
     "abrev": "QM",
-    "fantasma": false,
     "pontos": 5312.5,
     "diferenca_lider": -176.0,
     "pontos_ontem": 394.5,
@@ -55,25 +50,12 @@
     "id": 1,
     "nome": "Portela Lakers",
     "abrev": "PTL",
-    "fantasma": false,
     "pontos": 5187.5,
     "diferenca_lider": -301.0,
     "pontos_ontem": 259.0,
     "jogos_ontem": 5,
     "ritmo_7_dias": 324.0,
     "lugar": 3
-   },
-   {
-    "id": 4,
-    "nome": "Mike's FAKE Team",
-    "abrev": "FAKE",
-    "fantasma": true,
-    "pontos": 321.0,
-    "diferenca_lider": -5167.5,
-    "pontos_ontem": 50.0,
-    "jogos_ontem": 2,
-    "ritmo_7_dias": 28.4,
-    "lugar": 4
    }
   ],
   "projecao": [
@@ -139,7 +121,6 @@
      "id": 1,
      "nome": "Portela Lakers",
      "abrev": "PTL",
-     "fantasma": false,
      "pontos": [
       78.5,
       455.0,
@@ -166,7 +147,6 @@
      "id": 2,
      "nome": "Lisbon Lebron’s",
      "abrev": "Ll",
-     "fantasma": false,
      "pontos": [
       204.0,
       674.5,
@@ -193,7 +173,6 @@
      "id": 3,
      "nome": "Queta's magic",
      "abrev": "QM",
-     "fantasma": false,
      "pontos": [
       217.5,
       484.0,
@@ -214,33 +193,6 @@
       4520.5,
       4918.0,
       5312.5
-     ]
-    },
-    {
-     "id": 4,
-     "nome": "Mike's FAKE Team",
-     "abrev": "FAKE",
-     "fantasma": true,
-     "pontos": [
-      0.0,
-      19.0,
-      19.0,
-      38.5,
-      70.0,
-      70.0,
-      63.0,
-      65.0,
-      80.5,
-      94.5,
-      122.5,
-      140.0,
-      179.0,
-      234.5,
-      234.5,
-      244.5,
-      271.0,
-      271.0,
-      321.0
      ]
     }
    ]

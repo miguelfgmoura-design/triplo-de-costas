@@ -8,7 +8,7 @@ ESTADOS = {"OUT": "Fora", "DAY_TO_DAY": "Dia a dia", "QUESTIONABLE": "Em dúvida
 
 def calcular(ctx):
     resultado = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         pontos = Counter()
         jogos = Counter()
         nomes = {}

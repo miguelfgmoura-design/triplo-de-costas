@@ -72,11 +72,10 @@ class Vista:
         self.ontem = "ontem" if e_ontem else f"a {data_curta(referencia)}"
         self.Ontem = "Ontem" if e_ontem else f"A {data_curta(referencia)}"
         series = stats.get("titulo", {}).get("evolucao", {}).get("series", [])
-        reais = sorted((s for s in series if not s["fantasma"]), key=lambda s: s["id"])
-        self.classes = {s["nome"]: f"e{i}" for i, s in enumerate(reais, 1)}
+        self.classes = {s["nome"]: f"e{i}" for i, s in enumerate(sorted(series, key=lambda s: s["id"]), 1)}
 
     def classe(self, nome):
-        return self.classes.get(nome, "ef")  # a cor segue a equipa, nunca o lugar na tabela
+        return self.classes.get(nome, "e0")  # a cor segue a equipa, nunca o lugar na tabela
 
     def ponto(self, nome):
         return f'<i class="ponto {self.classe(nome)}" aria-hidden="true"></i>'

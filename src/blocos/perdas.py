@@ -50,7 +50,7 @@ def ritmo_do_limite(ctx, equipa, jogos_feitos, dias_jogados):
 def calcular(ctx):
     resultado = []
     dias_jogados = len(ctx.dias_com_jogos)
-    for t in ctx.reais:
+    for t in ctx.equipas:
         acumulado = Counter()
         falhas = Counter()
         pontos = jogos = 0

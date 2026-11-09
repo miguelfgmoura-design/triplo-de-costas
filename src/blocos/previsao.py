@@ -8,7 +8,7 @@ QUANTOS = 5
 def calcular(ctx):
     linhas = []
     datas = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         for j in t["plantel"]:
             epoca = j["medias"].get("epoca")
             if not epoca or epoca["jogos"] < MINIMO_JOGOS:
@@ -25,7 +25,7 @@ def calcular(ctx):
                 "diferenca": round(epoca["media"] - prevista, 1), "jogos": epoca["jogos"],
             })
     equipas = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         deles = [l for l in linhas if l["equipa"] == t["nome"]]
         jogos = sum(l["jogos"] for l in deles)
         if jogos:

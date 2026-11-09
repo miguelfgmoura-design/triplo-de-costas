@@ -11,20 +11,22 @@ from percursos import calcular_entradas
 
 
 class Contexto:
-    """Tudo o que os blocos precisam de saber, já arrumado."""
+    """Tudo o que os blocos precisam de saber, já arrumado.
+
+    A equipa fantasma sai logo aqui, para não entrar em nenhum cálculo, gráfico ou comentário.
+    """
 
     def __init__(self):
         self.atual = ler_json(FICHEIRO_ATUAL)
+        self.equipas = [t for t in self.atual["equipas"] if not t["fantasma"]]
+        ids_das_equipas = {t["id"] for t in self.equipas}
         self.dias = [ler_json(f) for f in sorted(DIAS.glob("*.json"))]
+        for dia in self.dias:
+            dia["equipas"] = [t for t in dia["equipas"] if t["id"] in ids_das_equipas]
         liga = self.atual["liga"]
         self.primeiro_dia = date.fromisoformat(liga["primeiro_dia"])
         self.periodo_final = liga["periodo_final"]
         self.calendario = {int(k): set(v) for k, v in self.atual["calendario"].items()}
-
-        self.equipas = self.atual["equipas"]
-        self.reais = [t for t in self.equipas if not t["fantasma"]]
-        self.ids_reais = {t["id"] for t in self.reais}
-        self.fantasmas = [t for t in self.equipas if t["fantasma"]]
 
         contagem = {int(k): v for k, v in self.atual["lugares"]["contagem"].items()}
         self.lugares_ativos = {k for k in contagem if k not in FORA_DO_CINCO}
@@ -74,7 +76,6 @@ def principal():
         "dia_de_referencia": ref["data"],
         "dia_de_referencia_e_ontem": ref["periodo"] == ctx.ultimo_periodo,
         "verificacao": ctx.atual.get("verificacao"),
-        "fantasma": [t["nome"] for t in ctx.fantasmas],
     }
     falhas = 0
     for nome, modulo in BLOCOS.items():

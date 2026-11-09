@@ -267,7 +267,7 @@ def principal():
         return {
             str(t["id"]): round(t["pontos_oficiais"] - soma.get(t["id"], 0.0), 1)
             for t in atual["equipas"]
-            if abs(t["pontos_oficiais"] - soma.get(t["id"], 0.0)) > 0.05
+            if not t["fantasma"] and abs(t["pontos_oficiais"] - soma.get(t["id"], 0.0)) > 0.05
         }
 
     dif = diferencas()

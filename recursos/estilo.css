@@ -4,7 +4,7 @@
   --pagina:#f9f9f7;--cartao:#fcfcfb;--realce:#f1f0ec;
   --tinta:#0b0b0b;--tinta2:#52514e;--muda:#6f6e69;
   --grelha:#e1e0d9;--eixo:#c3c2b7;--borda:rgba(11,11,11,.10);
-  --e1:#2a78d6;--e2:#eb6834;--e3:#1baf7a;--ef:#898781;
+  --e1:#2a78d6;--e2:#eb6834;--e3:#1baf7a;--e0:#898781;
   --subiu:#006300;--desceu:#b3261e;
   --bom:#0ca30c;--alerta:#fab219;--critico:#d03b3b;
   --bal-fundo:#1a1a19;--bal-tinta:#f0efec;
@@ -15,7 +15,7 @@
     --pagina:#0d0d0d;--cartao:#1a1a19;--realce:#262624;
     --tinta:#f0efec;--tinta2:#c3c2b7;--muda:#a3a29a;
     --grelha:#2c2c2a;--eixo:#383835;--borda:rgba(255,255,255,.10);
-    --e1:#3987e5;--e2:#d95926;--e3:#199e70;--ef:#898781;
+    --e1:#3987e5;--e2:#d95926;--e3:#199e70;--e0:#898781;
     --subiu:#3dc23d;--desceu:#f08a8a;
     --bal-fundo:#2c2c2a;--bal-tinta:#f0efec;
     --q1:#0d366b;--q1t:#f0efec;--q2:#184f95;--q2t:#fff;--q3:#2a78d6;--q3t:#fff;--q4:#6da7ec;--q4t:#0b0b0b;
@@ -82,7 +82,6 @@ h3{margin:0 0 8px;font-size:1rem;line-height:1.25}
 .linha{display:flex;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--grelha)}
 .lista>.linha:first-child{border-top:0;padding-top:0}
 .lista>.linha:last-child{padding-bottom:0}
-.linha.apagada{color:var(--tinta2)}
 .posto{flex:none;width:1.5em;font-weight:700;font-variant-numeric:tabular-nums;text-align:center}
 .cresce{flex:1 1 auto;min-width:0}
 .nome{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;font-weight:600;line-height:1.25}
@@ -91,7 +90,7 @@ h3{margin:0 0 8px;font-size:1rem;line-height:1.25}
 .grande{font-size:1.15rem;font-weight:700;line-height:1.2;white-space:nowrap}
 .ponto{display:inline-block;flex:none;width:10px;height:10px;border-radius:50%;background:var(--cor)}
 .chave{display:inline-block;flex:none;width:16px;height:2px;border-radius:1px;background:var(--cor);vertical-align:middle;margin-right:6px}
-.e1{--cor:var(--e1)}.e2{--cor:var(--e2)}.e3{--cor:var(--e3)}.ef{--cor:var(--ef)}
+.e1{--cor:var(--e1)}.e2{--cor:var(--e2)}.e3{--cor:var(--e3)}.e0{--cor:var(--e0)}
 
 .etiqueta{display:inline-flex;align-items:center;gap:4px;padding:1px 7px;border-radius:999px;background:var(--realce);color:var(--tinta);font-size:.75rem;font-weight:600;white-space:nowrap}
 .etiqueta i{width:7px;height:7px;border-radius:50%;background:var(--muda)}

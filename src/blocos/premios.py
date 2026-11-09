@@ -74,7 +74,7 @@ def calcular(ctx):
                     "pior_decisao": pior_decisao(ctx, t["id"], dias),
                     "melhor_contratacao": melhor_contratacao(ctx, t["id"], periodos),
                 }
-                for t in ctx.reais
+                for t in ctx.equipas
             ],
         })
     return {"meses": meses}

@@ -1,4 +1,4 @@
-"""C. Forma e destaques: MVP, flop, top 5, em alta e em baixa. Sem a equipa fantasma."""
+"""C. Forma e destaques: MVP, flop, top 5, em alta e em baixa."""
 from desenho import EB, data_curta, e, num
 
 MINIMO_JOGOS_RECENTES = 2
@@ -22,7 +22,7 @@ def flop_de(lista):
 
 def forma(ctx):
     linhas = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         for j in t["plantel"]:
             m = j["medias"]
             recente = m.get("u7")
@@ -50,8 +50,6 @@ def calcular(ctx):
     por_equipa = []
     todos = []
     for t in ctx.dia_ref["equipas"]:
-        if t["id"] not in ctx.ids_reais:
-            continue
         lista = [
             resumo(j, t["nome"], medias.get(j["id"], 0.0))
             for j in t["jogadores"] if j["lugar"] in ctx.lugares_ativos and j["jogou"]

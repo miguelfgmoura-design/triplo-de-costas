@@ -31,7 +31,7 @@ def melhores_livres(ctx, janela, minimo, periodos):
 
 def lesoes(ctx):
     linhas = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         for j in t["plantel"]:
             if j["estado"] in ESTADOS:
                 linhas.append({
@@ -50,7 +50,7 @@ def calendario(ctx, periodos):
         for p in periodos
     ]
     equipas = []
-    for t in ctx.reais:
+    for t in ctx.equipas:
         dias = []
         for p in periodos:
             hoje = [

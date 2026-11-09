@@ -15,9 +15,8 @@ Como escrever:
 - Português de Portugal, sempre.
 - Entre 180 e 220 palavras no total, somando as duas partes. Este limite é para cumprir: escolhe só o que for mais interessante e deixa o resto de fora.
 - A análise: tom sério de analista. Cada ponto tem de ter números.
-- O balneário: trash talk picante entre as 3 equipas reais, sem ofender. Goza com más decisões: jogadores que ficaram no banco na altura errada, flops, perdas de pontos, má gestão do limite de jogos.
+- O balneário: trash talk picante entre as 3 equipas, sem ofender. Goza com más decisões: jogadores que ficaram no banco na altura errada, flops, perdas de pontos, má gestão do limite de jogos.
 - Nada de família, aparência ou temas pessoais. Goza com as equipas e as decisões, nunca com as pessoas por trás delas.
-- A equipa fantasma (indicada em `fantasma`) não é concorrente: só pode aparecer como termo de comparação nas piadas.
 - Podes usar `**negrito**`. Não uses mais nenhuma formatação.
 
 Regras dos números:
