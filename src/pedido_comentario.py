@@ -6,17 +6,20 @@ isso não consegue chegar a mais nada no computador onde corre.
 import json
 import sys
 
-from comum import FICHEIRO_STATS, RAIZ, ler_json
+from comum import FICHEIRO_STATS, RAIZ, ler_config, ler_json
 
 
 def principal():
     stats = ler_json(FICHEIRO_STATS)
     titulo = stats.get("titulo", {})
     titulo.pop("evolucao", None)  # o histórico dia a dia não faz falta ao comentário
+    classificacao = titulo.get("classificacao", [])
     stats["pontos_do_dia_por_ordem"] = sorted(
-        ({"nome": c["nome"], "pontos": c["pontos_ontem"], "jogos": c["jogos_ontem"]} for c in titulo.get("classificacao", [])),
+        ({"nome": c["nome"], "pontos": c["pontos_ontem"], "jogos": c["jogos_ontem"]} for c in classificacao),
         key=lambda c: -c["pontos"],
     )
+    donos = ler_config().get("donos", {})
+    stats["donos"] = {c["nome"]: donos[str(c["id"])] for c in classificacao if str(c["id"]) in donos}
     instrucoes = (RAIZ / "prompts" / "comentario.md").read_text(encoding="utf-8").strip()
     # Impede que um nome vindo da ESPN consiga fechar a zona dos dados.
     dados = json.dumps(stats, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")

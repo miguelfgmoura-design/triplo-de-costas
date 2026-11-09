@@ -1,5 +1,6 @@
 {
   "id_liga": 965669271,
   "ano_api": 2027,
-  "equipas_fantasma": [4]
+  "equipas_fantasma": [4],
+  "donos": {"1": "Miguel", "2": "Brandão", "3": "Picanha"}
 }

@@ -3,8 +3,8 @@
 dados/dias/AAAA-MM-DD.json  retrato de cada dia da época (alinhamentos e pontos)
 dados/atual.json            situação de hoje (plantéis, lesões, livres, calendário)
 
-Só guarda nomes de equipas e de jogadores. Os dados pessoais dos donos das
-equipas nunca são gravados, porque o repositório é público.
+Só guarda nomes de equipas e de jogadores. Os dados pessoais dos donos que
+vêm da ESPN nunca são gravados, porque o repositório é público.
 """
 import sys
 import time

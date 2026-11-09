@@ -46,7 +46,7 @@ O token é como uma palavra-passe: não o envies a ninguém nem o escrevas em ne
 ## Coisas a saber
 
 - O GitHub desliga o agendamento ao fim de 60 dias sem atividade. Os dados guardados todas as manhãs contam como atividade, por isso só precisa de atenção se pausares durante muito tempo.
-- O número da liga está em `config.json`, tal como a equipa que fica de fora do site e do comentário (`equipas_fantasma`). Para a próxima época, muda lá também `ano_api`.
+- O número da liga está em `config.json`, tal como a equipa que fica de fora do site e do comentário (`equipas_fantasma`) e os nomes com que o comentário trata os donos (`donos`). Para a próxima época, muda lá também `ano_api`.
 - A liga tem de continuar visível ao público na ESPN, senão os dados deixam de chegar.
 - Para acrescentar um bloco de estatísticas, junta um ficheiro em `src/blocos/` e regista-o em `src/blocos/__init__.py`.
 - Para mudar o que aparece em cada menu do site, altera as listas em `src/seccoes.py`.
