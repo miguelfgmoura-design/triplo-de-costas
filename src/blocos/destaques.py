@@ -1,9 +1,12 @@
-"""C. Forma e destaques: MVP, flop, top 5, em alta e em baixa."""
-from desenho import EB, data_curta, e, nome_curto, num, quadro, tabela, tile, variacao
+"""C. Forma e destaques: MVP, flop, top 5, em alta, em baixa e os melhores da época."""
+import math
+
+from desenho import EB, data_curta, e, nome_curto, num, plural, quadro, tabela, tile, variacao
 
 MINIMO_JOGOS_RECENTES = 2
 MINIMO_JOGOS_COMPARACAO = 5
 QUANTOS_EM_ALTA = 4
+QUANTOS_MELHORES = 10
 
 
 def resumo(j, equipa, media):
@@ -45,6 +48,21 @@ def forma(ctx):
     return alta, baixa
 
 
+def melhores_da_epoca(ctx):
+    """Melhores médias da época, só entre quem fez pelo menos metade dos jogos de quem fez mais."""
+    linhas = [
+        {
+            "nome": j["nome"], "equipa": t["nome"], "jogos": j["medias"]["epoca"]["jogos"],
+            "total": round(j["medias"]["epoca"]["total"], 1), "media": round(j["medias"]["epoca"]["media"], 1),
+        }
+        for t in ctx.equipas for j in t["plantel"]
+        if (j["medias"].get("epoca") or {}).get("jogos")
+    ]
+    minimo = math.ceil(max((l["jogos"] for l in linhas), default=0) / 2)
+    escolhidos = sorted((l for l in linhas if l["jogos"] >= minimo), key=lambda l: (-l["media"], -l["total"]))
+    return {"jogadores": escolhidos[:QUANTOS_MELHORES], "minimo_jogos": minimo}
+
+
 def calcular(ctx):
     medias = {i: (j["medias"].get("epoca") or {}).get("media", 0.0) for i, j in ctx.jogadores_nos_planteis().items()}
     por_equipa = []
@@ -71,6 +89,7 @@ def calcular(ctx):
         "flops": sorted(abaixo_da_media, key=lambda r: r["diferenca_media"])[:5],
         "em_alta": em_alta,
         "em_baixa": em_baixa,
+        "melhores_epoca": melhores_da_epoca(ctx),
     }
 
 
@@ -135,12 +154,15 @@ def tabela_forma(lista, v, sobe):
     return tabela(colunas, corpo)
 
 
-def desenhar_dia(d, v):
-    dia = data_curta(d["dia"])
+def desenhar_destaques(d, v):
     herois = f'<div class="tiles">{heroi("MVP", d["mvp"], v)}{heroi("Flop", d["flop"], v)}</div>'
+    return quadro("Destaques do dia", herois, info=data_curta(d["dia"]))
+
+
+def desenhar_tops(d, v):
+    dia = data_curta(d["dia"])
     return (
-        quadro("Destaques do dia", herois, info=dia)
-        + quadro(
+        quadro(
             "Top 5",
             tabela_jogos(d["top5"], v, "Ninguém jogou neste dia."),
             info=dia,
@@ -164,6 +186,22 @@ def desenhar_forma(d, v):
             tabela_forma(d["em_baixa"], v, False),
             nota="Média dos últimos 7 dias contra a dos últimos 30 dias.",
         )
+    )
+
+
+def desenhar_melhores(d, v):
+    melhores = d["melhores_epoca"]
+    colunas = [("#", "p"), ("Jogador", "e"), ("Eq.", "eq"), ("J", ""), ("Total", ""), ("Méd.", "")]
+    corpo = [
+        [str(i), e(nome_curto(x["nome"])), v.equipa_curta(x["equipa"]), str(x["jogos"]), num(x["total"]), f'<b>{num(x["media"])}</b>']
+        for i, x in enumerate(melhores["jogadores"], 1)
+    ]
+    return quadro(
+        "Best so far",
+        tabela(colunas, corpo),
+        info="época toda",
+        nota=f'Melhores médias da época, entre os jogadores que estão hoje nas equipas. Só entra quem já fez pelo menos '
+        f'{plural(melhores["minimo_jogos"], "jogo", "jogos")}: metade dos jogos de quem fez mais.',
     )
 
 

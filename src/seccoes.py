@@ -23,11 +23,12 @@ SIMBOLOS = {
 }
 
 # Cada peça é: (bloco de dados, título se falhar, função que desenha os quadros).
-# O comentário entra no início de "hoje" e o menu "equipa" é construído pela FICHA.
+# O comentário entra no fim de "hoje" e o menu "equipa" é construído pela FICHA.
 MENUS = [
     {"id": "hoje", "nome": "Hoje", "pecas": [
+        ("destaques", "Destaques do dia", destaques.desenhar_destaques),
         ("titulo", "Classificação", titulo.desenhar_classificacao),
-        ("destaques", "Destaques do dia", destaques.desenhar_dia),
+        ("destaques", "Top 5 e flops", destaques.desenhar_tops),
     ]},
     {"id": "titulo", "nome": "Título", "pecas": [
         ("titulo", "Quem vai ganhar", titulo.desenhar_projecao),
@@ -37,6 +38,7 @@ MENUS = [
     {"id": "equipa", "nome": "Equipa", "pecas": []},
     {"id": "jogadores", "nome": "Jogadores", "pecas": [
         ("destaques", "Em alta e em baixa", destaques.desenhar_forma),
+        ("destaques", "Best so far", destaques.desenhar_melhores),
         ("previsao", "Real vs. projeção da ESPN", previsao.desenhar),
     ]},
     {"id": "conselhos", "nome": "Conselhos", "pecas": [
@@ -49,6 +51,7 @@ FICHA = [
     ("MVP e flop do dia", "destaques", "por_equipa", "equipa", destaques.cartao_equipa),
     ("Onde perde pontos", "perdas", "equipas", "nome", perdas.cartao_equipa),
     ("Dependência da estrela", "estrela", "equipas", "nome", estrela.cartao_equipa),
+    ("Limite de jogos", "perdas", "equipas", "nome", perdas.cartao_limite),
 ]
 
 

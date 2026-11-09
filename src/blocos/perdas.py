@@ -99,13 +99,9 @@ def frase_limite(limite):
 
 
 def cartao_equipa(t, v):
-    liga = v.stats["liga"]
-    por_posicao = liga["jogos_por_posicao"]
     banco = t["banco"]
     vagas = t["vagas"]
     falhas = t["jogos_falhados"]
-    limite = t["limite_de_jogos"]
-    classe = v.classe(t["nome"])
     quem = ", ".join(f'{e(nome_curto(x["nome"]))} ({x["jogos"]})' for x in falhas["mais_falhou"])
     numeros = (
         tile("Jogos feitos", num(t["jogos_feitos"], 0))
@@ -122,6 +118,14 @@ def cartao_equipa(t, v):
         "Evitáveis: vezes na época em que havia uma posição livre e alguém do banco a jogar. "
         "Jogos falhados: a equipa da NBA jogou e o jogador não, por lesão ou outra ausência.</p></details>"
     )
+    return quadro("Onde perde pontos", f'<div class="tiles">{numeros}</div>{glossario}')
+
+
+def cartao_limite(t, v):
+    liga = v.stats["liga"]
+    por_posicao = liga["jogos_por_posicao"]
+    limite = t["limite_de_jogos"]
+    classe = v.classe(t["nome"])
     largura = min(100.0, 100 * limite["usados"] / limite["limite"])
     posicoes = "".join(
         f'<div class="pos"><div class="pos-topo"><span>{e(p["posicao"])}</span><b>{p["usados"]}<small>/{p["limite"]}</small></b></div>'
@@ -133,14 +137,11 @@ def cartao_equipa(t, v):
         f'<div class="meta">{frase_limite(limite)}</div></div>'
         f'<div class="pos-grelha {classe}">{posicoes}</div>'
     )
-    return (
-        quadro("Onde perde pontos", f'<div class="tiles">{numeros}</div>{glossario}')
-        + quadro(
-            "Limite de jogos",
-            corpo_limite,
-            info=f'{limite["usados"]} de {num(limite["limite"], 0)}',
-            nota=f'Cada equipa só pode usar {num(liga["limite_total_jogos"], 0)} jogos na época: {por_posicao.get("PG")} em cada '
-            f'posição e {por_posicao.get("UT")} nas três UT. Por isso, depois de garantir que chega ao limite, os pontos por jogo '
-            "valem mais do que jogar todos os dias.",
-        )
+    return quadro(
+        "Limite de jogos",
+        corpo_limite,
+        info=f'{limite["usados"]} de {num(limite["limite"], 0)}',
+        nota=f'Cada equipa só pode usar {num(liga["limite_total_jogos"], 0)} jogos na época: {por_posicao.get("PG")} em cada '
+        f'posição e {por_posicao.get("UT")} nas três UT. Por isso, depois de garantir que chega ao limite, os pontos por jogo '
+        "valem mais do que jogar todos os dias.",
     )

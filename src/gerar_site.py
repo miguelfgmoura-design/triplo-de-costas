@@ -24,7 +24,7 @@ NOME_CURTO = "Triplo Costas"
 
 BOLA = (
     '<svg viewBox="-1 -1 2 2" aria-hidden="true"><circle r="1" fill="#eb6834"/>'
-    '<g transform="rotate(20)" fill="none" stroke="#1a1a19" stroke-width=".09">'
+    '<g transform="rotate(20)" fill="none" stroke="#131c3a" stroke-width=".09">'
     '<path d="M-1 0H1M0-1V1"/><path d="M-.72-.72a1.05 1.05 0 0 1 0 1.44M.72-.72a1.05 1.05 0 0 0 0 1.44"/>'
     "</g></svg>"
 )
@@ -137,7 +137,7 @@ def montar_paineis(stats, vista, dias_com_comentario):
     for n, menu in enumerate(MENUS):
         corpo = "".join(peca(stats, vista, *p) for p in menu["pecas"])
         if menu["id"] == "hoje":
-            corpo = seccao_comentario(stats["ultimo_dia_fechado"], dias_com_comentario) + corpo
+            corpo += seccao_comentario(stats["ultimo_dia_fechado"], dias_com_comentario)
         elif menu["id"] == "equipa":
             corpo = painel_equipa(stats, vista)
         ativo = " ativo" if n == 0 else ""
@@ -174,8 +174,8 @@ def montar_pagina(stats, dias_com_comentario, dados_antigos):
 <title>{e(nome)}</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f0">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#e9edf5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1128">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="{e(NOME_CURTO)}">
@@ -207,7 +207,7 @@ def escrever_manifesto(nome):
         "name": nome, "short_name": NOME_CURTO, "lang": "pt-PT",
         "description": "A nossa liga Fantasy NBA, atualizada todas as manhãs.",
         "start_url": "./", "scope": "./", "display": "standalone",
-        "background_color": "#0d0d0d", "theme_color": "#0d0d0d",
+        "background_color": "#0b1128", "theme_color": "#0b1128",
         "icons": [
             {"src": "icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
             {"src": "icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},

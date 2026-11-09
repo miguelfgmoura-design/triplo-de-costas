@@ -38,17 +38,24 @@ def calcular(ctx):
     return {"equipas": sorted(resultado, key=lambda r: -r["percentagem"])}
 
 
-def cartao_equipa(t, v):
+def linha_equipa(t, v, escolhida):
     estado = f' · está {e(t["estado"].lower())}' if t["estado"] else ""
     saiu = " · já não está na equipa" if not t["ainda_no_plantel"] else ""
-    corpo = (
-        f'<div class="q-bloco"><div class="barra-topo"><span>{e(t["jogador"])}</span><span>{num(t["percentagem"])}%</span></div>'
+    return (
+        f'<div class="estrela-l{" atual" if escolhida else ""}">'
+        f'<div class="estrela-eq">{v.equipa(t["nome"])}</div>'
+        f'<div class="barra-topo"><span>{e(t["jogador"])}</span><span>{num(t["percentagem"])}%</span></div>'
         f'<div class="medidor {v.classe(t["nome"])}"><div style="width:{t["percentagem"]:.1f}%"></div></div>'
         f'<div class="meta">{num(t["pontos"])} pontos em {plural(t["jogos"], "jogo", "jogos")}{estado}{saiu}. '
         f'Os 3 melhores valem {num(t["percentagem_3_melhores"])}%.</div></div>'
     )
+
+
+def cartao_equipa(t, v):
+    """As três equipas ficam sempre na mesma ordem; só muda a que está em destaque."""
+    linhas = "".join(linha_equipa(x, v, x["nome"] == t["nome"]) for x in v.stats["estrela"]["equipas"])
     return quadro(
         "Dependência da estrela",
-        corpo,
-        nota="Parte dos pontos da equipa que veio do seu melhor jogador. Quanto mais alta, mais uma lesão dele custa.",
+        linhas,
+        nota="Parte dos pontos de cada equipa que veio do seu melhor jogador. Quanto mais alta, mais uma lesão dele custa.",
     )

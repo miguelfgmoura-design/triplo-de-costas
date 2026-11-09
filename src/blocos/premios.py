@@ -2,7 +2,7 @@
 from collections import Counter, defaultdict
 from datetime import date
 
-from desenho import MESES, data_curta, e, nome_curto, num, quadro, tabela
+from desenho import MESES, data_curta, e, nome_curto, num, tabela
 
 from .perdas import analisar_dia
 
@@ -132,10 +132,11 @@ def desenhar(d, v):
         "Melhor contratação: quem veio dos livres ou de uma troca e mais pontos somou a jogar nesse mês."
     )
     html = []
-    for n, m in enumerate(d["meses"]):
-        titulo = f'Prémios de {nome_do_mes(m["mes"])}'
-        if n == 0:
-            html.append(quadro(titulo, corpo_mes(m, v), info="em curso" if m["em_curso"] else "", nota=nota))
-        else:
-            html.append(f'<details class="quadro"><summary>{e(titulo)}</summary>{corpo_mes(m, v)}</details>')
+    for m in d["meses"]:
+        titulo = e(f'Prémios de {nome_do_mes(m["mes"])}')
+        estado = '<span class="q-info">em curso</span>' if m["em_curso"] else ""
+        html.append(
+            f'<details class="quadro"><summary><span>{titulo}</span>{estado}</summary>'
+            f'{corpo_mes(m, v)}<p class="q-nota">{nota}</p></details>'
+        )
     return "".join(html)
