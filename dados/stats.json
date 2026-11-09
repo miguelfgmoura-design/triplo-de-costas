@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-09T04:11:24+00:00",
+ "atualizado_em": "2026-11-09T05:21:31+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "formato": "Pontos acumulados na época, sem confrontos semanais",
@@ -62,34 +62,34 @@
    {
     "id": 1,
     "nome": "Portela Lakers",
-    "total_previsto": 41914,
+    "total_previsto": 41934,
     "intervalo_80": [
-     39276,
-     44442
+     39294,
+     44465
     ],
-    "probabilidade_titulo": 50.9,
+    "probabilidade_titulo": 50.3,
     "jogos_restantes_previstos": 706
    },
    {
     "id": 2,
     "nome": "Lisbon Lebron’s",
-    "total_previsto": 41663,
+    "total_previsto": 41727,
     "intervalo_80": [
-     39005,
-     44199
+     39064,
+     44267
     ],
-    "probabilidade_titulo": 44.4,
+    "probabilidade_titulo": 44.8,
     "jogos_restantes_previstos": 704
    },
    {
     "id": 3,
     "nome": "Queta's magic",
-    "total_previsto": 38839,
+    "total_previsto": 38910,
     "intervalo_80": [
-     36411,
-     41160
+     36480,
+     41234
     ],
-    "probabilidade_titulo": 4.7,
+    "probabilidade_titulo": 4.8,
     "jogos_restantes_previstos": 703
    }
   ],
@@ -846,13 +846,13 @@
     "variacao": -7.5
    },
    {
-    "nome": "Giannis Antetokounmpo",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "MIA",
-    "media_7_dias": 61.1,
+    "nome": "Tyrese Maxey",
+    "equipa": "Queta's magic",
+    "nba": "PHI",
+    "media_7_dias": 45.8,
     "jogos_7_dias": 4,
-    "media_referencia": 67.4,
-    "variacao": -6.3
+    "media_referencia": 50.9,
+    "variacao": -5.2
    }
   ]
  },
@@ -944,6 +944,19 @@
      "jogos_proximos_7_dias": 3
     },
     {
+     "nome": "Davion Mitchell",
+     "nba": "MIA",
+     "posicoes": [
+      "PG"
+     ],
+     "media": 46.2,
+     "jogos": 8,
+     "total": 369.5,
+     "estado": null,
+     "em_waiver": false,
+     "jogos_proximos_7_dias": 4
+    },
+    {
      "nome": "Kyrie Irving",
      "nba": "DAL",
      "posicoes": [
@@ -983,19 +996,6 @@
      "estado": null,
      "em_waiver": false,
      "jogos_proximos_7_dias": 3
-    },
-    {
-     "nome": "Davion Mitchell",
-     "nba": "MIA",
-     "posicoes": [
-      "PG"
-     ],
-     "media": 42.6,
-     "jogos": 8,
-     "total": 341.0,
-     "estado": null,
-     "em_waiver": false,
-     "jogos_proximos_7_dias": 4
     }
    ]
   },
@@ -1451,15 +1451,15 @@
   "equipas": [
    {
     "nome": "Portela Lakers",
-    "diferenca": 1.4
+    "diferenca": 1.5
    },
    {
     "nome": "Queta's magic",
-    "diferenca": 0.6
+    "diferenca": 0.8
    },
    {
     "nome": "Lisbon Lebron’s",
-    "diferenca": -0.1
+    "diferenca": 0.1
    }
   ],
   "surpresas": [
