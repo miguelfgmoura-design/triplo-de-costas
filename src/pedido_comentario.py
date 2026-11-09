@@ -11,7 +11,12 @@ from comum import FICHEIRO_STATS, RAIZ, ler_json
 
 def principal():
     stats = ler_json(FICHEIRO_STATS)
-    stats.get("titulo", {}).pop("evolucao", None)  # o histórico dia a dia não faz falta ao comentário
+    titulo = stats.get("titulo", {})
+    titulo.pop("evolucao", None)  # o histórico dia a dia não faz falta ao comentário
+    stats["pontos_do_dia_por_ordem"] = sorted(
+        ({"nome": c["nome"], "pontos": c["pontos_ontem"], "jogos": c["jogos_ontem"]} for c in titulo.get("classificacao", [])),
+        key=lambda c: -c["pontos"],
+    )
     instrucoes = (RAIZ / "prompts" / "comentario.md").read_text(encoding="utf-8").strip()
     # Impede que um nome vindo da ESPN consiga fechar a zona dos dados.
     dados = json.dumps(stats, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
