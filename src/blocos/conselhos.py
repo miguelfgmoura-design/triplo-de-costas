@@ -1,6 +1,6 @@
 """D. Conselhos táticos: livres, lesões e calendário dos próximos 7 dias. Iguais para os 3."""
 from comum import NOMES_LUGARES, melhor_alinhamento
-from desenho import data_curta, dia_curto, e, num, plural
+from desenho import data_curta, dia_curto, e, nome_curto, num, quadro, tabela
 
 JANELAS = {"ultimos_7_dias": ("u7", 2), "ultimos_15_dias": ("u15", 4)}  # janela e mínimo de jogos
 QUANTOS_LIVRES = 5
@@ -84,6 +84,9 @@ def calcular(ctx):
     }
 
 
+LUGARES_CURTOS = {"Lesionados": "IR"}
+
+
 def etiqueta_estado(estado):
     if not estado:
         return ""
@@ -94,79 +97,101 @@ def etiqueta_estado(estado):
 def lista_livres(linhas):
     if not linhas:
         return '<p class="nota">Sem jogadores com jogos suficientes.</p>'
-    itens = []
+    colunas = [("Jogador", "e quebra"), ("NBA", "tx"), ("Pos.", "tx"), ("Próx.", ""), ("J", ""), ("Média", "")]
+    corpo = []
     for x in linhas:
-        waiver = ' <span class="etiqueta">Em waiver</span>' if x["em_waiver"] else ""
-        itens.append(
-            f'<li class="linha"><div class="cresce"><div class="nome">{e(x["nome"])}{etiqueta_estado(x["estado"])}{waiver}</div>'
-            f'<div class="meta">{e(x["nba"])} · {e(", ".join(x["posicoes"]))} · '
-            f'{plural(x["jogos_proximos_7_dias"], "jogo", "jogos")} em 7 dias</div></div>'
-            f'<div class="direita"><strong class="grande">{num(x["media"])}</strong>'
-            f'<span class="meta">por jogo, em {x["jogos"]}</span></div></li>'
-        )
-    return f'<ul class="lista">{"".join(itens)}</ul>'
+        estado = f' {etiqueta_estado(x["estado"])}' if x["estado"] else ""
+        waiver = ' <span class="etiqueta">Waiver</span>' if x["em_waiver"] else ""
+        corpo.append([
+            f'{e(nome_curto(x["nome"]))}{estado}{waiver}',
+            e(x["nba"]),
+            e("/".join(x["posicoes"])),
+            str(x["jogos_proximos_7_dias"]),
+            str(x["jogos"]),
+            f'<b>{num(x["media"])}</b>',
+        ])
+    return tabela(colunas, corpo)
 
 
 def linhas_lesoes(linhas, v):
     if not linhas:
         return '<p class="nota">Ninguém lesionado nos plantéis.</p>'
-    itens = []
+    colunas = [("Jogador", "e"), ("Eq.", "eq"), ("Lugar", "tx"), ("Estado", "tx"), ("Regresso", "")]
+    corpo = []
     for x in linhas:
         if x["fora_da_epoca"]:
-            quando = "fora até ao fim da época"
+            quando = "fim da época"
         elif x["regresso"]:
-            quando = f'regresso previsto a {data_curta(x["regresso"])}'
+            quando = data_curta(x["regresso"])
         elif x["estado"] == "Fora":
-            quando = "sem data de regresso"
+            quando = "sem data"
         else:
-            quando = ""
-        detalhe = " · ".join(p for p in (e(x["nba"]), f'em {e(x["lugar"])}', quando) if p)
-        ativa = ' <span class="etiqueta critico"><i aria-hidden="true"></i>Numa posição ativa</span>' if x["em_posicao_ativa"] else ""
-        itens.append(
-            f'<li class="linha"><div class="cresce"><div class="nome">{v.ponto(x["equipa"])}{e(x["nome"])}</div>'
-            f'<div class="meta">{detalhe}</div>{ativa}</div>{etiqueta_estado(x["estado"])}</li>'
-        )
-    return f'<ul class="lista">{"".join(itens)}</ul>'
+            quando = "—"
+        lugar = e(LUGARES_CURTOS.get(x["lugar"], x["lugar"]))
+        if x["em_posicao_ativa"]:
+            lugar = f'<i class="ponto-critico" role="img" aria-label="Numa posição ativa"></i>{lugar}'
+        corpo.append([
+            f'{e(nome_curto(x["nome"]))} <span class="mu">{e(x["nba"])}</span>',
+            v.equipa_curta(x["equipa"]),
+            lugar,
+            etiqueta_estado(x["estado"]),
+            quando,
+        ])
+    return tabela(colunas, corpo)
 
 
 def intensidade(valor, cortes):
     return sum(1 for corte in cortes if valor >= corte)
 
 
-def bloco_calendario(c, v):
+def celulas(dias, chave, cortes):
+    return "".join(
+        f'<td><span class="q q{intensidade(d[chave], cortes)}">{d[chave]}</span></td>' for d in dias
+    )
+
+
+def quadro_calendario(c, v):
+    titulo = "Jogos nos próximos 7 dias"
     if not c["dias"]:
-        return '<p class="nota">A época regular já acabou.</p>'
+        return quadro(titulo, '<p class="nota">A época regular já acabou.</p>')
     cabecalho = "".join(
-        f'<div class="cal-dia">{dia_curto(d["data"])}<b>{data_curta(d["data"]).split(chr(160))[0]}</b></div>' for d in c["dias"]
+        f'<th scope="col">{dia_curto(d["data"])}<b>{data_curta(d["data"]).split(chr(160))[0]}</b></th>' for d in c["dias"]
     )
-    celulas_nba = "".join(
-        f'<div class="q q{intensidade(d["jogos_nba"], (1, 4, 7, 10))}">{d["jogos_nba"]}</div>' for d in c["dias"]
-    )
-    equipas = []
+    linhas = [f'<tr><th scope="row">NBA</th>{celulas(c["dias"], "jogos_nba", (1, 4, 7, 10))}<td></td><td></td></tr>']
     for t in c["equipas"]:
-        celulas = "".join(
-            f'<div class="q q{intensidade(d["jogos"], (1, 4, 6, 8))}">{d["jogos"]}</div>' for d in t["dias"]
-        )
-        nota = f' <small>só {t["utilizaveis"]} cabem nas posições</small>' if t["utilizaveis"] < t["total"] else ""
-        equipas.append(
-            f'<div class="cal-nome"><span>{v.ponto(t["nome"])}{e(t["nome"])}</span>'
-            f'<span>{plural(t["total"], "jogo", "jogos")}{nota}</span></div>{celulas}'
+        linhas.append(
+            f'<tr><th scope="row">{v.equipa_curta(t["nome"])}</th>{celulas(t["dias"], "jogos", (1, 4, 6, 8))}'
+            f'<td>{t["total"]}</td><td><b>{t["utilizaveis"]}</b></td></tr>'
         )
     mais = ", ".join(
         f'{dia_curto(d["data"])} {data_curta(d["data"])} ({d["jogos_nba"]})'
         for d in c["dias_com_mais_jogos"] if d["jogos_nba"]
     )
-    return (
-        f'<div class="calendario">{cabecalho}<div class="cal-nome"><span>Jogos na NBA</span></div>{celulas_nba}'
-        f'{"".join(equipas)}</div><p class="nota" style="margin:10px 0 0">Dias com mais jogos: {mais}. Quanto mais forte a cor, mais jogos.</p>'
+    tabela_dias = (
+        '<div class="t-caixa"><table class="t cal"><thead><tr><th scope="col"><span class="so-leitor">Equipa</span></th>'
+        f'{cabecalho}<th scope="col">Tot.</th><th scope="col">Úteis</th></tr></thead><tbody>{"".join(linhas)}</tbody></table></div>'
+    )
+    return quadro(
+        titulo,
+        tabela_dias,
+        nota=f"Dias com mais jogos: {mais}. Úteis: os jogos que cabem nas posições. Quanto mais forte a cor, mais jogos.",
     )
 
 
 def desenhar(d, v):
     return "".join([
-        '<p class="nota">Ordenados por pontos por jogo, porque com limite de jogos a qualidade pesa mais do que a quantidade.</p>',
-        f'<div class="cartao"><h3>Melhores livres, últimos 7 dias</h3>{lista_livres(d["livres"]["ultimos_7_dias"])}</div>',
-        f'<div class="cartao"><h3>Melhores livres, últimos 15 dias</h3>{lista_livres(d["livres"]["ultimos_15_dias"])}</div>',
-        f'<div class="cartao"><h3>Lesões nos plantéis</h3>{linhas_lesoes(d["lesoes"], v)}</div>',
-        f'<div class="cartao"><h3>Jogos nos próximos 7 dias</h3>{bloco_calendario(d["calendario"], v)}</div>',
+        quadro("Melhores livres", lista_livres(d["livres"]["ultimos_7_dias"]), info="últimos 7 dias"),
+        quadro(
+            "Melhores livres",
+            lista_livres(d["livres"]["ultimos_15_dias"]),
+            info="últimos 15 dias",
+            nota="Ordenados por pontos por jogo, porque com limite de jogos a qualidade pesa mais do que a quantidade. "
+            "Próx.: jogos nos próximos 7 dias. J: jogos feitos nesse período.",
+        ),
+        quadro(
+            "Lesões nos plantéis",
+            linhas_lesoes(d["lesoes"], v),
+            nota="Ponto vermelho no lugar: não joga e está a ocupar uma posição ativa.",
+        ),
+        quadro_calendario(d["calendario"], v),
     ])

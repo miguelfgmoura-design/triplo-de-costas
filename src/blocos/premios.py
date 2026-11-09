@@ -2,7 +2,7 @@
 from collections import Counter, defaultdict
 from datetime import date
 
-from desenho import MESES, data_curta, e, num, plural
+from desenho import MESES, data_curta, e, nome_curto, num, quadro, tabela
 
 from .perdas import analisar_dia
 
@@ -85,54 +85,57 @@ def nome_do_mes(mes):
     return f"{MESES[d.month - 1]} de {d.year}"
 
 
-def texto_pior(p):
-    if not p["no_banco"]:
-        return f"A {data_curta(p['data'])}, um titular deu pontos negativos"
-    banco = ", ".join(f"{e(b['nome'])} ({num(b['pontos'])})" for b in p["no_banco"])
-    return f"A {data_curta(p['data'])}, no banco: {banco}"
-
-
-def linhas_premio(equipas, chave, v, com_valor, com_texto, vazio):
-    itens = []
+def tabela_jogador(equipas, chave, vazio, v):
+    colunas = [("Eq.", "eq"), ("Jogador", "e"), ("J", ""), ("Pontos", "")]
+    corpo = []
     for t in equipas:
         p = t[chave]
         if p:
-            detalhe = com_texto(p)
-            valor = com_valor(p)
+            corpo.append([v.equipa_curta(t["nome"]), e(nome_curto(p["nome"])), str(p["jogos"]), f'<b>{num(p["pontos"])}</b>'])
         else:
-            detalhe = vazio
-            valor = "—"
-        itens.append(
-            f'<li class="linha"><div class="cresce"><div class="nome">{v.ponto(t["nome"])}{e(t["nome"])}</div>'
-            f'<div class="meta">{detalhe}</div></div><strong class="grande">{valor}</strong></li>'
-        )
-    return f'<ul class="lista">{"".join(itens)}</ul>'
+            corpo.append([v.equipa_curta(t["nome"]), vazio, "—", "—"])
+    return tabela(colunas, corpo)
+
+
+def texto_banco(p):
+    if not p["no_banco"]:
+        return "Um titular deu pontos negativos"
+    return ", ".join(f"{e(nome_curto(b['nome']))} ({num(b['pontos'])})" for b in p["no_banco"])
+
+
+def tabela_pior(equipas, v):
+    colunas = [("Eq.", "eq"), ("No banco", "e quebra"), ("Dia", ""), ("Perdeu", "")]
+    corpo = []
+    for t in equipas:
+        p = t["pior_decisao"]
+        if p:
+            corpo.append([v.equipa_curta(t["nome"]), texto_banco(p), data_curta(p["data"]), f'<b>{num(-p["perdidos"])}</b>'])
+        else:
+            corpo.append([v.equipa_curta(t["nome"]), "Nenhum ponto deixado no banco.", "—", "—"])
+    return tabela(colunas, corpo)
 
 
 def corpo_mes(m, v):
-    def jogador(p):
-        return f"{e(p['nome'])}, em {plural(p['jogos'], 'jogo', 'jogos')}"
-
     return (
-        '<h4 class="subtitulo">MVP</h4>'
-        + linhas_premio(m["equipas"], "mvp", v, lambda p: num(p["pontos"]), jogador, "Sem jogos neste mês.")
-        + '<h4 class="subtitulo">Pior decisão</h4>'
-        + linhas_premio(m["equipas"], "pior_decisao", v, lambda p: num(-p["perdidos"]), texto_pior, "Nenhum ponto deixado no banco.")
-        + '<h4 class="subtitulo">Melhor contratação</h4>'
-        + linhas_premio(m["equipas"], "melhor_contratacao", v, lambda p: num(p["pontos"]), jogador, "Nenhuma contratação jogou neste mês.")
+        '<h3 class="q-sub">MVP</h3>'
+        + tabela_jogador(m["equipas"], "mvp", "Sem jogos neste mês.", v)
+        + '<h3 class="q-sub">Pior decisão</h3>'
+        + tabela_pior(m["equipas"], v)
+        + '<h3 class="q-sub">Melhor contratação</h3>'
+        + tabela_jogador(m["equipas"], "melhor_contratacao", "Nenhuma jogou neste mês.", v)
     )
 
 
 def desenhar(d, v):
+    nota = (
+        "Pior decisão: o dia em que o melhor alinhamento possível teria somado mais pontos do que o real. "
+        "Melhor contratação: quem veio dos livres ou de uma troca e mais pontos somou a jogar nesse mês."
+    )
     html = []
     for n, m in enumerate(d["meses"]):
-        titulo = nome_do_mes(m["mes"]).capitalize() + (" (em curso)" if m["em_curso"] else "")
+        titulo = f'Prémios de {nome_do_mes(m["mes"])}'
         if n == 0:
-            html.append(f'<article class="cartao"><h3>{e(titulo)}</h3>{corpo_mes(m, v)}</article>')
+            html.append(quadro(titulo, corpo_mes(m, v), info="em curso" if m["em_curso"] else "", nota=nota))
         else:
-            html.append(f'<details class="cartao"><summary>{e(titulo)}</summary>{corpo_mes(m, v)}</details>')
-    html.append(
-        '<p class="nota">Pior decisão: o dia em que o melhor alinhamento possível teria somado mais pontos do que o real. '
-        "Melhor contratação: quem veio dos livres ou de uma troca e mais pontos somou a jogar nesse mês.</p>"
-    )
+            html.append(f'<details class="quadro"><summary>{e(titulo)}</summary>{corpo_mes(m, v)}</details>')
     return "".join(html)

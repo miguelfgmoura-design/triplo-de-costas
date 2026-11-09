@@ -1,7 +1,7 @@
 """Dependência da estrela: que parte dos pontos de cada equipa vem do melhor jogador."""
 from collections import Counter
 
-from desenho import e, num, plural
+from desenho import e, num, plural, quadro
 
 ESTADOS = {"OUT": "Fora", "DAY_TO_DAY": "Dia a dia", "QUESTIONABLE": "Em dúvida", "DOUBTFUL": "Improvável", "SUSPENSION": "Suspenso"}
 
@@ -41,11 +41,14 @@ def calcular(ctx):
 def cartao_equipa(t, v):
     estado = f' · está {e(t["estado"].lower())}' if t["estado"] else ""
     saiu = " · já não está na equipa" if not t["ainda_no_plantel"] else ""
-    return (
-        f'<div class="cartao"><div class="barra-topo"><span class="nome">{e(t["jogador"])}</span>'
-        f'<strong>{num(t["percentagem"])}%</strong></div>'
+    corpo = (
+        f'<div class="q-bloco"><div class="barra-topo"><span>{e(t["jogador"])}</span><span>{num(t["percentagem"])}%</span></div>'
         f'<div class="medidor {v.classe(t["nome"])}"><div style="width:{t["percentagem"]:.1f}%"></div></div>'
         f'<div class="meta">{num(t["pontos"])} pontos em {plural(t["jogos"], "jogo", "jogos")}{estado}{saiu}. '
         f'Os 3 melhores valem {num(t["percentagem_3_melhores"])}%.</div></div>'
-        '<p class="nota">Parte dos pontos da equipa que veio do seu melhor jogador. Quanto mais alta, mais uma lesão dele custa.</p>'
+    )
+    return quadro(
+        "Dependência da estrela",
+        corpo,
+        nota="Parte dos pontos da equipa que veio do seu melhor jogador. Quanto mais alta, mais uma lesão dele custa.",
     )

@@ -3,7 +3,7 @@ import math
 from collections import Counter
 
 from comum import NOMES_LUGARES, melhor_alinhamento
-from desenho import data_curta, e, num
+from desenho import data_curta, e, nome_curto, num, quadro, tile
 
 
 def analisar_dia(equipa_do_dia, ctx):
@@ -106,32 +106,41 @@ def cartao_equipa(t, v):
     falhas = t["jogos_falhados"]
     limite = t["limite_de_jogos"]
     classe = v.classe(t["nome"])
-    quem = ", ".join(f'{e(x["nome"])} ({x["jogos"]})' for x in falhas["mais_falhou"])
-    posicoes = "".join(
-        f'<span>{e(p["posicao"])} {p["usados"]}/{p["limite"]}</span>' for p in limite["por_posicao"]
+    quem = ", ".join(f'{e(nome_curto(x["nome"]))} ({x["jogos"]})' for x in falhas["mais_falhou"])
+    numeros = (
+        tile("Jogos feitos", num(t["jogos_feitos"], 0))
+        + tile("Pontos por jogo", num(t["pontos_por_jogo"]))
+        + tile("Perdidos no banco", num(banco["epoca_perdidos"]), f'{v.Ontem}: {num(banco["ontem_perdidos"])}')
+        + tile("Marcados no banco", num(banco["epoca_no_banco"]), f'{v.Ontem}: {num(banco["ontem_no_banco"])}')
+        + tile("Posições sem jogo, por dia", num(vagas["por_dia_sem_jogo"]), f'Evitáveis: {vagas["epoca_evitaveis"]}')
+        + tile("Jogos falhados", num(falhas["total"], 0), quem or "Ninguém falhou jogos.")
     )
-    largura = min(100.0, 100 * limite["usados"] / limite["limite"])
-    return (
-        '<article class="cartao">'
-        f'<div class="grelha-2"><div class="tile"><span>Jogos feitos</span><strong>{num(t["jogos_feitos"], 0)}</strong></div>'
-        f'<div class="tile"><span>Pontos por jogo</span><strong>{num(t["pontos_por_jogo"])}</strong></div></div>'
-        '<dl class="dados-linhas">'
-        f'<div><dt>Perdidos no banco</dt><dd><small>{v.ontem}: {num(banco["ontem_perdidos"])}</small>{num(banco["epoca_perdidos"])}</dd></div>'
-        f'<div><dt>Marcados no banco</dt><dd><small>{v.ontem}: {num(banco["ontem_no_banco"])}</small>{num(banco["epoca_no_banco"])}</dd></div>'
-        f'<div><dt>Posições sem jogo, por dia</dt><dd><small>evitáveis: {vagas["epoca_evitaveis"]}</small>{num(vagas["por_dia_sem_jogo"])}</dd></div>'
-        f'<div><dt>Jogos falhados</dt><dd>{falhas["total"]}</dd><dd class="quem">{quem or "Ninguém falhou jogos."}</dd></div>'
-        "</dl>"
-        f'<div class="limite {classe}"><div class="limite-topo"><span>Limite de jogos</span>'
-        f'<span>{limite["usados"]} de {num(limite["limite"], 0)}</span></div>'
-        f'<div class="medidor"><div style="width:{largura:.1f}%"></div></div>'
-        f'<div class="meta">{frase_limite(limite)}</div>'
-        f'<details><summary>Jogos por posição</summary><div class="chips">{posicoes}</div></details></div>'
-        "</article>"
-        f'<p class="nota">Cada equipa só pode usar {num(liga["limite_total_jogos"], 0)} jogos na época: '
-        f'{por_posicao.get("PG")} em cada posição e {por_posicao.get("UT")} nas três UT. Por isso, depois de garantir '
-        "que chega ao limite, os pontos por jogo valem mais do que jogar todos os dias.</p>"
-        '<p class="nota">Perdidos no banco: o que o melhor alinhamento possível teria somado a mais. '
+    glossario = (
+        '<details class="q-mais"><summary>O que significa cada número</summary><p class="q-texto">'
+        "Perdidos no banco: o que o melhor alinhamento possível teria somado a mais. "
         "Marcados no banco: tudo o que quem não estava a jogar marcou. "
         "Evitáveis: vezes na época em que havia uma posição livre e alguém do banco a jogar. "
-        "Jogos falhados: a equipa da NBA jogou e o jogador não, por lesão ou outra ausência.</p>"
+        "Jogos falhados: a equipa da NBA jogou e o jogador não, por lesão ou outra ausência.</p></details>"
+    )
+    largura = min(100.0, 100 * limite["usados"] / limite["limite"])
+    posicoes = "".join(
+        f'<div class="pos"><div class="pos-topo"><span>{e(p["posicao"])}</span><b>{p["usados"]}<small>/{p["limite"]}</small></b></div>'
+        f'<div class="medidor"><div style="width:{min(100.0, 100 * p["usados"] / p["limite"]):.1f}%"></div></div></div>'
+        for p in limite["por_posicao"]
+    )
+    corpo_limite = (
+        f'<div class="q-bloco {classe}"><div class="medidor"><div style="width:{largura:.1f}%"></div></div>'
+        f'<div class="meta">{frase_limite(limite)}</div></div>'
+        f'<div class="pos-grelha {classe}">{posicoes}</div>'
+    )
+    return (
+        quadro("Onde perde pontos", f'<div class="tiles">{numeros}</div>{glossario}')
+        + quadro(
+            "Limite de jogos",
+            corpo_limite,
+            info=f'{limite["usados"]} de {num(limite["limite"], 0)}',
+            nota=f'Cada equipa só pode usar {num(liga["limite_total_jogos"], 0)} jogos na época: {por_posicao.get("PG")} em cada '
+            f'posição e {por_posicao.get("UT")} nas três UT. Por isso, depois de garantir que chega ao limite, os pontos por jogo '
+            "valem mais do que jogar todos os dias.",
+        )
     )

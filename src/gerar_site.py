@@ -11,7 +11,7 @@ import unicodedata
 from datetime import date, timedelta
 
 from comum import DADOS, FICHEIRO_STATS, RAIZ, ler_json
-from desenho import Vista, data_longa, e, momento_longo
+from desenho import Vista, data_curta, dia_curto, e, momento_curto
 from seccoes import MENUS, SIMBOLOS, painel_equipa, peca
 
 SITE = RAIZ / "site"
@@ -81,8 +81,8 @@ def ler_comentario(caminho):
 
 def cartoes_comentario(partes):
     return (
-        f'<article class="cartao comentario"><h3>A análise</h3>{corpo_md(partes[0])}</article>'
-        f'<article class="cartao balneario"><h3>O balneário</h3>{corpo_md(partes[1])}</article>'
+        f'<div class="comentario"><h3>A análise</h3>{corpo_md(partes[0])}</div>'
+        f'<div class="balneario"><h3>O balneário</h3>{corpo_md(partes[1])}</div>'
     )
 
 
@@ -110,7 +110,8 @@ def publicar_comentarios():
 
 def rotulo_dia(chave):
     """O comentário sai na manhã a seguir ao último dia com as contas fechadas."""
-    return data_longa((date.fromisoformat(chave) + timedelta(days=1)).isoformat())
+    dia = (date.fromisoformat(chave) + timedelta(days=1)).isoformat()
+    return f"{dia_curto(dia)}, {data_curta(dia)}"
 
 
 def seccao_comentario(chave_hoje, dias):
@@ -120,12 +121,12 @@ def seccao_comentario(chave_hoje, dias):
     entradas = e(json.dumps([{"d": d, "r": rotulo_dia(d)} for d in todos], ensure_ascii=False, separators=(",", ":")))
     seta = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="{}"/></svg>'
     return (
-        '<section id="comentario"><h2>Comentário do dia</h2>'
+        '<section class="quadro" id="comentario"><header class="q-cab"><h2>Comentário do dia</h2>'
         f'<div class="cn" id="comentario-navega" data-entradas="{entradas}" hidden>'
         f'<button type="button" class="cn-antes" aria-label="Dia anterior">{seta.format("M15 5l-7 7 7 7")}</button>'
         f'<div class="cn-dia" aria-live="polite">{e(rotulo_dia(chave_hoje))}</div>'
         f'<button type="button" class="cn-depois" aria-label="Dia seguinte">{seta.format("M9 5l7 7-7 7")}</button>'
-        "</div>"
+        "</div></header>"
         '<button type="button" class="cn-recente" id="comentario-recente" hidden>Voltar ao mais recente</button>'
         f'<div id="comentario-texto">{corpo}</div></section>'
     )
@@ -173,7 +174,7 @@ def montar_pagina(stats, dias_com_comentario, dados_antigos):
 <title>{e(nome)}</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9f9f7">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f0">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -188,8 +189,7 @@ def montar_pagina(stats, dias_com_comentario, dados_antigos):
 <div class="pagina">
 <header class="topo">
 <div class="marca">{BOLA}<h1>{e(nome)}</h1></div>
-<p class="carimbo">Atualizado <strong>{e(momento_longo(stats["atualizado_em"]))}</strong></p>
-<p class="fecho">Pontos fechados até {e(data_longa(stats["ultimo_dia_fechado"]))}</p>
+<p class="selo">Atualizado <b>{e(momento_curto(stats["atualizado_em"]))}</b><br>Pontos até <b>{e(data_curta(stats["ultimo_dia_fechado"]))}</b></p>
 {aviso}
 </header>
 <main>{paineis}</main>

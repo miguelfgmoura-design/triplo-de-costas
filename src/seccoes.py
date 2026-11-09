@@ -5,9 +5,9 @@ Para mudar a organização do site, basta mexer nas listas MENUS e FICHA.
 import traceback
 
 from blocos import conselhos, destaques, estrela, perdas, premios, previsao, titulo
-from desenho import e
+from desenho import e, quadro
 
-INDISPONIVEL = '<p class="nota">Este bloco não ficou disponível hoje.</p>'
+INDISPONIVEL = '<p class="nota">Este quadro não ficou disponível hoje.</p>'
 
 
 def _simbolo(desenho):
@@ -22,7 +22,7 @@ SIMBOLOS = {
     "conselhos": _simbolo('<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>'),
 }
 
-# Cada peça é: (bloco de dados, título, função que a desenha).
+# Cada peça é: (bloco de dados, título se falhar, função que desenha os quadros).
 # O comentário entra no início de "hoje" e o menu "equipa" é construído pela FICHA.
 MENUS = [
     {"id": "hoje", "nome": "Hoje", "pecas": [
@@ -44,16 +44,12 @@ MENUS = [
     ]},
 ]
 
-# Cada parte da ficha é: (título, bloco, lista de equipas, campo com o nome, função).
+# Cada parte da ficha é: (título se falhar, bloco, lista de equipas, campo com o nome, função).
 FICHA = [
     ("MVP e flop do dia", "destaques", "por_equipa", "equipa", destaques.cartao_equipa),
     ("Onde perde pontos", "perdas", "equipas", "nome", perdas.cartao_equipa),
     ("Dependência da estrela", "estrela", "equipas", "nome", estrela.cartao_equipa),
 ]
-
-
-def _seccao(titulo_seccao, corpo):
-    return f"<section><h2>{e(titulo_seccao)}</h2>{corpo}</section>"
 
 
 def peca(stats, vista, bloco, titulo_seccao, desenhar):
@@ -62,21 +58,19 @@ def peca(stats, vista, bloco, titulo_seccao, desenhar):
     try:
         if dados.get("erro"):
             raise ValueError(f"bloco {bloco} sem dados")
-        corpo = desenhar(dados, vista)
+        return desenhar(dados, vista)
     except Exception:
         traceback.print_exc()
-        corpo = INDISPONIVEL
-    return _seccao(titulo_seccao, corpo)
+        return quadro(titulo_seccao, INDISPONIVEL)
 
 
 def _parte_da_ficha(stats, vista, nome, titulo_parte, bloco, lista, campo, desenhar):
     try:
         item = next(x for x in stats[bloco][lista] if x[campo] == nome)
-        corpo = desenhar(item, vista)
+        return desenhar(item, vista)
     except Exception:
         traceback.print_exc()
-        corpo = INDISPONIVEL
-    return _seccao(titulo_parte, corpo)
+        return quadro(titulo_parte, INDISPONIVEL)
 
 
 def _nomes_das_equipas(stats):
@@ -90,7 +84,7 @@ def painel_equipa(stats, vista):
     """Uma ficha por equipa e uma lista para escolher qual ver, igual para todos."""
     nomes = _nomes_das_equipas(stats)
     if not nomes:
-        return _seccao("Equipa", INDISPONIVEL)
+        return quadro("Equipa", INDISPONIVEL)
     opcoes = "".join(
         f'<option value="{i}" data-classe="{vista.classe(n)}">{e(n)}</option>' for i, n in enumerate(nomes)
     )
@@ -101,7 +95,7 @@ def painel_equipa(stats, vista):
         for i, n in enumerate(nomes)
     )
     return (
-        '<div class="escolha"><label for="escolha-equipa">Escolhe a equipa</label>'
+        '<div class="escolha"><label class="so-leitor" for="escolha-equipa">Escolhe a equipa</label>'
         '<div class="escolha-caixa"><i id="escolha-ponto" class="ponto" aria-hidden="true"></i>'
-        f'<select id="escolha-equipa">{opcoes}</select></div></div>{fichas}'
+        f'<span id="escolha-nome"></span><select id="escolha-equipa">{opcoes}</select></div></div>{fichas}'
     )

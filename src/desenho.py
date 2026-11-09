@@ -9,10 +9,6 @@ from comum import LISBOA
 EB = " "  # espaço que não deixa partir a linha
 MENOS = "−"
 
-DIAS_SEMANA = [
-    "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira",
-    "sexta-feira", "sábado", "domingo",
-]
 DIAS_CURTOS = ["seg", "ter", "qua", "qui", "sex", "sáb", "dom"]
 MESES = [
     "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
@@ -52,14 +48,9 @@ def dia_curto(iso):
     return DIAS_CURTOS[date.fromisoformat(iso).weekday()]
 
 
-def data_longa(iso):
-    d = date.fromisoformat(iso)
-    return f"{DIAS_SEMANA[d.weekday()]}, {d.day} de {MESES[d.month - 1]}"
-
-
-def momento_longo(iso):
+def momento_curto(iso):
     m = datetime.fromisoformat(iso).astimezone(LISBOA)
-    return f"{DIAS_SEMANA[m.weekday()]}, {m.day} de {MESES[m.month - 1]}, às{EB}{m:%H:%M}"
+    return f"{m.day}{EB}{MESES_CURTOS[m.month - 1]}, {m:%H:%M}"
 
 
 class Vista:
@@ -70,15 +61,22 @@ class Vista:
         referencia = stats["dia_de_referencia"]
         e_ontem = stats["dia_de_referencia_e_ontem"]
         self.ontem = "ontem" if e_ontem else f"a {data_curta(referencia)}"
-        self.Ontem = "Ontem" if e_ontem else f"A {data_curta(referencia)}"
+        self.Ontem = "Ontem" if e_ontem else data_curta(referencia)
         series = stats.get("titulo", {}).get("evolucao", {}).get("series", [])
         self.classes = {s["nome"]: f"e{i}" for i, s in enumerate(sorted(series, key=lambda s: s["id"]), 1)}
+        self.abrevs = {s["nome"]: s["abrev"] for s in series}
 
     def classe(self, nome):
         return self.classes.get(nome, "e0")  # a cor segue a equipa, nunca o lugar na tabela
 
     def ponto(self, nome):
         return f'<i class="ponto {self.classe(nome)}" aria-hidden="true"></i>'
+
+    def equipa(self, nome):
+        return f"{self.ponto(nome)}{e(nome)}"
+
+    def equipa_curta(self, nome):
+        return f"{self.ponto(nome)}{e(self.abrevs.get(nome, nome))}"
 
 
 def marcas_redondas(minimo, maximo, quantas=4):
@@ -157,19 +155,48 @@ def grafico_linhas(descricao, datas, series, altura=190, rotulos_fim=False):
     )
 
 
+def tabela(colunas, linhas):
+    """Tabela de um quadro. colunas: (título, classe); linhas: listas de HTML já protegido."""
+
+    def atributo(classe):
+        return f' class="{classe}"' if classe else ""
+
+    cabecalho = "".join(f'<th scope="col"{atributo(c)}>{t}</th>' for t, c in colunas)
+    corpo = "".join(
+        "<tr>" + "".join(f"<td{atributo(c)}>{v}</td>" for (_, c), v in zip(colunas, linha)) + "</tr>"
+        for linha in linhas
+    )
+    return f'<div class="t-caixa"><table class="t"><thead><tr>{cabecalho}</tr></thead><tbody>{corpo}</tbody></table></div>'
+
+
 def tabela_numeros(titulo, datas, series, passo=7):
     """A versão em números de um gráfico, de semana a semana."""
     indices = list(range(len(datas) - 1, -1, -passo))
-    cabecalho = "".join(
-        f'<th scope="col"><i class="ponto {s["classe"]}" aria-hidden="true"></i>{e(s["abrev"])}</th>' for s in series
-    )
-    linhas = "".join(
-        f'<tr><th scope="row">{e(datas[i])}</th>'
-        + "".join(f'<td>{num(s["valores"][i], 0)}</td>' for s in series)
-        + "</tr>"
-        for i in indices
-    )
-    return (
-        f'<details><summary>{e(titulo)}</summary><table class="numeros"><thead><tr><th scope="col">Dia</th>'
-        f"{cabecalho}</tr></thead><tbody>{linhas}</tbody></table></details>"
-    )
+    colunas = [("Dia", "tx")] + [(f'<i class="ponto {s["classe"]}" aria-hidden="true"></i>{e(s["abrev"])}', "") for s in series]
+    linhas = [[e(datas[i])] + [num(s["valores"][i], 0) for s in series] for i in indices]
+    return f'<details class="q-mais"><summary>{e(titulo)}</summary>{tabela(colunas, linhas)}</details>'
+
+
+def quadro(titulo, corpo, info="", nota=""):
+    """Um quadro do site: título em cima, conteúdo e, se houver, uma nota por baixo."""
+    extra = f'<span class="q-info">{info}</span>' if info else ""
+    rodape = f'<p class="q-nota">{nota}</p>' if nota else ""
+    return f'<section class="quadro"><header class="q-cab"><h2>{e(titulo)}</h2>{extra}</header>{corpo}{rodape}</section>'
+
+
+def tile(rotulo, valor, detalhe=""):
+    """Um número em destaque dentro de um quadro."""
+    baixo = f'<span class="tile-s">{detalhe}</span>' if detalhe else ""
+    return f'<div class="tile"><span class="tile-k">{rotulo}</span><span class="tile-v">{valor}</span>{baixo}</div>'
+
+
+def nome_curto(nome):
+    """Karl-Anthony Towns passa a K. Towns, como nas fichas de jogo."""
+    primeiro, _, resto = nome.partition(" ")
+    return f"{primeiro[0]}.{EB}{resto}" if resto else nome
+
+
+def variacao(valor, sobe):
+    """Diferença com seta e cor, para nunca depender só da cor."""
+    classe, seta = ("sobe", "▲") if sobe else ("desce", "▼")
+    return f'<span class="{classe}"><span class="seta" aria-hidden="true">{seta}</span>{num(valor, sinal=True)}</span>'

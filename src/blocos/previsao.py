@@ -1,5 +1,5 @@
 """Real vs. projeção da ESPN: quem está a surpreender e quem está a desiludir."""
-from desenho import data_curta, e, num, plural
+from desenho import data_curta, e, nome_curto, num, quadro, tabela, variacao
 
 MINIMO_JOGOS = 5
 QUANTOS = 5
@@ -43,30 +43,33 @@ def calcular(ctx):
     }
 
 
-def lista(linhas, v, sobe, vazio):
+def tabela_jogadores(linhas, v, sobe, vazio):
     if not linhas:
         return f'<p class="nota">{vazio}</p>'
-    classe = "sobe" if sobe else "desce"
-    seta = "▲" if sobe else "▼"
-    itens = "".join(
-        f'<li class="linha"><div class="cresce"><div class="nome">{v.ponto(x["equipa"])}{e(x["nome"])}</div>'
-        f'<div class="meta">Média {num(x["media"])} · previsão {num(x["prevista"])} · {plural(x["jogos"], "jogo", "jogos")}</div></div>'
-        f'<span class="{classe}"><span aria-hidden="true">{seta}</span> {num(x["diferenca"], sinal=True)}</span></li>'
+    colunas = [("Jogador", "e"), ("Eq.", "eq"), ("J", ""), ("Média", ""), ("Prev.", ""), ("Dif.", "")]
+    corpo = [
+        [
+            e(nome_curto(x["nome"])),
+            v.equipa_curta(x["equipa"]),
+            str(x["jogos"]),
+            num(x["media"]),
+            num(x["prevista"]),
+            variacao(x["diferenca"], sobe),
+        ]
         for x in linhas
-    )
-    return f'<ul class="lista">{itens}</ul>'
+    ]
+    return tabela(colunas, corpo)
 
 
 def desenhar(d, v):
-    equipas = "".join(
-        f'<li class="linha"><div class="cresce"><div class="nome">{v.ponto(t["nome"])}{e(t["nome"])}</div></div>'
-        f'<strong class="grande">{num(t["diferenca"], sinal=True)}</strong></li>'
-        for t in d["equipas"]
-    )
+    equipas = [[v.equipa(t["nome"]), f'<b>{num(t["diferenca"], sinal=True)}</b>'] for t in d["equipas"]]
     desde = f' A previsão foi guardada a {data_curta(d["projecao_guardada_em"])}.' if d["projecao_guardada_em"] else ""
     return (
-        f'<div class="cartao"><h3>Pontos por jogo face à previsão</h3><ul class="lista">{equipas}</ul></div>'
-        f'<div class="cartao"><h3>Quem está a surpreender</h3>{lista(d["surpresas"], v, True, "Ainda ninguém acima da previsão.")}</div>'
-        f'<div class="cartao"><h3>Quem está a desiludir</h3>{lista(d["desilusoes"], v, False, "Ainda ninguém abaixo da previsão.")}</div>'
-        f'<p class="nota">Média de pontos por jogo contra a previsão da ESPN para a época, só para quem já fez pelo menos {d["minimo_jogos"]} jogos.{desde}</p>'
+        quadro("Pontos por jogo face à previsão", tabela([("Equipa", "e"), ("Diferença", "")], equipas), info="ESPN")
+        + quadro("Quem está a surpreender", tabela_jogadores(d["surpresas"], v, True, "Ainda ninguém acima da previsão."))
+        + quadro(
+            "Quem está a desiludir",
+            tabela_jogadores(d["desilusoes"], v, False, "Ainda ninguém abaixo da previsão."),
+            nota=f'Média de pontos por jogo contra a previsão da ESPN para a época, só para quem já fez pelo menos {d["minimo_jogos"]} jogos.{desde}',
+        )
     )

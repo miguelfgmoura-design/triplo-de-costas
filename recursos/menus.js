@@ -32,9 +32,12 @@
   if (!escolha) return;
   var fichas = Array.prototype.slice.call(document.querySelectorAll('.ficha'));
   var ponto = document.getElementById('escolha-ponto');
+  var nome = document.getElementById('escolha-nome');
   function mostrarEquipa() {
+    var opcao = escolha.options[escolha.selectedIndex];
     fichas.forEach(function (f) { f.classList.toggle('ativa', f.getAttribute('data-equipa') === escolha.value); });
-    ponto.className = 'ponto ' + escolha.options[escolha.selectedIndex].getAttribute('data-classe');
+    ponto.className = 'ponto ' + opcao.getAttribute('data-classe');
+    nome.textContent = opcao.textContent;
   }
   escolha.addEventListener('change', mostrarEquipa);
   mostrarEquipa();

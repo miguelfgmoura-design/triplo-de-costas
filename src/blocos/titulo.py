@@ -5,7 +5,7 @@ from collections import defaultdict
 from datetime import date
 
 from comum import melhor_alinhamento
-from desenho import EB, data_curta, e, grafico_linhas, num, plural, tabela_numeros
+from desenho import data_curta, e, grafico_linhas, num, quadro, tabela, tabela_numeros
 
 SIMULACOES = 10000
 PESO_DA_PREVISAO = 12  # a previsão da ESPN vale como 12 jogos já feitos
@@ -164,37 +164,51 @@ def calcular(ctx):
 
 
 def desenhar_classificacao(d, v):
-    linhas = []
-    for c in d["classificacao"]:
-        distancia = "Líder" if c["lugar"] == 1 else f'{num(c["diferenca_lider"])} do líder'
-        linhas.append(
-            f'<li class="linha"><span class="posto">{c["lugar"]}</span>'
-            f'<div class="cresce"><div class="nome">{v.ponto(c["nome"])}{e(c["nome"])}</div>'
-            f'<div class="meta">{v.Ontem}: {num(c["pontos_ontem"])} em {plural(c["jogos_ontem"], "jogo", "jogos")}'
-            f' · ritmo{EB}{num(c["ritmo_7_dias"])}</div></div>'
-            f'<div class="direita"><strong class="grande">{num(c["pontos"])}</strong>'
-            f'<span class="meta">{distancia}</span></div></li>'
-        )
-    return (
-        f'<div class="cartao"><ol class="lista">{"".join(linhas)}</ol></div>'
-        '<p class="nota">Ritmo: média de pontos nos últimos 7 dias com jogos.</p>'
+    colunas = [("#", "p"), ("Equipa", "e"), ("Pontos", ""), ("Dif.", ""), (v.Ontem, ""), ("J", "so-largo"), ("Ritmo", "")]
+    linhas = [
+        [
+            str(c["lugar"]),
+            v.equipa(c["nome"]),
+            f'<b>{num(c["pontos"])}</b>',
+            "—" if c["lugar"] == 1 else num(c["diferenca_lider"]),
+            num(c["pontos_ontem"]),
+            str(c["jogos_ontem"]),
+            num(c["ritmo_7_dias"]),
+        ]
+        for c in d["classificacao"]
+    ]
+    return quadro(
+        "Classificação",
+        tabela(colunas, linhas),
+        nota=f"Dif.: distância para o líder. J: jogos feitos {v.ontem}. Ritmo: média de pontos nos últimos 7 dias com jogos.",
     )
 
 
 def desenhar_projecao(d, v):
-    barras = "".join(
-        f'<li><div class="barra-topo"><span class="nome">{v.ponto(p["nome"])}{e(p["nome"])}</span>'
-        f'<strong>{num(p["probabilidade_titulo"])}%</strong></div>'
-        f'<div class="barra {v.classe(p["nome"])}" style="width:{p["probabilidade_titulo"]:.1f}%"></div>'
-        f'<div class="meta">Total previsto {num(p["total_previsto"], 0)}, '
-        f'entre {num(p["intervalo_80"][0], 0)} e {num(p["intervalo_80"][1], 0)}</div></li>'
-        for p in d["projecao"]
+    partes = [p for p in d["projecao"] if p["probabilidade_titulo"] > 0]
+    descricao = ", ".join(f'{p["nome"]} {num(p["probabilidade_titulo"])}%' for p in partes)
+    barra = "".join(
+        f'<i class="{v.classe(p["nome"])}" style="flex:{p["probabilidade_titulo"]:.1f} 1 0"></i>' for p in partes
     )
-    return (
-        f'<div class="cartao"><ul class="barras">{barras}</ul></div>'
-        f'<p class="nota">{num(d["simulacoes"], 0)} simulações com as médias, os jogos restantes de cada plantel '
-        "e o limite de jogos. Assume que cada equipa gasta os jogos que lhe restam nos melhores jogadores. "
-        "O intervalo cobre 8 em cada 10 simulações.</p>"
+    linhas = [
+        [
+            v.equipa(p["nome"]),
+            f'<b>{num(p["probabilidade_titulo"])}%</b>',
+            num(p["total_previsto"], 0),
+            f'{num(p["intervalo_80"][0], 0)}–{num(p["intervalo_80"][1], 0)}',
+        ]
+        for p in d["projecao"]
+    ]
+    corpo = (
+        f'<div class="segmentos" role="img" aria-label="Probabilidade de ganhar o título: {e(descricao)}">{barra}</div>'
+        + tabela([("Equipa", "e"), ("Título", ""), ("Previsto", ""), ("Intervalo", "")], linhas)
+    )
+    return quadro(
+        "Quem vai ganhar",
+        corpo,
+        info=f'{num(d["simulacoes"], 0)} simulações',
+        nota="Usa as médias, os jogos restantes de cada plantel e o limite de jogos, e assume que cada equipa gasta "
+        "os jogos que lhe restam nos melhores jogadores. O intervalo cobre 8 em cada 10 simulações.",
     )
 
 
@@ -208,12 +222,17 @@ def desenhar_evolucao(d, v):
     distancias = [
         {**s, "valores": [round(s["valores"][i] - lideres[i], 1) for i in range(len(datas))]} for s in series
     ]
+    grafico = grafico_linhas("Pontos acumulados de cada equipa ao longo da época", datas, series, altura=165)
+    grafico_distancia = grafico_linhas(
+        "Diferença de pontos de cada equipa para o líder de cada dia", datas, distancias, altura=150, rotulos_fim=True
+    )
     return (
-        '<div class="cartao">'
-        + grafico_linhas("Pontos acumulados de cada equipa ao longo da época", datas, series)
-        + tabela_numeros("Ver os números, de semana a semana", datas, series)
-        + '<h3 class="subtitulo">Distância para o líder</h3>'
-        + grafico_linhas("Diferença de pontos de cada equipa para o líder de cada dia", datas, distancias, altura=170, rotulos_fim=True)
-        + tabela_numeros("Ver os números, de semana a semana", datas, distancias)
-        + "</div>"
+        quadro(
+            "Evolução dos pontos",
+            f'<div class="q-grafico">{grafico}</div>' + tabela_numeros("Ver os números, de semana a semana", datas, series),
+        )
+        + quadro(
+            "Distância para o líder",
+            f'<div class="q-grafico">{grafico_distancia}</div>' + tabela_numeros("Ver os números, de semana a semana", datas, distancias),
+        )
     )
