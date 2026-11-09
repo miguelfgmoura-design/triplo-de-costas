@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-09T14:00:06+00:00",
+ "atualizado_em": "2026-11-09T17:02:54+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "periodo_atual": 21,
@@ -279,7 +279,7 @@
        "jogos": 68
       }
      },
-     "estado": "OUT",
+     "estado": "DAY_TO_DAY",
      "regresso": null,
      "fora_epoca": false
     },
@@ -907,7 +907,7 @@
        "jogos": 69
       }
      },
-     "estado": "OUT",
+     "estado": "DAY_TO_DAY",
      "regresso": null,
      "fora_epoca": false
     },
@@ -3679,7 +3679,7 @@
      "jogos": 62
     }
    },
-   "estado": "OUT",
+   "estado": "DAY_TO_DAY",
    "regresso": null,
    "fora_epoca": false
   },
