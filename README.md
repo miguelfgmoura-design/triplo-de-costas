@@ -19,6 +19,8 @@ Tudo o que está abaixo faz-se no site do GitHub, nesta página do projeto.
 
 Não uses o minuto 0, porque é quando o GitHub costuma ter mais atrasos. Não marques antes das 8h, para a ESPN ter tempo de fechar os números.
 
+As duas linhas `cron` seguintes são reservas, para o caso de o GitHub saltar a corrida principal. Só fazem alguma coisa se a atualização do dia ainda faltar, por isso é normal veres corridas curtas sem nada feito. Se mudares a hora principal, mantém as reservas mais tarde.
+
 ## Pausar e voltar a ligar
 
 1. Carrega em **Actions** e, à esquerda, em **Atualização diária**.

@@ -6,6 +6,10 @@ on:
   schedule:
     - cron: "7 9 * * *"
       timezone: "Europe/Lisbon"
+    # Reservas: o GitHub pode saltar uma corrida agendada. Estas só fazem
+    # alguma coisa se a atualização do dia ainda faltar. Hora de Londres (UTC).
+    - cron: "37 10 * * *"
+    - cron: "23 13 * * *"
   workflow_dispatch:
     inputs:
       simular_falha:
@@ -24,8 +28,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  decidir:
+    name: Ver se a atualização ainda falta
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      correr: ${{ steps.ver.outputs.correr }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      # Na dúvida, corre: se esta verificação falhar, a atualização segue na mesma.
+      - id: ver
+        env:
+          EVENTO: ${{ github.event_name }}
+        run: |
+          if [ "$EVENTO" = "schedule" ] && python src/ja_atualizado.py; then
+            echo "A atualização deste dia já está feita."
+            echo "correr=nao" >> "$GITHUB_OUTPUT"
+          else
+            echo "correr=sim" >> "$GITHUB_OUTPUT"
+          fi
+
   atualizar:
     name: Atualizar os dados e gerar o site
+    needs: decidir
+    if: needs.decidir.outputs.correr == 'sim'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -149,7 +182,7 @@ jobs:
   avisar:
     name: Avisar se alguma coisa falhou
     needs: [atualizar, publicar]
-    if: always()
+    if: always() && needs.atualizar.result != 'skipped'
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
