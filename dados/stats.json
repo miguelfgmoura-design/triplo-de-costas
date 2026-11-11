@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-10T16:58:25+00:00",
+ "atualizado_em": "2026-11-11T01:41:40+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "formato": "Pontos acumulados na época, sem confrontos semanais",
@@ -62,34 +62,34 @@
    {
     "id": 1,
     "nome": "Portela Lakers",
-    "total_previsto": 42204,
+    "total_previsto": 42121,
     "intervalo_80": [
-     39501,
-     44749
+     39485,
+     44631
     ],
-    "probabilidade_titulo": 59.4,
+    "probabilidade_titulo": 59.9,
     "jogos_restantes_previstos": 694
    },
    {
     "id": 2,
     "nome": "Lisbon Lebron’s",
-    "total_previsto": 41308,
+    "total_previsto": 41169,
     "intervalo_80": [
-     38687,
-     43720
+     38553,
+     43613
     ],
-    "probabilidade_titulo": 35.1,
-    "jogos_restantes_previstos": 693
+    "probabilidade_titulo": 35.6,
+    "jogos_restantes_previstos": 692
    },
    {
     "id": 3,
     "nome": "Queta's magic",
-    "total_previsto": 39155,
+    "total_previsto": 38833,
     "intervalo_80": [
-     36679,
-     41485
+     36387,
+     41138
     ],
-    "probabilidade_titulo": 5.5,
+    "probabilidade_titulo": 4.5,
     "jogos_restantes_previstos": 691
    }
   ],
@@ -816,13 +816,13 @@
     "variacao": 18.7
    },
    {
-    "nome": "Jalen Brunson",
-    "equipa": "Queta's magic",
-    "nba": "NY",
-    "media_7_dias": 60.5,
-    "jogos_7_dias": 2,
-    "media_referencia": 43.4,
-    "variacao": 17.1
+    "nome": "Keyonte George",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "UTAH",
+    "media_7_dias": 51.0,
+    "jogos_7_dias": 3,
+    "media_referencia": 37.4,
+    "variacao": 13.6
    }
   ],
   "em_baixa": [
@@ -830,10 +830,10 @@
     "nome": "Tyrese Maxey",
     "equipa": "Queta's magic",
     "nba": "PHI",
-    "media_7_dias": 35.8,
-    "jogos_7_dias": 3,
-    "media_referencia": 50.9,
-    "variacao": -15.1
+    "media_7_dias": 29.8,
+    "jogos_7_dias": 4,
+    "media_referencia": 47.6,
+    "variacao": -17.9
    },
    {
     "nome": "Ty Jerome",
@@ -845,6 +845,15 @@
     "variacao": -11.8
    },
    {
+    "nome": "Paul George",
+    "equipa": "Portela Lakers",
+    "nba": "BOS",
+    "media_7_dias": 31.0,
+    "jogos_7_dias": 4,
+    "media_referencia": 39.9,
+    "variacao": -8.9
+   },
+   {
     "nome": "Trae Young",
     "equipa": "Lisbon Lebron’s",
     "nba": "WSH",
@@ -852,15 +861,6 @@
     "jogos_7_dias": 4,
     "media_referencia": 37.2,
     "variacao": -8.0
-   },
-   {
-    "nome": "Domantas Sabonis",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "SAC",
-    "media_7_dias": 47.0,
-    "jogos_7_dias": 2,
-    "media_referencia": 54.8,
-    "variacao": -7.8
    }
   ],
   "melhores_epoca": {
@@ -929,11 +929,11 @@
      "media": 54.5
     },
     {
-     "nome": "Karl-Anthony Towns",
-     "equipa": "Queta's magic",
-     "jogos": 9,
-     "total": 485.5,
-     "media": 53.9
+     "nome": "Walker Kessler",
+     "equipa": "Portela Lakers",
+     "jogos": 12,
+     "total": 641.5,
+     "media": 53.5
     }
    ],
    "minimo_jogos": 6
@@ -1079,26 +1079,6 @@
   },
   "lesoes": [
    {
-    "nome": "Domantas Sabonis",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "SAC",
-    "estado": "Dia a dia",
-    "lugar": "UT",
-    "em_posicao_ativa": false,
-    "regresso": null,
-    "fora_da_epoca": false
-   },
-   {
-    "nome": "Giannis Antetokounmpo",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "MIA",
-    "estado": "Dia a dia",
-    "lugar": "Banco",
-    "em_posicao_ativa": false,
-    "regresso": null,
-    "fora_da_epoca": false
-   },
-   {
     "nome": "Keyonte George",
     "equipa": "Lisbon Lebron’s",
     "nba": "UTAH",
@@ -1109,31 +1089,11 @@
     "fora_da_epoca": false
    },
    {
-    "nome": "Zion Williamson",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "NO",
-    "estado": "Dia a dia",
-    "lugar": "Lesionados",
-    "em_posicao_ativa": false,
-    "regresso": null,
-    "fora_da_epoca": false
-   },
-   {
-    "nome": "Austin Reaves",
-    "equipa": "Portela Lakers",
-    "nba": "LAL",
-    "estado": "Dia a dia",
-    "lugar": "Banco",
-    "em_posicao_ativa": false,
-    "regresso": null,
-    "fora_da_epoca": false
-   },
-   {
     "nome": "Scottie Barnes",
     "equipa": "Portela Lakers",
     "nba": "TOR",
-    "estado": "Dia a dia",
-    "lugar": "SG",
+    "estado": "Fora",
+    "lugar": "Lesionados",
     "em_posicao_ativa": false,
     "regresso": null,
     "fora_da_epoca": false
@@ -1185,48 +1145,6 @@
     }
    ],
    "equipas": [
-    {
-     "nome": "Portela Lakers",
-     "total": 47,
-     "utilizaveis": 45,
-     "dias": [
-      {
-       "data": "2026-11-10",
-       "jogos": 5,
-       "utilizaveis": 5
-      },
-      {
-       "data": "2026-11-11",
-       "jogos": 12,
-       "utilizaveis": 10
-      },
-      {
-       "data": "2026-11-12",
-       "jogos": 3,
-       "utilizaveis": 3
-      },
-      {
-       "data": "2026-11-13",
-       "jogos": 5,
-       "utilizaveis": 5
-      },
-      {
-       "data": "2026-11-14",
-       "jogos": 3,
-       "utilizaveis": 3
-      },
-      {
-       "data": "2026-11-15",
-       "jogos": 9,
-       "utilizaveis": 9
-      },
-      {
-       "data": "2026-11-16",
-       "jogos": 10,
-       "utilizaveis": 10
-      }
-     ]
-    },
     {
      "nome": "Lisbon Lebron’s",
      "total": 44,
@@ -1308,6 +1226,48 @@
        "data": "2026-11-16",
        "jogos": 6,
        "utilizaveis": 6
+      }
+     ]
+    },
+    {
+     "nome": "Portela Lakers",
+     "total": 44,
+     "utilizaveis": 43,
+     "dias": [
+      {
+       "data": "2026-11-10",
+       "jogos": 5,
+       "utilizaveis": 5
+      },
+      {
+       "data": "2026-11-11",
+       "jogos": 11,
+       "utilizaveis": 10
+      },
+      {
+       "data": "2026-11-12",
+       "jogos": 2,
+       "utilizaveis": 2
+      },
+      {
+       "data": "2026-11-13",
+       "jogos": 5,
+       "utilizaveis": 5
+      },
+      {
+       "data": "2026-11-14",
+       "jogos": 3,
+       "utilizaveis": 3
+      },
+      {
+       "data": "2026-11-15",
+       "jogos": 8,
+       "utilizaveis": 8
+      },
+      {
+       "data": "2026-11-16",
+       "jogos": 10,
+       "utilizaveis": 10
       }
      ]
     }
@@ -1494,7 +1454,7 @@
     "pontos_por_jogo": 68.8,
     "percentagem": 11.3,
     "percentagem_3_melhores": 29.3,
-    "estado": "Dia a dia",
+    "estado": null,
     "ainda_no_plantel": true
    }
   ]
@@ -1505,15 +1465,15 @@
   "equipas": [
    {
     "nome": "Portela Lakers",
-    "diferenca": 1.6
-   },
-   {
-    "nome": "Queta's magic",
-    "diferenca": 1.2
+    "diferenca": 1.1
    },
    {
     "nome": "Lisbon Lebron’s",
-    "diferenca": 0.7
+    "diferenca": 0.4
+   },
+   {
+    "nome": "Queta's magic",
+    "diferenca": -0.0
    }
   ],
   "surpresas": [
@@ -1601,12 +1561,12 @@
     "jogos": 11
    },
    {
-    "nome": "Cade Cunningham",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "DET",
-    "media": 48.9,
-    "prevista": 55.5,
-    "diferenca": -6.7,
+    "nome": "Jalen Brunson",
+    "equipa": "Queta's magic",
+    "nba": "NY",
+    "media": 41.0,
+    "prevista": 49.1,
+    "diferenca": -8.2,
     "jogos": 10
    }
   ]
