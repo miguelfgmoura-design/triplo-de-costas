@@ -1,6 +1,6 @@
 # Triplo de Costas
 
-Mini-site da nossa liga ESPN Fantasy NBA. Atualiza-se sozinho todas as manhãs, às 9h07 de Lisboa, com as estatísticas e o comentário do Claude.
+Mini-site da nossa liga ESPN Fantasy NBA. Atualiza-se sozinho todas as manhãs, pouco depois das 9h de Lisboa, com as estatísticas e o comentário do Claude.
 
 Tudo o que está abaixo faz-se no site do GitHub, nesta página do projeto.
 
@@ -10,16 +10,13 @@ Tudo o que está abaixo faz-se no site do GitHub, nesta página do projeto.
 2. À esquerda, carrega em **Atualização diária**.
 3. À direita, carrega em **Run workflow** e outra vez em **Run workflow**.
 
-## Mudar a hora
+## Como funciona a hora
 
-1. Abre o ficheiro `.github/workflows/diario.yml`.
-2. Carrega no lápis, em cima à direita.
-3. Na linha `cron: "7 9 * * *"`, o primeiro número são os minutos e o segundo é a hora de Lisboa. Para 8h22, por exemplo, fica `cron: "22 8 * * *"`.
-4. Carrega em **Commit changes**.
+O GitHub não cumpre horas marcadas: entrega as corridas agendadas com atraso, que pode ser de várias horas. Por isso o robô tenta de hora a hora e só trabalha na primeira tentativa depois das 9h de Lisboa. As outras acabam em segundos, sem fazer nada, e é normal veres muitas dessas na lista.
 
-Não uses o minuto 0, porque é quando o GitHub costuma ter mais atrasos. Não marques antes das 8h, para a ESPN ter tempo de fechar os números.
+Para mudar a hora, abre `src/ja_atualizado.py`, carrega no lápis e muda a linha `HORA_DE_ABRIR = time(9, 0)`. Não marques antes das 9h, para a ESPN ter tempo de fechar os números.
 
-As duas linhas `cron` seguintes são reservas, para o caso de o GitHub saltar a corrida principal. Só fazem alguma coisa se a atualização do dia ainda faltar, por isso é normal veres corridas curtas sem nada feito. Se mudares a hora principal, mantém as reservas mais tarde.
+Se a atualização só sair depois das 11h, o site é publicado na mesma e o GitHub envia um email de falha, para saberes do atraso.
 
 ## Pausar e voltar a ligar
 

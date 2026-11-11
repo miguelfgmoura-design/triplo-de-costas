@@ -4,12 +4,12 @@ name: Atualização diária
 # Nunca corre em pull requests de terceiros, porque o repositório é público.
 on:
   schedule:
-    - cron: "7 9 * * *"
-      timezone: "Europe/Lisbon"
-    # Reservas: o GitHub pode saltar uma corrida agendada. Estas só fazem
-    # alguma coisa se a atualização do dia ainda faltar. Hora de Londres (UTC).
-    - cron: "37 10 * * *"
-    - cron: "23 13 * * *"
+    # O GitHub entrega as corridas agendadas com horas de atraso (7 a 10 horas
+    # nas primeiras manhãs), por isso não dá para confiar numa hora marcada.
+    # Tenta de hora a hora; o primeiro passo só deixa avançar depois das 9h de
+    # Lisboa e enquanto a atualização do dia faltar. As outras tentativas
+    # acabam em segundos, sem fazer nada.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       simular_falha:
@@ -36,6 +36,7 @@ jobs:
       contents: read
     outputs:
       correr: ${{ steps.ver.outputs.correr }}
+      hora: ${{ steps.ver.outputs.hora }}
     steps:
       - uses: actions/checkout@v7
 
@@ -48,8 +49,8 @@ jobs:
         env:
           EVENTO: ${{ github.event_name }}
         run: |
+          echo "hora=$(TZ=Europe/Lisbon date +%-H)" >> "$GITHUB_OUTPUT"
           if [ "$EVENTO" = "schedule" ] && python src/ja_atualizado.py; then
-            echo "A atualização deste dia já está feita."
             echo "correr=nao" >> "$GITHUB_OUTPUT"
           else
             echo "correr=sim" >> "$GITHUB_OUTPUT"
@@ -181,7 +182,7 @@ jobs:
   # email de falha quando houver alguma coisa a corrigir.
   avisar:
     name: Avisar se alguma coisa falhou
-    needs: [atualizar, publicar]
+    needs: [decidir, atualizar, publicar]
     if: always() && needs.atualizar.result != 'skipped'
     runs-on: ubuntu-latest
     timeout-minutes: 2
@@ -191,8 +192,15 @@ jobs:
           DADOS: ${{ needs.atualizar.outputs.dados }}
           BLOCOS: ${{ needs.atualizar.outputs.blocos }}
           GUARDAR: ${{ needs.atualizar.outputs.guardar }}
+          EVENTO: ${{ github.event_name }}
+          HORA: ${{ needs.decidir.outputs.hora }}
         run: |
           problemas=0
+          # O site saiu, mas tarde: o email serve para se saber que o GitHub se atrasou.
+          if [ "$EVENTO" = "schedule" ] && [ "${HORA:-0}" -ge 11 ]; then
+            echo "::error::A atualização só saiu depois das ${HORA}h de Lisboa, por atraso do agendamento do GitHub."
+            problemas=1
+          fi
           if [ "$DADOS" != "success" ]; then
             echo "::error::A ESPN falhou. O site saiu com os dados anteriores e o aviso de dados de ontem."
             problemas=1
