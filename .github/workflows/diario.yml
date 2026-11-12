@@ -3,13 +3,40 @@ name: Atualização diária
 # Corre sozinho todas as manhãs e também à mão, no botão "Run workflow".
 # Nunca corre em pull requests de terceiros, porque o repositório é público.
 on:
-  schedule:
-    # O GitHub entrega as corridas agendadas com horas de atraso (7 a 10 horas
-    # nas primeiras manhãs), por isso não dá para confiar numa hora marcada.
-    # Tenta de hora a hora; o primeiro passo só deixa avançar depois das 9h de
-    # Lisboa e enquanto a atualização do dia faltar. As outras tentativas
-    # acabam em segundos, sem fazer nada.
-    - cron: "17 * * * *"
+  # O GitHub não cumpre as horas marcadas. Neste projeto, cada linha do
+  # agendamento só dispara umas 7 horas depois da hora marcada, e uma linha que
+  # se repete (de hora a hora, por exemplo) só volta a contar depois de a
+  # tentativa anterior chegar, o que dava 3 ou 4 tentativas por dia.
+  # Por isso há uma linha para cada 20 minutos do dia, cada uma com a sua hora:
+  # seja qual for o atraso, chega sempre alguma pouco depois das 9h de Lisboa.
+  # O primeiro passo só deixa trabalhar a primeira que chegar depois das 9h;
+  # as outras acabam em segundos, sem fazer nada. Horas de Londres (UTC).
+  schedule: [
+    {cron: "4 0 * * *"}, {cron: "24 0 * * *"}, {cron: "44 0 * * *"},
+    {cron: "4 1 * * *"}, {cron: "24 1 * * *"}, {cron: "44 1 * * *"},
+    {cron: "4 2 * * *"}, {cron: "24 2 * * *"}, {cron: "44 2 * * *"},
+    {cron: "4 3 * * *"}, {cron: "24 3 * * *"}, {cron: "44 3 * * *"},
+    {cron: "4 4 * * *"}, {cron: "24 4 * * *"}, {cron: "44 4 * * *"},
+    {cron: "4 5 * * *"}, {cron: "24 5 * * *"}, {cron: "44 5 * * *"},
+    {cron: "4 6 * * *"}, {cron: "24 6 * * *"}, {cron: "44 6 * * *"},
+    {cron: "4 7 * * *"}, {cron: "24 7 * * *"}, {cron: "44 7 * * *"},
+    {cron: "4 8 * * *"}, {cron: "24 8 * * *"}, {cron: "44 8 * * *"},
+    {cron: "4 9 * * *"}, {cron: "24 9 * * *"}, {cron: "44 9 * * *"},
+    {cron: "4 10 * * *"}, {cron: "24 10 * * *"}, {cron: "44 10 * * *"},
+    {cron: "4 11 * * *"}, {cron: "24 11 * * *"}, {cron: "44 11 * * *"},
+    {cron: "4 12 * * *"}, {cron: "24 12 * * *"}, {cron: "44 12 * * *"},
+    {cron: "4 13 * * *"}, {cron: "24 13 * * *"}, {cron: "44 13 * * *"},
+    {cron: "4 14 * * *"}, {cron: "24 14 * * *"}, {cron: "44 14 * * *"},
+    {cron: "4 15 * * *"}, {cron: "24 15 * * *"}, {cron: "44 15 * * *"},
+    {cron: "4 16 * * *"}, {cron: "24 16 * * *"}, {cron: "44 16 * * *"},
+    {cron: "4 17 * * *"}, {cron: "24 17 * * *"}, {cron: "44 17 * * *"},
+    {cron: "4 18 * * *"}, {cron: "24 18 * * *"}, {cron: "44 18 * * *"},
+    {cron: "4 19 * * *"}, {cron: "24 19 * * *"}, {cron: "44 19 * * *"},
+    {cron: "4 20 * * *"}, {cron: "24 20 * * *"}, {cron: "44 20 * * *"},
+    {cron: "4 21 * * *"}, {cron: "24 21 * * *"}, {cron: "44 21 * * *"},
+    {cron: "4 22 * * *"}, {cron: "24 22 * * *"}, {cron: "44 22 * * *"},
+    {cron: "4 23 * * *"}, {cron: "24 23 * * *"}, {cron: "44 23 * * *"}
+  ]
   workflow_dispatch:
     inputs:
       simular_falha:
@@ -37,23 +64,46 @@ jobs:
     outputs:
       correr: ${{ steps.ver.outputs.correr }}
       hora: ${{ steps.ver.outputs.hora }}
+      verificacao: ${{ steps.ver.outputs.verificacao }}
     steps:
+      # Vai buscar sempre a versão mais recente, para ver o que a tentativa anterior já fez.
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
-      # Na dúvida, corre: se esta verificação falhar, a atualização segue na mesma.
       - id: ver
         env:
           EVENTO: ${{ github.event_name }}
+          LINHA: ${{ github.event.schedule }}
         run: |
-          echo "hora=$(TZ=Europe/Lisbon date +%-H)" >> "$GITHUB_OUTPUT"
-          if [ "$EVENTO" = "schedule" ] && python src/ja_atualizado.py; then
-            echo "correr=nao" >> "$GITHUB_OUTPUT"
-          else
+          hora=$(TZ=Europe/Lisbon date +%-H)
+          echo "hora=$hora" >> "$GITHUB_OUTPUT"
+          if [ "$EVENTO" != "schedule" ]; then
+            echo "Pedido feito à mão: corre sempre."
             echo "correr=sim" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Serve para medir o atraso do GitHub: a que horas estava marcada e a que horas chegou.
+          echo "Tentativa marcada com a linha: $LINHA (hora de Londres). Chegou às $(TZ=Europe/Lisbon date +%H:%M) de Lisboa."
+          codigo=0
+          python src/ja_atualizado.py || codigo=$?
+          if [ "$codigo" -eq 0 ]; then
+            echo "correr=nao" >> "$GITHUB_OUTPUT"
+          elif [ "$codigo" -eq 10 ]; then
+            echo "correr=sim" >> "$GITHUB_OUTPUT"
+          elif [ "$hora" -eq 9 ]; then
+            # A verificação avariou. Na dúvida corre, mas só nesta hora, para
+            # não repetir a atualização em todas as tentativas do dia.
+            echo "::warning::A verificação inicial avariou (código $codigo). A atualização corre na mesma."
+            echo "correr=sim" >> "$GITHUB_OUTPUT"
+            echo "verificacao=falhou" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::A verificação inicial avariou (código $codigo). Fica para as tentativas das 9h."
+            echo "correr=nao" >> "$GITHUB_OUTPUT"
           fi
 
   atualizar:
@@ -70,11 +120,19 @@ jobs:
       guardar: ${{ steps.guardar.outcome }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
           cache: pip
+
+      # Fica apontado que esta tentativa começou. Se ela não chegar ao fim, as
+      # seguintes esperam antes de repetir (ver src/ja_atualizado.py).
+      - name: Apontar a tentativa
+        continue-on-error: true
+        run: python src/ja_atualizado.py --registar
 
       - name: Instalar as dependências
         run: pip install -r requirements.txt
@@ -148,8 +206,10 @@ jobs:
         with:
           path: site
 
+      # Corre mesmo que um passo anterior falhe, para o apontamento da tentativa ficar guardado.
       - name: Guardar os dados no repositório
         id: guardar
+        if: always()
         continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
@@ -194,11 +254,16 @@ jobs:
           GUARDAR: ${{ needs.atualizar.outputs.guardar }}
           EVENTO: ${{ github.event_name }}
           HORA: ${{ needs.decidir.outputs.hora }}
+          VERIFICACAO: ${{ needs.decidir.outputs.verificacao }}
         run: |
           problemas=0
-          # O site saiu, mas tarde: o email serve para se saber que o GitHub se atrasou.
+          if [ "$VERIFICACAO" = "falhou" ]; then
+            echo "::error::A verificação inicial avariou. A atualização correu na mesma, mas o código precisa de ser visto."
+            problemas=1
+          fi
+          # O site saiu, mas tarde: o email serve para se saber que houve atraso.
           if [ "$EVENTO" = "schedule" ] && [ "${HORA:-0}" -ge 11 ]; then
-            echo "::error::A atualização só saiu depois das ${HORA}h de Lisboa, por atraso do agendamento do GitHub."
+            echo "::error::Esta atualização só correu depois das ${HORA}h de Lisboa: ou o agendamento do GitHub se atrasou, ou uma tentativa anterior não chegou ao fim."
             problemas=1
           fi
           if [ "$DADOS" != "success" ]; then

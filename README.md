@@ -12,11 +12,13 @@ Tudo o que está abaixo faz-se no site do GitHub, nesta página do projeto.
 
 ## Como funciona a hora
 
-O GitHub não cumpre horas marcadas: entrega as corridas agendadas com atraso, que pode ser de várias horas. Por isso o robô tenta de hora a hora e só trabalha na primeira tentativa depois das 9h de Lisboa. As outras acabam em segundos, sem fazer nada, e é normal veres muitas dessas na lista.
+O GitHub não cumpre horas marcadas: neste projeto, cada tentativa agendada chega umas 7 horas depois da hora marcada, e a hora muda de dia para dia. Por isso o robô tem uma tentativa marcada para cada 20 minutos do dia e só trabalha na primeira que chegar depois das 9h de Lisboa. As outras acabam em segundos, sem fazer nada, e é normal veres dezenas dessas por dia na lista.
 
-Para mudar a hora, abre `src/ja_atualizado.py`, carrega no lápis e muda a linha `HORA_DE_ABRIR = time(9, 0)`. Não marques antes das 9h, para a ESPN ter tempo de fechar os números.
+Se uma tentativa não chegar ao fim (a ESPN em baixo ou o comentário a falhar, por exemplo), o robô volta a tentar 1 hora depois, e a seguir com 2, 3 e 4 horas de intervalo. O ficheiro `dados/tentativa.json` é onde ele aponta quantas vezes já tentou nesse dia.
 
-Se a atualização só sair depois das 11h, o site é publicado na mesma e o GitHub envia um email de falha, para saberes do atraso.
+Para mudar a hora, abre `src/ja_atualizado.py`, carrega no lápis e muda a linha `HORA_DE_ABRIR = time(9, 0)`. Não marques antes das 9h, para a ESPN ter tempo de fechar os números. As linhas `cron` do ficheiro `.github/workflows/diario.yml` não são a hora da atualização: são só as tentativas, e não precisam de ser mexidas.
+
+Se a atualização só correr depois das 11h, o site é publicado na mesma e o GitHub envia um email de falha, para saberes do atraso.
 
 ## Pausar e voltar a ligar
 
