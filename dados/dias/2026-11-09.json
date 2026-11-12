@@ -292,7 +292,7 @@
    "id": 2,
    "nome": "Lisbon Lebron’s",
    "abrev": "Ll",
-   "pontos": 320.0,
+   "pontos": 319.0,
    "jogos": 6,
    "jogadores": [
     {
@@ -386,13 +386,13 @@
       4,
       11
      ],
-     "pontos": 68.0,
+     "pontos": 67.0,
      "jogou": true,
      "tinha_jogo": true,
      "linha": {
       "min": 35,
       "pts": 20,
-      "res": 12,
+      "res": 11,
       "ast": 8,
       "rb": 1,
       "dl": 1,
