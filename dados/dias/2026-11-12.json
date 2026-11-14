@@ -743,7 +743,7 @@
     {
      "id": 4433569,
      "nome": "Johni Broome",
-     "nba": "FA",
+     "nba": "MIN",
      "lugar": 6,
      "posicoes": [
       3,
@@ -752,7 +752,7 @@
      ],
      "pontos": 0.0,
      "jogou": false,
-     "tinha_jogo": false
+     "tinha_jogo": true
     },
     {
      "id": 4397886,
