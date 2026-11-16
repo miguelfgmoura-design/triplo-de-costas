@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-15T09:12:18+00:00",
+ "atualizado_em": "2026-11-16T09:28:50+00:00",
  "liga": {
   "nome": "Triplo de Costas",
   "formato": "Pontos acumulados na época, sem confrontos semanais",
@@ -15,8 +15,8 @@
   },
   "limite_total_jogos": 820
  },
- "ultimo_dia_fechado": "2026-11-14",
- "dia_de_referencia": "2026-11-14",
+ "ultimo_dia_fechado": "2026-11-15",
+ "dia_de_referencia": "2026-11-15",
  "dia_de_referencia_e_ontem": true,
  "verificacao": {
   "bate_certo": true,
@@ -28,33 +28,33 @@
     "id": 2,
     "nome": "Lisbon Lebron’s",
     "abrev": "Ll",
-    "pontos": 7649.5,
+    "pontos": 7963.0,
     "diferenca_lider": 0.0,
-    "pontos_ontem": 308.5,
-    "jogos_ontem": 5,
-    "ritmo_7_dias": 308.7,
+    "pontos_ontem": 312.5,
+    "jogos_ontem": 6,
+    "ritmo_7_dias": 312.6,
     "lugar": 1
    },
    {
     "id": 1,
     "nome": "Portela Lakers",
     "abrev": "PTL",
-    "pontos": 7199.0,
-    "diferenca_lider": -450.5,
-    "pontos_ontem": 184.5,
-    "jogos_ontem": 3,
-    "ritmo_7_dias": 287.4,
+    "pontos": 7591.0,
+    "diferenca_lider": -372.0,
+    "pontos_ontem": 392.0,
+    "jogos_ontem": 8,
+    "ritmo_7_dias": 303.9,
     "lugar": 2
    },
    {
     "id": 3,
     "nome": "Queta's magic",
     "abrev": "QM",
-    "pontos": 7103.5,
-    "diferenca_lider": -546.0,
-    "pontos_ontem": 31.0,
-    "jogos_ontem": 1,
-    "ritmo_7_dias": 255.9,
+    "pontos": 7556.0,
+    "diferenca_lider": -407.0,
+    "pontos_ontem": 456.5,
+    "jogos_ontem": 10,
+    "ritmo_7_dias": 282.4,
     "lugar": 3
    }
   ],
@@ -62,35 +62,35 @@
    {
     "id": 1,
     "nome": "Portela Lakers",
-    "total_previsto": 42696,
+    "total_previsto": 42711,
     "intervalo_80": [
-     40101,
-     45126
+     40097,
+     45150
     ],
-    "probabilidade_titulo": 69.7,
-    "jogos_restantes_previstos": 669
+    "probabilidade_titulo": 69.4,
+    "jogos_restantes_previstos": 661
    },
    {
     "id": 2,
     "nome": "Lisbon Lebron’s",
-    "total_previsto": 41151,
+    "total_previsto": 41178,
     "intervalo_80": [
-     38675,
-     43524
+     38693,
+     43481
     ],
-    "probabilidade_titulo": 26.9,
-    "jogos_restantes_previstos": 661
+    "probabilidade_titulo": 27.2,
+    "jogos_restantes_previstos": 655
    },
    {
     "id": 3,
     "nome": "Queta's magic",
-    "total_previsto": 38826,
+    "total_previsto": 38909,
     "intervalo_80": [
-     36415,
-     41065
+     36548,
+     41085
     ],
-    "probabilidade_titulo": 3.5,
-    "jogos_restantes_previstos": 666
+    "probabilidade_titulo": 3.4,
+    "jogos_restantes_previstos": 656
    }
   ],
   "simulacoes": 10000,
@@ -121,7 +121,8 @@
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "series": [
     {
@@ -154,7 +155,8 @@
       6552.5,
       6698.0,
       7014.5,
-      7199.0
+      7199.0,
+      7591.0
      ]
     },
     {
@@ -187,7 +189,8 @@
       6695.0,
       6907.5,
       7341.0,
-      7649.5
+      7650.5,
+      7963.0
      ]
     },
     {
@@ -215,12 +218,13 @@
       4918.0,
       5312.5,
       5579.0,
-      5969.5,
-      6167.0,
-      6581.5,
-      6701.5,
-      7072.5,
-      7103.5
+      5965.5,
+      6163.0,
+      6577.5,
+      6697.5,
+      7068.5,
+      7099.5,
+      7556.0
      ]
     }
    ]
@@ -231,7 +235,7 @@
    {
     "id": 1,
     "nome": "Portela Lakers",
-    "jogos_feitos": 151,
+    "jogos_feitos": 159,
     "pontos_por_jogo": 47.7,
     "banco": {
      "ontem_no_banco": 0,
@@ -240,12 +244,12 @@
      "epoca_perdidos": 171.0
     },
     "vagas": {
-     "por_dia_sem_jogo": 4.0,
+     "por_dia_sem_jogo": 3.9,
      "epoca_evitaveis": 2,
      "ontem_evitaveis": 0
     },
     "jogos_falhados": {
-     "total": 20,
+     "total": 21,
      "mais_falhou": [
       {
        "nome": "Chet Holmgren",
@@ -262,53 +266,53 @@
      ]
     },
     "limite_de_jogos": {
-     "usados": 151,
+     "usados": 159,
      "limite": 820,
-     "restantes": 669,
-     "dias_com_jogos_restantes": 131,
-     "jogos_por_dia_ate_agora": 6.04,
-     "jogos_por_dia_para_chegar_ao_fim": 5.11,
-     "esgota_em": "2027-03-21",
+     "restantes": 661,
+     "dias_com_jogos_restantes": 130,
+     "jogos_por_dia_ate_agora": 6.12,
+     "jogos_por_dia_para_chegar_ao_fim": 5.08,
+     "esgota_em": "2027-03-20",
      "sobram_no_fim": 0,
      "por_posicao": [
       {
        "posicao": "PG",
-       "usados": 23,
+       "usados": 24,
        "limite": 82
       },
       {
        "posicao": "SG",
-       "usados": 17,
+       "usados": 18,
        "limite": 82
       },
       {
        "posicao": "SF",
-       "usados": 19,
-       "limite": 82
-      },
-      {
-       "posicao": "PF",
-       "usados": 19,
-       "limite": 82
-      },
-      {
-       "posicao": "C",
        "usados": 20,
        "limite": 82
       },
       {
+       "posicao": "PF",
+       "usados": 20,
+       "limite": 82
+      },
+      {
+       "posicao": "C",
+       "usados": 21,
+       "limite": 82
+      },
+      {
        "posicao": "G",
-       "usados": 14,
+       "usados": 15,
        "limite": 82
       },
       {
        "posicao": "F",
-       "usados": 12,
+       "usados": 13,
        "limite": 82
       },
       {
        "posicao": "UT",
-       "usados": 27,
+       "usados": 28,
        "limite": 246
       }
      ]
@@ -317,8 +321,8 @@
    {
     "id": 2,
     "nome": "Lisbon Lebron’s",
-    "jogos_feitos": 159,
-    "pontos_por_jogo": 48.1,
+    "jogos_feitos": 165,
+    "pontos_por_jogo": 48.3,
     "banco": {
      "ontem_no_banco": 0,
      "ontem_perdidos": 0.0,
@@ -326,7 +330,7 @@
      "epoca_perdidos": 89.5
     },
     "vagas": {
-     "por_dia_sem_jogo": 3.6,
+     "por_dia_sem_jogo": 3.7,
      "epoca_evitaveis": 0,
      "ontem_evitaveis": 0
     },
@@ -348,13 +352,13 @@
      ]
     },
     "limite_de_jogos": {
-     "usados": 159,
+     "usados": 165,
      "limite": 820,
-     "restantes": 661,
-     "dias_com_jogos_restantes": 131,
-     "jogos_por_dia_ate_agora": 6.36,
-     "jogos_por_dia_para_chegar_ao_fim": 5.05,
-     "esgota_em": "2027-03-14",
+     "restantes": 655,
+     "dias_com_jogos_restantes": 130,
+     "jogos_por_dia_ate_agora": 6.35,
+     "jogos_por_dia_para_chegar_ao_fim": 5.04,
+     "esgota_em": "2027-03-15",
      "sobram_no_fim": 0,
      "por_posicao": [
       {
@@ -364,12 +368,12 @@
       },
       {
        "posicao": "SG",
-       "usados": 18,
+       "usados": 19,
        "limite": 82
       },
       {
        "posicao": "SF",
-       "usados": 17,
+       "usados": 18,
        "limite": 82
       },
       {
@@ -379,22 +383,22 @@
       },
       {
        "posicao": "C",
-       "usados": 18,
+       "usados": 19,
        "limite": 82
       },
       {
        "posicao": "G",
-       "usados": 17,
+       "usados": 18,
        "limite": 82
       },
       {
        "posicao": "F",
-       "usados": 16,
+       "usados": 17,
        "limite": 82
       },
       {
        "posicao": "UT",
-       "usados": 36,
+       "usados": 37,
        "limite": 246
       }
      ]
@@ -403,16 +407,16 @@
    {
     "id": 3,
     "nome": "Queta's magic",
-    "jogos_feitos": 155,
+    "jogos_feitos": 165,
     "pontos_por_jogo": 45.8,
     "banco": {
-     "ontem_no_banco": 0,
-     "ontem_perdidos": 0.0,
-     "epoca_no_banco": 153.0,
-     "epoca_perdidos": 72.0
+     "ontem_no_banco": 37.0,
+     "ontem_perdidos": 1.5,
+     "epoca_no_banco": 190.0,
+     "epoca_perdidos": 73.5
     },
     "vagas": {
-     "por_dia_sem_jogo": 3.8,
+     "por_dia_sem_jogo": 3.7,
      "epoca_evitaveis": 0,
      "ontem_evitaveis": 0
     },
@@ -434,53 +438,53 @@
      ]
     },
     "limite_de_jogos": {
-     "usados": 155,
+     "usados": 165,
      "limite": 820,
-     "restantes": 665,
-     "dias_com_jogos_restantes": 131,
-     "jogos_por_dia_ate_agora": 6.2,
-     "jogos_por_dia_para_chegar_ao_fim": 5.08,
-     "esgota_em": "2027-03-18",
+     "restantes": 655,
+     "dias_com_jogos_restantes": 130,
+     "jogos_por_dia_ate_agora": 6.35,
+     "jogos_por_dia_para_chegar_ao_fim": 5.04,
+     "esgota_em": "2027-03-15",
      "sobram_no_fim": 0,
      "por_posicao": [
       {
        "posicao": "PG",
-       "usados": 22,
+       "usados": 23,
        "limite": 82
       },
       {
        "posicao": "SG",
-       "usados": 19,
+       "usados": 20,
        "limite": 82
       },
       {
        "posicao": "SF",
-       "usados": 14,
+       "usados": 15,
        "limite": 82
       },
       {
        "posicao": "PF",
-       "usados": 17,
+       "usados": 18,
        "limite": 82
       },
       {
        "posicao": "C",
-       "usados": 21,
+       "usados": 22,
        "limite": 82
       },
       {
        "posicao": "G",
-       "usados": 14,
+       "usados": 15,
        "limite": 82
       },
       {
        "posicao": "F",
-       "usados": 14,
+       "usados": 15,
        "limite": 82
       },
       {
        "posicao": "UT",
-       "usados": 34,
+       "usados": 37,
        "limite": 246
       }
      ]
@@ -489,222 +493,238 @@
   ]
  },
  "destaques": {
-  "dia": "2026-11-14",
+  "dia": "2026-11-15",
   "mvp": {
-   "nome": "Giannis Antetokounmpo",
-   "equipa": "Lisbon Lebron’s",
-   "nba": "MIA",
-   "pontos": 102.5,
-   "media_epoca": 71.08,
-   "diferenca_media": 31.4,
+   "nome": "Victor Wembanyama",
+   "equipa": "Queta's magic",
+   "nba": "SA",
+   "pontos": 78.5,
+   "media_epoca": 78.07,
+   "diferenca_media": 0.4,
    "linha": {
-    "min": 31,
-    "pts": 34,
-    "res": 14,
-    "ast": 8,
+    "min": 35,
+    "pts": 26,
+    "res": 10,
+    "ast": 6,
     "rb": 1,
-    "dl": 3,
-    "per": 3
+    "dl": 5,
+    "per": 2
    }
   },
   "flop": {
    "nome": "Cooper Flagg",
    "equipa": "Queta's magic",
    "nba": "DAL",
-   "pontos": 31.0,
-   "media_epoca": 56.42,
-   "diferenca_media": -25.4,
+   "pontos": 27.5,
+   "media_epoca": 54.19,
+   "diferenca_media": -26.7,
    "linha": {
-    "min": 38,
-    "pts": 18,
-    "res": 8,
-    "ast": 5,
-    "rb": 0,
+    "min": 27,
+    "pts": 17,
+    "res": 3,
+    "ast": 4,
+    "rb": 1,
     "dl": 1,
-    "per": 0
+    "per": 3
    }
   },
   "por_equipa": [
    {
     "equipa": "Portela Lakers",
     "mvp": {
-     "nome": "Nikola Jokic",
+     "nome": "Scottie Barnes",
      "equipa": "Portela Lakers",
-     "nba": "DEN",
-     "pontos": 78.5,
-     "media_epoca": 73.82,
-     "diferenca_media": 4.7,
+     "nba": "TOR",
+     "pontos": 68.5,
+     "media_epoca": 53.67,
+     "diferenca_media": 14.8,
      "linha": {
-      "min": 37,
-      "pts": 26,
-      "res": 8,
-      "ast": 10,
-      "rb": 3,
-      "dl": 0,
-      "per": 4
+      "min": 36,
+      "pts": 30,
+      "res": 9,
+      "ast": 4,
+      "rb": 1,
+      "dl": 2,
+      "per": 0
      }
     },
-    "flop": null
+    "flop": {
+     "nome": "Paul George",
+     "equipa": "Portela Lakers",
+     "nba": "BOS",
+     "pontos": 27.5,
+     "media_epoca": 43.86,
+     "diferenca_media": -16.4,
+     "linha": {
+      "min": 25,
+      "pts": 7,
+      "res": 7,
+      "ast": 6,
+      "rb": 2,
+      "dl": 0,
+      "per": 2
+     }
+    }
    },
    {
     "equipa": "Lisbon Lebron’s",
     "mvp": {
-     "nome": "Giannis Antetokounmpo",
+     "nome": "Shai Gilgeous-Alexander",
      "equipa": "Lisbon Lebron’s",
-     "nba": "MIA",
-     "pontos": 102.5,
-     "media_epoca": 71.08,
-     "diferenca_media": 31.4,
+     "nba": "OKC",
+     "pontos": 66.5,
+     "media_epoca": 54.04,
+     "diferenca_media": 12.5,
      "linha": {
-      "min": 31,
-      "pts": 34,
-      "res": 14,
-      "ast": 8,
-      "rb": 1,
-      "dl": 3,
-      "per": 3
+      "min": 30,
+      "pts": 37,
+      "res": 2,
+      "ast": 2,
+      "rb": 0,
+      "dl": 0,
+      "per": 0
      }
     },
     "flop": {
-     "nome": "Zion Williamson",
+     "nome": "Alperen Sengun",
      "equipa": "Lisbon Lebron’s",
-     "nba": "NO",
-     "pontos": 45.5,
-     "media_epoca": 48.15,
-     "diferenca_media": -2.6,
+     "nba": "HOU",
+     "pontos": 55.5,
+     "media_epoca": 65.17,
+     "diferenca_media": -9.7,
      "linha": {
-      "min": 31,
-      "pts": 24,
-      "res": 6,
-      "ast": 2,
-      "rb": 0,
-      "dl": 2,
-      "per": 2
+      "min": 28,
+      "pts": 19,
+      "res": 8,
+      "ast": 8,
+      "rb": 2,
+      "dl": 0,
+      "per": 1
      }
     }
    },
    {
     "equipa": "Queta's magic",
     "mvp": {
-     "nome": "Cooper Flagg",
+     "nome": "Victor Wembanyama",
      "equipa": "Queta's magic",
-     "nba": "DAL",
-     "pontos": 31.0,
-     "media_epoca": 56.42,
-     "diferenca_media": -25.4,
+     "nba": "SA",
+     "pontos": 78.5,
+     "media_epoca": 78.07,
+     "diferenca_media": 0.4,
      "linha": {
-      "min": 38,
-      "pts": 18,
-      "res": 8,
-      "ast": 5,
-      "rb": 0,
-      "dl": 1,
-      "per": 0
+      "min": 35,
+      "pts": 26,
+      "res": 10,
+      "ast": 6,
+      "rb": 1,
+      "dl": 5,
+      "per": 2
      }
     },
     "flop": {
      "nome": "Cooper Flagg",
      "equipa": "Queta's magic",
      "nba": "DAL",
-     "pontos": 31.0,
-     "media_epoca": 56.42,
-     "diferenca_media": -25.4,
+     "pontos": 27.5,
+     "media_epoca": 54.19,
+     "diferenca_media": -26.7,
      "linha": {
-      "min": 38,
-      "pts": 18,
-      "res": 8,
-      "ast": 5,
-      "rb": 0,
+      "min": 27,
+      "pts": 17,
+      "res": 3,
+      "ast": 4,
+      "rb": 1,
       "dl": 1,
-      "per": 0
+      "per": 3
      }
     }
    }
   ],
   "top5": [
    {
-    "nome": "Giannis Antetokounmpo",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "MIA",
-    "pontos": 102.5,
-    "media_epoca": 71.08,
-    "diferenca_media": 31.4,
-    "linha": {
-     "min": 31,
-     "pts": 34,
-     "res": 14,
-     "ast": 8,
-     "rb": 1,
-     "dl": 3,
-     "per": 3
-    }
-   },
-   {
-    "nome": "Nikola Jokic",
-    "equipa": "Portela Lakers",
-    "nba": "DEN",
+    "nome": "Victor Wembanyama",
+    "equipa": "Queta's magic",
+    "nba": "SA",
     "pontos": 78.5,
-    "media_epoca": 73.82,
-    "diferenca_media": 4.7,
+    "media_epoca": 78.07,
+    "diferenca_media": 0.4,
     "linha": {
-     "min": 37,
+     "min": 35,
      "pts": 26,
-     "res": 8,
-     "ast": 10,
-     "rb": 3,
-     "dl": 0,
-     "per": 4
+     "res": 10,
+     "ast": 6,
+     "rb": 1,
+     "dl": 5,
+     "per": 2
     }
    },
    {
-    "nome": "Cade Cunningham",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "DET",
-    "pontos": 59.0,
-    "media_epoca": 55.21,
-    "diferenca_media": 3.8,
+    "nome": "Amen Thompson",
+    "equipa": "Queta's magic",
+    "nba": "HOU",
+    "pontos": 69.5,
+    "media_epoca": 42.75,
+    "diferenca_media": 26.8,
     "linha": {
-     "min": 36,
-     "pts": 33,
-     "res": 5,
-     "ast": 8,
+     "min": 29,
+     "pts": 26,
+     "res": 7,
+     "ast": 7,
      "rb": 1,
      "dl": 1,
      "per": 3
     }
    },
    {
-    "nome": "Bam Adebayo",
+    "nome": "Scottie Barnes",
     "equipa": "Portela Lakers",
-    "nba": "MIA",
-    "pontos": 55.0,
-    "media_epoca": 50.5,
-    "diferenca_media": 4.5,
+    "nba": "TOR",
+    "pontos": 68.5,
+    "media_epoca": 53.67,
+    "diferenca_media": 14.8,
     "linha": {
      "min": 36,
-     "pts": 20,
-     "res": 5,
+     "pts": 30,
+     "res": 9,
      "ast": 4,
-     "rb": 3,
+     "rb": 1,
      "dl": 2,
-     "per": 1
+     "per": 0
     }
    },
    {
-    "nome": "Jamal Murray",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "DEN",
-    "pontos": 55.0,
-    "media_epoca": 54.45,
-    "diferenca_media": 0.5,
+    "nome": "Luka Doncic",
+    "equipa": "Portela Lakers",
+    "nba": "LAL",
+    "pontos": 68.5,
+    "media_epoca": 71.0,
+    "diferenca_media": -2.5,
     "linha": {
-     "min": 38,
-     "pts": 23,
-     "res": 7,
+     "min": 36,
+     "pts": 43,
+     "res": 3,
      "ast": 9,
+     "rb": 1,
+     "dl": 0,
+     "per": 2
+    }
+   },
+   {
+    "nome": "Shai Gilgeous-Alexander",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "OKC",
+    "pontos": 66.5,
+    "media_epoca": 54.04,
+    "diferenca_media": 12.5,
+    "linha": {
+     "min": 30,
+     "pts": 37,
+     "res": 2,
+     "ast": 2,
      "rb": 0,
-     "dl": 2,
-     "per": 4
+     "dl": 0,
+     "per": 0
     }
    }
   ],
@@ -713,34 +733,85 @@
     "nome": "Cooper Flagg",
     "equipa": "Queta's magic",
     "nba": "DAL",
-    "pontos": 31.0,
-    "media_epoca": 56.42,
-    "diferenca_media": -25.4,
+    "pontos": 27.5,
+    "media_epoca": 54.19,
+    "diferenca_media": -26.7,
     "linha": {
-     "min": 38,
-     "pts": 18,
-     "res": 8,
-     "ast": 5,
-     "rb": 0,
+     "min": 27,
+     "pts": 17,
+     "res": 3,
+     "ast": 4,
+     "rb": 1,
      "dl": 1,
-     "per": 0
+     "per": 3
     }
    },
    {
-    "nome": "Zion Williamson",
-    "equipa": "Lisbon Lebron’s",
-    "nba": "NO",
-    "pontos": 45.5,
-    "media_epoca": 48.15,
-    "diferenca_media": -2.6,
+    "nome": "Darius Acuff Jr.",
+    "equipa": "Queta's magic",
+    "nba": "SAC",
+    "pontos": 19.5,
+    "media_epoca": 40.69,
+    "diferenca_media": -21.2,
     "linha": {
-     "min": 31,
-     "pts": 24,
-     "res": 6,
-     "ast": 2,
+     "min": 33,
+     "pts": 26,
+     "res": 0,
+     "ast": 6,
      "rb": 0,
-     "dl": 2,
+     "dl": 0,
+     "per": 9
+    }
+   },
+   {
+    "nome": "Jalen Johnson",
+    "equipa": "Queta's magic",
+    "nba": "ATL",
+    "pontos": 29.0,
+    "media_epoca": 46.5,
+    "diferenca_media": -17.5,
+    "linha": {
+     "min": 35,
+     "pts": 14,
+     "res": 11,
+     "ast": 5,
+     "rb": 0,
+     "dl": 0,
+     "per": 4
+    }
+   },
+   {
+    "nome": "Paul George",
+    "equipa": "Portela Lakers",
+    "nba": "BOS",
+    "pontos": 27.5,
+    "media_epoca": 43.86,
+    "diferenca_media": -16.4,
+    "linha": {
+     "min": 25,
+     "pts": 7,
+     "res": 7,
+     "ast": 6,
+     "rb": 2,
+     "dl": 0,
      "per": 2
+    }
+   },
+   {
+    "nome": "Domantas Sabonis",
+    "equipa": "Portela Lakers",
+    "nba": "SAC",
+    "pontos": 33.0,
+    "media_epoca": 49.21,
+    "diferenca_media": -16.2,
+    "linha": {
+     "min": 29,
+     "pts": 11,
+     "res": 13,
+     "ast": 3,
+     "rb": 0,
+     "dl": 0,
+     "per": 1
     }
    }
   ],
@@ -749,10 +820,10 @@
     "nome": "Franz Wagner",
     "equipa": "Portela Lakers",
     "nba": "ORL",
-    "media_7_dias": 70.4,
-    "jogos_7_dias": 4,
+    "media_7_dias": 71.2,
+    "jogos_7_dias": 3,
     "media_referencia": 51.5,
-    "variacao": 18.9
+    "variacao": 19.7
    },
    {
     "nome": "Austin Reaves",
@@ -764,22 +835,22 @@
     "variacao": 17.1
    },
    {
-    "nome": "Anthony Davis",
-    "equipa": "Portela Lakers",
-    "nba": "WSH",
-    "media_7_dias": 71.3,
+    "nome": "Jamal Murray",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "DEN",
+    "media_7_dias": 68.0,
     "jogos_7_dias": 3,
-    "media_referencia": 58.7,
-    "variacao": 12.6
+    "media_referencia": 54.5,
+    "variacao": 13.5
    },
    {
-    "nome": "Paul George",
-    "equipa": "Portela Lakers",
-    "nba": "BOS",
-    "media_7_dias": 58.0,
-    "jogos_7_dias": 2,
-    "media_referencia": 45.5,
-    "variacao": 12.5
+    "nome": "Deni Avdija",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "POR",
+    "media_7_dias": 58.7,
+    "jogos_7_dias": 3,
+    "media_referencia": 46.9,
+    "variacao": 11.8
    }
   ],
   "em_baixa": [
@@ -787,10 +858,28 @@
     "nome": "Domantas Sabonis",
     "equipa": "Portela Lakers",
     "nba": "SAC",
-    "media_7_dias": 32.2,
-    "jogos_7_dias": 2,
-    "media_referencia": 50.7,
-    "variacao": -18.4
+    "media_7_dias": 32.5,
+    "jogos_7_dias": 3,
+    "media_referencia": 49.2,
+    "variacao": -16.7
+   },
+   {
+    "nome": "Jabari Smith Jr.",
+    "equipa": "Queta's magic",
+    "nba": "HOU",
+    "media_7_dias": 20.9,
+    "jogos_7_dias": 4,
+    "media_referencia": 35.6,
+    "variacao": -14.7
+   },
+   {
+    "nome": "Yaxel Lendeborg",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "GS",
+    "media_7_dias": 33.0,
+    "jogos_7_dias": 3,
+    "media_referencia": 41.1,
+    "variacao": -8.1
    },
    {
     "nome": "Ty Jerome",
@@ -800,24 +889,6 @@
     "jogos_7_dias": 3,
     "media_referencia": 44.1,
     "variacao": -7.9
-   },
-   {
-    "nome": "Jabari Smith Jr.",
-    "equipa": "Queta's magic",
-    "nba": "HOU",
-    "media_7_dias": 29.5,
-    "jogos_7_dias": 4,
-    "media_referencia": 37.1,
-    "variacao": -7.6
-   },
-   {
-    "nome": "Jayson Tatum",
-    "equipa": "Portela Lakers",
-    "nba": "BOS",
-    "media_7_dias": 42.5,
-    "jogos_7_dias": 3,
-    "media_referencia": 48.8,
-    "variacao": -6.3
    }
   ],
   "melhores_epoca": {
@@ -825,9 +896,9 @@
     {
      "nome": "Victor Wembanyama",
      "equipa": "Queta's magic",
-     "jogos": 13,
-     "total": 1018.5,
-     "media": 78.3
+     "jogos": 14,
+     "total": 1093.0,
+     "media": 78.1
     },
     {
      "nome": "Nikola Jokic",
@@ -837,13 +908,6 @@
      "media": 73.8
     },
     {
-     "nome": "Luka Doncic",
-     "equipa": "Portela Lakers",
-     "jogos": 11,
-     "total": 783.5,
-     "media": 71.2
-    },
-    {
      "nome": "Giannis Antetokounmpo",
      "equipa": "Lisbon Lebron’s",
      "jogos": 13,
@@ -851,32 +915,32 @@
      "media": 71.1
     },
     {
+     "nome": "Luka Doncic",
+     "equipa": "Portela Lakers",
+     "jogos": 12,
+     "total": 852.0,
+     "media": 71.0
+    },
+    {
      "nome": "Alperen Sengun",
      "equipa": "Lisbon Lebron’s",
-     "jogos": 11,
-     "total": 726.5,
-     "media": 66.0
+     "jogos": 12,
+     "total": 782.0,
+     "media": 65.2
     },
     {
      "nome": "Anthony Davis",
      "equipa": "Portela Lakers",
-     "jogos": 11,
-     "total": 646.0,
-     "media": 58.7
-    },
-    {
-     "nome": "Cooper Flagg",
-     "equipa": "Queta's magic",
      "jogos": 12,
-     "total": 677.0,
-     "media": 56.4
+     "total": 688.0,
+     "media": 57.3
     },
     {
      "nome": "Karl-Anthony Towns",
      "equipa": "Queta's magic",
-     "jogos": 12,
-     "total": 664.5,
-     "media": 55.4
+     "jogos": 13,
+     "total": 725.5,
+     "media": 55.8
     },
     {
      "nome": "Cade Cunningham",
@@ -891,6 +955,13 @@
      "jogos": 11,
      "total": 599.0,
      "media": 54.5
+    },
+    {
+     "nome": "Cooper Flagg",
+     "equipa": "Queta's magic",
+     "jogos": 13,
+     "total": 704.5,
+     "media": 54.2
     }
    ],
    "minimo_jogos": 7
@@ -905,25 +976,26 @@
      "posicoes": [
       "C"
      ],
-     "media": 53.1,
-     "jogos": 4,
-     "total": 212.5,
+     "media": 50.2,
+     "jogos": 3,
+     "total": 150.5,
      "estado": null,
      "em_waiver": false,
      "jogos_proximos_7_dias": 3
     },
     {
-     "nome": "Isaiah Hartenstein",
-     "nba": "OKC",
+     "nome": "Jalen Smith",
+     "nba": "CHI",
      "posicoes": [
+      "PF",
       "C"
      ],
-     "media": 50.6,
-     "jogos": 4,
-     "total": 202.5,
-     "estado": null,
+     "media": 49.2,
+     "jogos": 3,
+     "total": 147.5,
+     "estado": "Dia a dia",
      "em_waiver": false,
-     "jogos_proximos_7_dias": 3
+     "jogos_proximos_7_dias": 4
     },
     {
      "nome": "Ausar Thompson",
@@ -937,19 +1009,19 @@
      "total": 191.5,
      "estado": null,
      "em_waiver": false,
-     "jogos_proximos_7_dias": 3
+     "jogos_proximos_7_dias": 4
     },
     {
-     "nome": "Kyrie Irving",
-     "nba": "DAL",
+     "nome": "Isaiah Hartenstein",
+     "nba": "OKC",
      "posicoes": [
-      "PG"
+      "C"
      ],
-     "media": 47.2,
+     "media": 45.9,
      "jogos": 4,
-     "total": 189.0,
+     "total": 183.5,
      "estado": null,
-     "em_waiver": true,
+     "em_waiver": false,
      "jogos_proximos_7_dias": 3
     },
     {
@@ -968,28 +1040,28 @@
    ],
    "ultimos_15_dias": [
     {
-     "nome": "Kyrie Irving",
-     "nba": "DAL",
-     "posicoes": [
-      "PG"
-     ],
-     "media": 47.4,
-     "jogos": 7,
-     "total": 332.0,
-     "estado": null,
-     "em_waiver": true,
-     "jogos_proximos_7_dias": 3
-    },
-    {
      "nome": "Ausar Thompson",
      "nba": "DET",
      "posicoes": [
       "SF",
       "PF"
      ],
-     "media": 45.1,
+     "media": 45.0,
+     "jogos": 6,
+     "total": 270.0,
+     "estado": null,
+     "em_waiver": false,
+     "jogos_proximos_7_dias": 4
+    },
+    {
+     "nome": "Day'Ron Sharpe",
+     "nba": "BKN",
+     "posicoes": [
+      "C"
+     ],
+     "media": 44.6,
      "jogos": 7,
-     "total": 316.0,
+     "total": 312.0,
      "estado": null,
      "em_waiver": false,
      "jogos_proximos_7_dias": 3
@@ -1008,15 +1080,14 @@
      "jogos_proximos_7_dias": 4
     },
     {
-     "nome": "Anthony Black",
-     "nba": "ORL",
+     "nome": "Onyeka Okongwu",
+     "nba": "ATL",
      "posicoes": [
-      "PG",
-      "SG"
+      "C"
      ],
-     "media": 42.9,
-     "jogos": 7,
-     "total": 300.5,
+     "media": 42.6,
+     "jogos": 8,
+     "total": 340.5,
      "estado": null,
      "em_waiver": false,
      "jogos_proximos_7_dias": 3
@@ -1027,9 +1098,9 @@
      "posicoes": [
       "PG"
      ],
-     "media": 42.5,
-     "jogos": 8,
-     "total": 340.0,
+     "media": 41.1,
+     "jogos": 7,
+     "total": 287.5,
      "estado": null,
      "em_waiver": false,
      "jogos_proximos_7_dias": 4
@@ -1041,16 +1112,6 @@
     "nome": "Austin Reaves",
     "equipa": "Portela Lakers",
     "nba": "LAL",
-    "estado": "Fora",
-    "lugar": "G",
-    "em_posicao_ativa": true,
-    "regresso": null,
-    "fora_da_epoca": false
-   },
-   {
-    "nome": "Scottie Barnes",
-    "equipa": "Portela Lakers",
-    "nba": "TOR",
     "estado": "Fora",
     "lugar": "Lesionados",
     "em_posicao_ativa": false,
@@ -1066,24 +1127,10 @@
     "em_posicao_ativa": false,
     "regresso": null,
     "fora_da_epoca": false
-   },
-   {
-    "nome": "Donovan Mitchell",
-    "equipa": "Queta's magic",
-    "nba": "CLE",
-    "estado": "Fora",
-    "lugar": "Banco",
-    "em_posicao_ativa": false,
-    "regresso": null,
-    "fora_da_epoca": false
    }
   ],
   "calendario": {
    "dias": [
-    {
-     "data": "2026-11-15",
-     "jogos_nba": 9
-    },
     {
      "data": "2026-11-16",
      "jogos_nba": 8
@@ -1107,6 +1154,10 @@
     {
      "data": "2026-11-21",
      "jogos_nba": 6
+    },
+    {
+     "data": "2026-11-22",
+     "jogos_nba": 7
     }
    ],
    "dias_com_mais_jogos": [
@@ -1115,25 +1166,20 @@
      "jogos_nba": 12
     },
     {
-     "data": "2026-11-15",
+     "data": "2026-11-20",
      "jogos_nba": 9
     },
     {
-     "data": "2026-11-20",
-     "jogos_nba": 9
+     "data": "2026-11-16",
+     "jogos_nba": 8
     }
    ],
    "equipas": [
     {
      "nome": "Lisbon Lebron’s",
-     "total": 44,
-     "utilizaveis": 44,
+     "total": 45,
+     "utilizaveis": 45,
      "dias": [
-      {
-       "data": "2026-11-15",
-       "jogos": 6,
-       "utilizaveis": 6
-      },
       {
        "data": "2026-11-16",
        "jogos": 8,
@@ -1163,23 +1209,23 @@
        "data": "2026-11-21",
        "jogos": 5,
        "utilizaveis": 5
+      },
+      {
+       "data": "2026-11-22",
+       "jogos": 7,
+       "utilizaveis": 7
       }
      ]
     },
     {
      "nome": "Queta's magic",
-     "total": 45,
-     "utilizaveis": 43,
+     "total": 44,
+     "utilizaveis": 44,
      "dias": [
       {
-       "data": "2026-11-15",
-       "jogos": 12,
-       "utilizaveis": 10
-      },
-      {
        "data": "2026-11-16",
-       "jogos": 5,
-       "utilizaveis": 5
+       "jogos": 7,
+       "utilizaveis": 7
       },
       {
        "data": "2026-11-17",
@@ -1188,13 +1234,13 @@
       },
       {
        "data": "2026-11-18",
-       "jogos": 8,
-       "utilizaveis": 8
+       "jogos": 9,
+       "utilizaveis": 9
       },
       {
        "data": "2026-11-19",
-       "jogos": 3,
-       "utilizaveis": 3
+       "jogos": 4,
+       "utilizaveis": 4
       },
       {
        "data": "2026-11-20",
@@ -1203,21 +1249,21 @@
       },
       {
        "data": "2026-11-21",
-       "jogos": 8,
-       "utilizaveis": 8
+       "jogos": 9,
+       "utilizaveis": 9
+      },
+      {
+       "data": "2026-11-22",
+       "jogos": 6,
+       "utilizaveis": 6
       }
      ]
     },
     {
      "nome": "Portela Lakers",
-     "total": 38,
-     "utilizaveis": 37,
+     "total": 41,
+     "utilizaveis": 39,
      "dias": [
-      {
-       "data": "2026-11-15",
-       "jogos": 7,
-       "utilizaveis": 7
-      },
       {
        "data": "2026-11-16",
        "jogos": 8,
@@ -1225,12 +1271,12 @@
       },
       {
        "data": "2026-11-17",
-       "jogos": 2,
-       "utilizaveis": 2
+       "jogos": 3,
+       "utilizaveis": 3
       },
       {
        "data": "2026-11-18",
-       "jogos": 11,
+       "jogos": 12,
        "utilizaveis": 10
       },
       {
@@ -1240,13 +1286,18 @@
       },
       {
        "data": "2026-11-20",
-       "jogos": 7,
-       "utilizaveis": 7
+       "jogos": 8,
+       "utilizaveis": 8
       },
       {
        "data": "2026-11-21",
        "jogos": 3,
        "utilizaveis": 3
+      },
+      {
+       "data": "2026-11-22",
+       "jogos": 7,
+       "utilizaveis": 7
       }
      ]
     }
@@ -1262,9 +1313,9 @@
      {
       "nome": "Portela Lakers",
       "mvp": {
-       "nome": "Nikola Jokic",
-       "pontos": 479.5,
-       "jogos": 6
+       "nome": "Luka Doncic",
+       "pontos": 541.0,
+       "jogos": 7
       },
       "pior_decisao": {
        "data": "2026-11-09",
@@ -1278,8 +1329,8 @@
       },
       "melhor_contratacao": {
        "nome": "Walker Kessler",
-       "pontos": 340.5,
-       "jogos": 6
+       "pontos": 398.5,
+       "jogos": 7
       }
      },
      {
@@ -1313,8 +1364,8 @@
       "nome": "Queta's magic",
       "mvp": {
        "nome": "Victor Wembanyama",
-       "pontos": 573.0,
-       "jogos": 7
+       "pontos": 647.5,
+       "jogos": 8
       },
       "pior_decisao": {
        "data": "2026-11-04",
@@ -1332,8 +1383,8 @@
       },
       "melhor_contratacao": {
        "nome": "Karl-Anthony Towns",
-       "pontos": 340.0,
-       "jogos": 6
+       "pontos": 401.0,
+       "jogos": 7
       }
      }
     ]
@@ -1406,10 +1457,10 @@
    {
     "nome": "Queta's magic",
     "jogador": "Victor Wembanyama",
-    "pontos": 1018.5,
-    "jogos": 13,
-    "pontos_por_jogo": 78.3,
-    "percentagem": 14.3,
+    "pontos": 1093.0,
+    "jogos": 14,
+    "pontos_por_jogo": 78.1,
+    "percentagem": 14.5,
     "percentagem_3_melhores": 33.2,
     "estado": null,
     "ainda_no_plantel": true
@@ -1420,19 +1471,19 @@
     "pontos": 924.0,
     "jogos": 13,
     "pontos_por_jogo": 71.1,
-    "percentagem": 12.1,
-    "percentagem_3_melhores": 30.6,
+    "percentagem": 11.6,
+    "percentagem_3_melhores": 30.9,
     "estado": null,
     "ainda_no_plantel": true
    },
    {
     "nome": "Portela Lakers",
-    "jogador": "Nikola Jokic",
-    "pontos": 812.0,
-    "jogos": 11,
-    "pontos_por_jogo": 73.8,
-    "percentagem": 11.3,
-    "percentagem_3_melhores": 31.3,
+    "jogador": "Luka Doncic",
+    "pontos": 852.0,
+    "jogos": 12,
+    "pontos_por_jogo": 71.0,
+    "percentagem": 11.2,
+    "percentagem_3_melhores": 30.6,
     "estado": null,
     "ainda_no_plantel": true
    }
@@ -1444,15 +1495,15 @@
   "equipas": [
    {
     "nome": "Portela Lakers",
-    "diferenca": 3.6
+    "diferenca": 3.3
    },
    {
     "nome": "Lisbon Lebron’s",
-    "diferenca": 2.1
+    "diferenca": 2.2
    },
    {
     "nome": "Queta's magic",
-    "diferenca": 0.7
+    "diferenca": 1.3
    }
   ],
   "surpresas": [
@@ -1469,28 +1520,28 @@
     "nome": "Alperen Sengun",
     "equipa": "Lisbon Lebron’s",
     "nba": "HOU",
-    "media": 66.0,
+    "media": 65.2,
     "prevista": 49.8,
-    "diferenca": 16.3,
-    "jogos": 11
+    "diferenca": 15.4,
+    "jogos": 12
    },
    {
     "nome": "Victor Wembanyama",
     "equipa": "Queta's magic",
     "nba": "SA",
-    "media": 78.3,
+    "media": 78.1,
     "prevista": 65.7,
-    "diferenca": 12.6,
-    "jogos": 13
+    "diferenca": 12.3,
+    "jogos": 14
    },
    {
     "nome": "Walker Kessler",
     "equipa": "Portela Lakers",
     "nba": "LAL",
-    "media": 52.9,
+    "media": 53.2,
     "prevista": 43.1,
-    "diferenca": 9.8,
-    "jogos": 13
+    "diferenca": 10.1,
+    "jogos": 14
    },
    {
     "nome": "Franz Wagner",
@@ -1507,19 +1558,19 @@
     "nome": "Shai Gilgeous-Alexander",
     "equipa": "Lisbon Lebron’s",
     "nba": "OKC",
-    "media": 53.1,
+    "media": 54.0,
     "prevista": 64.8,
-    "diferenca": -11.8,
-    "jogos": 13
+    "diferenca": -10.8,
+    "jogos": 14
    },
    {
     "nome": "Jalen Johnson",
     "equipa": "Queta's magic",
     "nba": "ATL",
-    "media": 48.2,
+    "media": 46.5,
     "prevista": 55.4,
-    "diferenca": -7.2,
-    "jogos": 10
+    "diferenca": -8.9,
+    "jogos": 11
    },
    {
     "nome": "Donovan Mitchell",
@@ -1531,22 +1582,22 @@
     "jogos": 13
    },
    {
-    "nome": "Amen Thompson",
-    "equipa": "Queta's magic",
-    "nba": "HOU",
-    "media": 40.7,
-    "prevista": 45.7,
-    "diferenca": -5.0,
-    "jogos": 13
-   },
-   {
     "nome": "Derrick White",
     "equipa": "Queta's magic",
     "nba": "BOS",
-    "media": 32.2,
+    "media": 32.8,
     "prevista": 37.0,
-    "diferenca": -4.8,
-    "jogos": 12
+    "diferenca": -4.2,
+    "jogos": 13
+   },
+   {
+    "nome": "Pascal Siakam",
+    "equipa": "Lisbon Lebron’s",
+    "nba": "IND",
+    "media": 43.3,
+    "prevista": 47.2,
+    "diferenca": -4.0,
+    "jogos": 13
    }
   ]
  }
