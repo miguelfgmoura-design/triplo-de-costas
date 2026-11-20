@@ -6,7 +6,7 @@
    "id": 1,
    "nome": "Portela Lakers",
    "abrev": "PTL",
-   "pontos": 132.5,
+   "pontos": 133.5,
    "jogos": 3,
    "jogadores": [
     {
@@ -72,13 +72,13 @@
       5,
       11
      ],
-     "pontos": 49.5,
+     "pontos": 50.5,
      "jogou": true,
      "tinha_jogo": true,
      "linha": {
       "min": 42,
       "pts": 36,
-      "res": 6,
+      "res": 7,
       "ast": 7,
       "rb": 1,
       "dl": 1,
