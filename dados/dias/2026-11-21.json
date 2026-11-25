@@ -439,7 +439,7 @@
    "id": 3,
    "nome": "Queta's magic",
    "abrev": "QM",
-   "pontos": 375.5,
+   "pontos": 374.5,
    "jogos": 7,
    "jogadores": [
     {
@@ -528,13 +528,13 @@
       4,
       11
      ],
-     "pontos": 137.5,
+     "pontos": 136.5,
      "jogou": true,
      "tinha_jogo": true,
      "linha": {
       "min": 32,
       "pts": 50,
-      "res": 19,
+      "res": 18,
       "ast": 1,
       "rb": 4,
       "dl": 5,
