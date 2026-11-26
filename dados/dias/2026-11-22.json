@@ -6,7 +6,7 @@
    "id": 1,
    "nome": "Portela Lakers",
    "abrev": "PTL",
-   "pontos": 458.0,
+   "pontos": 459.0,
    "jogos": 7,
    "jogadores": [
     {
@@ -264,13 +264,13 @@
       6,
       11
      ],
-     "pontos": 63.5,
+     "pontos": 64.5,
      "jogou": true,
      "tinha_jogo": true,
      "linha": {
       "min": 38,
       "pts": 18,
-      "res": 11,
+      "res": 12,
       "ast": 5,
       "rb": 1,
       "dl": 2,
@@ -283,7 +283,7 @@
    "id": 2,
    "nome": "Lisbon Lebron’s",
    "abrev": "Ll",
-   "pontos": 251.5,
+   "pontos": 247.5,
    "jogos": 5,
    "jogadores": [
     {
@@ -470,7 +470,7 @@
       5,
       11
      ],
-     "pontos": 61.5,
+     "pontos": 57.5,
      "jogou": true,
      "tinha_jogo": true,
      "linha": {
@@ -479,7 +479,7 @@
       "res": 14,
       "ast": 8,
       "rb": 5,
-      "dl": 3,
+      "dl": 2,
       "per": 3
      }
     },
